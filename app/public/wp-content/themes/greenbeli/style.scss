@@ -15,7 +15,11 @@ Version: 1.0
 
 @import "scss/layout/grid";
 
-/* Content */
+/* Typography */
+
+@import "scss/typography/typography";
+
+/* Modules */
 
 @import "scss/modules/atomic";
 

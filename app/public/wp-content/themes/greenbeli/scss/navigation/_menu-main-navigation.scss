@@ -32,7 +32,7 @@
 					color: map-get($map: $theme-colors, $key: txt-body);
 				}
 			}
-			+ .page_item {
+			+ li {
 				margin-left: 32px;
 				@media (max-width: 1024.98px) {
 					margin-left: 0;

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
     <?php wp_head(); ?>
+    <?php if (is_home()) echo '<link rel="stylesheet" href='.get_theme_file_uri("/scss/pages/home.css").">" ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -14,10 +15,8 @@
         <header class="site-header">
             <div class="container h-100">
                 <div class="site-header-wrapper">
-                    <a class="site-branding" href="index.html">
-                        <?php if ( has_custom_logo() ) : ?>
-                        <div class="site-logo"><?php the_custom_logo(); ?></div>
-                        <?php endif; ?>
+                    <a class="site-branding" href="/">
+                        <img src=<?php echo get_theme_file_uri("/images/logo.png")?> alt="GREEN-BELI">
                     </a>
                     <div class="js-collapse-aside-menu-mobile"><i class="fal fa-bars"></i><i class="fal fa-times"></i>
                     </div>
@@ -25,6 +24,4 @@
                 </div>
             </div>
         </header>
-    </div>
-    <div id="content" class="site-content"></div>
-</body>
+        <div id="content" class="site-content">

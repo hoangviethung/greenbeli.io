@@ -1,15 +1,8 @@
 /** === Layout === */
-
-body {
-	&.admin-bar {
-		.site-header {
-			top: 32px;
-		}
-	}
-}
-
 #page {
+	position: relative;
 	width: 100%;
+	padding-top: 150px;
 }
 
 .site-content {

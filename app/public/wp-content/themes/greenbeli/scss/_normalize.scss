@@ -4,18 +4,7 @@
 	box-sizing: border-box;
 }
 
-body {
-	margin: 0;
-	font-family: map-get($map: $theme-fonts, $key: font-body);
-	font-size: 0.875rem;
-	font-weight: 400;
-	color: map-get($map: $theme-colors, $key: txt-body);
-	background-color: map-get($map: $theme-colors, $key: neutral-white);
-	overflow-x: hidden;
-	&.no-scroll {
-		overflow-y: hidden;
-	}
-}
+
 
 figure {
 	position: relative;
