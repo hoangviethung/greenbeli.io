@@ -17,10 +17,10 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div id="primary" class="content-area">
+    <main id="main" class="site-main">
 
-		<?php
+        <?php
 		if ( have_posts() ) {
 
 			// Load posts loop.
@@ -40,8 +40,8 @@ get_header();
 		}
 		?>
 
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+    </main><!-- .site-main -->
+</div><!-- .content-area -->
 
 <?php
 get_footer();

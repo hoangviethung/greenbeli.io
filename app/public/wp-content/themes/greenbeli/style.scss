@@ -5,4 +5,28 @@ Version: 1.0
 */
 @import "scss/variables-site/variables-site";
 
-@import "scss/site/header/site-header";
+/* Normalize */
+
+@import "scss/normalize";
+
+/* Layout */
+
+@import "scss/layout/layout";
+
+@import "scss/layout/grid";
+
+/* Content */
+
+@import "scss/modules/atomic";
+
+/* Content */
+
+@import "scss/site/site";
+
+/* Navigation */
+
+@import "scss/navigation/navigation";
+
+/* Forms */
+
+@import "scss/forms/forms";

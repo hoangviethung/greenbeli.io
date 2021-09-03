@@ -1,6 +1,7 @@
-.header-main {
+.site-header {
 	position: absolute;
 	top: 0;
+	left: 0;
 	width: 100%;
 	height: 150px;
 	z-index: 302;
@@ -10,7 +11,7 @@
 	}
 }
 
-.header__logo {
+.site-branding {
 	display: block;
 	height: 70%;
 	width: auto;
@@ -52,61 +53,9 @@
 	}
 }
 
-.header_wrapper {
+.site-header-wrapper {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 100%;
-}
-
-.navigation {
-	display: flex;
-	align-items: center;
-	@media (max-width: 1024.98px) {
-		position: fixed;
-		top: 80px;
-		left: 0;
-		bottom: 0;
-		flex-direction: column;
-		align-items: flex-start;
-		width: 80%;
-		padding: 16px;
-		background-color: map-get($map: $theme-colors, $key: neutral-white);
-		transform: translateX(-100%);
-		transition: all 0.3s ease-in-out;
-		&.active {
-			transform: translateX(0);
-		}
-	}
-}
-
-.nav__list {
-	display: flex;
-	margin-left: auto;
-	margin-top: 6px;
-	@media (max-width: 1024.98px) {
-		flex-direction: column;
-		margin-left: 0;
-		margin-top: 0;
-		margin-right: 0;
-		margin-bottom: 32px;
-	}
-}
-
-.nav__item {
-	> a {
-		color: map-get($map: $theme-colors, $key: txt-gray);
-		font-weight: 600;
-		transition: all 0.3s ease-in-out;
-		&:hover {
-			color: map-get($map: $theme-colors, $key: txt-body);
-		}
-	}
-	+ .nav__item {
-		margin-left: 32px;
-		@media (max-width: 1024.98px) {
-			margin-left: 0;
-			margin-top: 32px;
-		}
-	}
 }

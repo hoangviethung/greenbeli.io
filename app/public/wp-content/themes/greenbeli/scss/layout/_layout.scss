@@ -1,0 +1,17 @@
+/** === Layout === */
+
+body {
+	&.admin-bar {
+		.site-header {
+			top: 32px;
+		}
+	}
+}
+
+#page {
+	width: 100%;
+}
+
+.site-content {
+	overflow: hidden;
+}

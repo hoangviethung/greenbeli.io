@@ -1,0 +1,173 @@
+[hidden],
+.hidden {
+	display: none;
+}
+.txt-body {
+	color: map-get($map: $theme-colors, $key: txt-body);
+	&:hover {
+		color: lighten(
+			$color: map-get($map: $theme-colors, $key: txt-body),
+			$amount: 30%
+		);
+	}
+}
+.txt-light {
+	color: map-get($map: $theme-colors, $key: neutral-white);
+}
+.text-x-thin {
+	font-weight: 100;
+}
+.clearfix:after {
+	display: table;
+	clear: both;
+	content: "";
+}
+.d-none,
+[hidden] {
+	display: none !important;
+}
+.d-flex {
+	display: flex;
+}
+.h-100 {
+	height: 100%;
+}
+.fw-300 {
+	font-weight: 300;
+}
+.fw-400 {
+	font-weight: 400;
+}
+.fw-500 {
+	font-weight: 500;
+}
+.fw-600 {
+	font-weight: 600;
+}
+.fw-700 {
+	font-weight: 700;
+}
+.fw-800 {
+	font-weight: 800;
+}
+.fw-900 {
+	font-weight: 900;
+}
+.ta-c {
+	text-align: center;
+}
+.ta-l {
+	text-align: left;
+}
+.ta-r {
+	text-align: right;
+}
+.ta-jus {
+	text-align: justify;
+}
+.ta-last-c {
+	text-align-last: center;
+}
+.t-u {
+	text-decoration: underline;
+}
+.t-up {
+	text-transform: uppercase;
+}
+.t-cap {
+	text-transform: capitalize;
+}
+.jc-c {
+	justify-content: center;
+}
+.jc-e {
+	justify-content: flex-end;
+}
+.jc-s {
+	justify-content: flex-start;
+}
+
+.al-c {
+	align-items: center;
+}
+.al-e {
+	align-items: flex-end;
+}
+.al-s {
+	align-items: flex-start;
+}
+.fullsize {
+	width: 100%;
+	height: 100%;
+}
+.pl-0 {
+	padding-left: 0;
+}
+.pr-0 {
+	padding-right: 0;
+}
+.pt-0 {
+	padding-top: 0;
+}
+.pb-0 {
+	padding-bottom: 0;
+}
+.px-0 {
+	@extend .pl-0;
+	@extend .pr-0;
+}
+.py-0 {
+	@extend .pt-0;
+	@extend .pb-0;
+}
+.pt-section {
+	padding-top: 100px;
+	@media (max-width: 575.98px) {
+		padding-top: 50px;
+	}
+}
+.pb-section {
+	padding-bottom: 100px;
+	@media (max-width: 575.98px) {
+		padding-bottom: 50px;
+	}
+}
+.py-section {
+	@extend .pt-section;
+	@extend .pb-section;
+}
+.mt-section {
+	margin-top: 100px;
+	@media (max-width: 575.98px) {
+		margin-top: 50px;
+	}
+}
+.mb-section {
+	margin-bottom: 100px;
+	@media (max-width: 575.98px) {
+		margin-bottom: 50px;
+	}
+}
+.my-section {
+	@extend .mt-section;
+	@extend .mb-section;
+}
+.obj-resize {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.obj-cover {
+	@extend .fullsize;
+	object-fit: cover;
+}
+.ov-h {
+	overflow: hidden;
+}
+.obj-contain {
+	@extend .fullsize;
+	object-fit: contain;
+	position: absolute;
+	top: 0;
+	left: 0;
+}

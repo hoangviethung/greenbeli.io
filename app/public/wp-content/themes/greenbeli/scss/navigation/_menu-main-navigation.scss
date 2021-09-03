@@ -1,0 +1,51 @@
+/** === Main menu === */
+
+.main-navigation {
+	display: flex;
+	align-items: center;
+	@media (max-width: 1024.98px) {
+		position: fixed;
+		top: 80px;
+		left: 0;
+		bottom: 0;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 80%;
+		padding: 16px;
+		background-color: map-get($map: $theme-colors, $key: neutral-white);
+		transform: translateX(-100%);
+		transition: all 0.3s ease-in-out;
+		&.active {
+			transform: translateX(0);
+		}
+	}
+	.navigation {
+		display: flex;
+		margin-left: auto;
+		margin-top: 6px;
+		li {
+			> a {
+				color: map-get($map: $theme-colors, $key: txt-gray);
+				font-weight: 600;
+				transition: all 0.3s ease-in-out;
+				&:hover {
+					color: map-get($map: $theme-colors, $key: txt-body);
+				}
+			}
+			+ .page_item {
+				margin-left: 32px;
+				@media (max-width: 1024.98px) {
+					margin-left: 0;
+					margin-top: 32px;
+				}
+			}
+		}
+		@media (max-width: 1024.98px) {
+			flex-direction: column;
+			margin-left: 0;
+			margin-top: 0;
+			margin-right: 0;
+			margin-bottom: 32px;
+		}
+	}
+}
