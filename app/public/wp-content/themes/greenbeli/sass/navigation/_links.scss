@@ -1,18 +1,11 @@
 a {
-	color: map-get($map: $theme-colors, $key: link);
+    &:hover,
+    &:active {
+        outline: 0;
+        text-decoration: none;
+    }
 
-	&:visited {
-		color: map-get($map: $theme-colors, $key: link-visited);
-	}
-
-	&:hover,
-	&:active {
-		color: map-get($map: $theme-colors, $key: link-hover);
-		outline: 0;
-		text-decoration: none;
-	}
-
-	&:focus {
-		text-decoration: underline;
-	}
+    &:focus {
+        text-decoration: underline;
+    }
 }
