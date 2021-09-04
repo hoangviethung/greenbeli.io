@@ -1,32 +1,47 @@
 {
-	"name": "greenbeli_landingpage",
-	"version": "1.0.0",
-	"description": "greenbeli_landingpage by hoangviethung",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"sass": "node-sass --watch ./ -o ./ --output-style compressed \"node-sass --watch ./scss/pages/ -o ./scss/pages/ --output-style compressed\"",
-		"dev": "npm run sass"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/hoangviethung/nft_tree"
-	},
-	"keywords": [
-		"nft_tree_landingpage"
-	],
-	"author": "hoangviethung",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/hoangviethung/nft_tree/issues"
-	},
-	"homepage": "https://github.com/hoangviethung/nft_tree#readme",
-	"dependencies": {
-		"animate.css": "^4.1.1",
-		"concurrently": "^6.2.0",
-		"node-sass": "^6.0.1",
-		"sass": "^1.39.0",
-		"swiper": "^6.8.1",
-		"wow.js": "^1.2.2"
-	}
+    "name": "greenbelli",
+    "version": "1.0.0",
+    "description": "Hi. I'm Roger. This is theme Greenbeli NFT Game, Yoooo !!!",
+    "author": "Hoàng Việt Hùng (Roger)",
+    "license": "GPL-2.0-or-later",
+    "keywords": [
+        "WordPress",
+        "Theme",
+        "Greenbeli",
+        "Roger"
+    ],
+    "homepage": "https://github.com/hoangviethung/greenbeli.io/blob/main/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hoangviethung/greenbeli.io"
+    },
+    "bugs": {
+        "url": "https://github.com/hoangviethung/greenbeli.io/issues"
+    },
+    "devDependencies": {
+        "@wordpress/scripts": "^12.1.0",
+        "concurrently": "^6.2.1",
+        "dir-archiver": "^1.1.1",
+        "node-sass": "^4.14.1",
+        "rtlcss": "^2.5.0"
+    },
+    "rtlcssConfig": {
+        "options": {
+            "autoRename": false,
+            "autoRenameStrict": false,
+            "blacklist": {},
+            "clean": true,
+            "greedy": false,
+            "processUrls": false,
+            "stringMap": []
+        },
+        "plugins": [],
+        "map": false
+    },
+    "scripts": {
+        "sass:style": "node-sass ./style.scss -o ./ --source-map true --output-style compressed --watch",
+        "sass:pages": "node-sass ./sass/template-pages -o ./css --source-map true --output-style compressed --watch",
+        "sass": "concurrently --kill-others \"npm run sass:style\" \"npm run sass:pages\"",
+        "bundle": "dir-archiver --src . --dest ../_s.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map"
+    }
 }
