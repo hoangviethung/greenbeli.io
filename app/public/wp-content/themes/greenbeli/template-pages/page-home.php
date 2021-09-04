@@ -336,7 +336,7 @@
                     <div class="swiper-slide">
                         <div class="leadership-item">
                             <div class="leadership-img">
-                                <img src=<?php echo get_theme_file_uri("/images/KhoaNguyen.png") ?> alt="Khoa-Nguyen" />
+                                <img src=<?php echo get_theme_file_uri("/images/khoanguyen.png") ?> alt="Khoa-Nguyen" />
                             </div>
                             <div class="leadership-info">
                                 <h3>Khoa Nguyen</h3>
