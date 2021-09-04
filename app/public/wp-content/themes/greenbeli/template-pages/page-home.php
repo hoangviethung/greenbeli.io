@@ -347,7 +347,7 @@
                     <div class="swiper-slide">
                         <div class="leadership-item">
                             <div class="leadership-img">
-                                <img src=<?php echo get_theme_file_uri("/images/KarenyLe.jpg")?> alt="Kareny-Le" />
+                                <img src=<?php echo get_theme_file_uri("/images/karenyle.jpg")?> alt="Kareny-Le" />
                             </div>
                             <div class="leadership-info">
                                 <h3>Kary Le</h3>
@@ -358,7 +358,7 @@
                     <div class="swiper-slide">
                         <div class="leadership-item">
                             <div class="leadership-img">
-                                <img src=<?php echo get_theme_file_uri("/images/MisueTran.jpg") ?> alt="Misue-Tran" />
+                                <img src=<?php echo get_theme_file_uri("/images/misuetran.jpg") ?> alt="Misue-Tran" />
                             </div>
                             <div class="leadership-info">
                                 <h3>Misue Tran</h3>
@@ -369,7 +369,7 @@
                     <div class="swiper-slide">
                         <div class="leadership-item">
                             <div class="leadership-img">
-                                <img src=<?php echo get_theme_file_uri("/images/OrinPhan.jpg") ?> alt="Thu-Phan" />
+                                <img src=<?php echo get_theme_file_uri("/images/orinphan.jpg") ?> alt="Thu-Phan" />
                             </div>
                             <div class="leadership-info">
                                 <h3>Thu Phan</h3>
@@ -380,7 +380,7 @@
                     <div class="swiper-slide">
                         <div class="leadership-item">
                             <div class="leadership-img">
-                                <img src=<?php echo get_theme_file_uri("/images/ThaoNguyen.png") ?> alt="Thao-Nguyen" />
+                                <img src=<?php echo get_theme_file_uri("/images/thaonguyen.png") ?> alt="Thao-Nguyen" />
                             </div>
                             <div class="leadership-info">
                                 <h3>Thao Nguyen</h3>
@@ -391,7 +391,7 @@
                     <div class="swiper-slide">
                         <div class="leadership-item">
                             <div class="leadership-img">
-                                <img src=<?php echo  get_theme_file_uri("/images/SahnBui.jpg") ?> alt="Sahn-Bui" />
+                                <img src=<?php echo  get_theme_file_uri("/images/sahnbui.jpg") ?> alt="Sahn-Bui" />
                             </div>
                             <div class="leadership-info">
                                 <h3>Sahn Bui</h3>
@@ -413,7 +413,7 @@
             <div class="advisors">
                 <div class="advisor-item">
                     <div class="advisor-img">
-                        <img src=<?php echo get_theme_file_uri("/images/VictorTruong.jpg") ?> alt="Victor-Truong" />
+                        <img src=<?php echo get_theme_file_uri("/images/victortruong.jpg") ?> alt="Victor-Truong" />
                     </div>
                     <div class="advisor-info">
                         <h3>Victor Truong</h3>
@@ -427,7 +427,7 @@
                 </div>
                 <div class="advisor-item">
                     <div class="advisor-img">
-                        <img src=<?php echo get_theme_file_uri("./images/Scofield.jpg")?> alt="Victor-Truong" />
+                        <img src=<?php echo get_theme_file_uri("/images/scofield.jpg")?> alt="Victor-Truong" />
                     </div>
                     <div class="advisor-info">
                         <h3>Scofield</h3>
@@ -440,7 +440,7 @@
                 </div>
                 <div class="advisor-item">
                     <div class="advisor-img">
-                        <img src=<?php echo get_theme_file_uri("./images/CrisDTran.jpg")?> alt="CRIS-D.TRAN" />
+                        <img src=<?php echo get_theme_file_uri("/images/crisdtran.jpg")?> alt="CRIS-D.TRAN" />
                     </div>
                     <div class="advisor-info">
                         <h3>Cris D.Tran</h3>
@@ -463,13 +463,13 @@
         </div>
         <div class="partners-investors">
             <div class="item-investor">
-                <img src=<?php echo get_theme_file_uri("images/FIM.png")?> alt="FIM" />
+                <img src=<?php echo get_theme_file_uri("/images/fim.png")?> alt="FIM" />
             </div>
             <div class="item-investor">
-                <img src=<?php echo get_theme_file_uri("images/upfi.png")?> alt="upfi" />
+                <img src=<?php echo get_theme_file_uri("/images/upfi.png")?> alt="upfi" />
             </div>
             <div class="item-investor">
-                <img src=<?php echo get_theme_file_uri("images/BSCStation.png")?> alt="BSCStation" />
+                <img src=<?php echo get_theme_file_uri("/images/bscstation.png")?> alt="BSCStation" />
             </div>
         </div>
     </div>
