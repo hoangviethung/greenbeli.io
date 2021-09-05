@@ -9,7 +9,7 @@
     <div class="container">
         <div class="introduction__wrapper">
             <div class="introduction__image">
-                <img width="500" height="500" src=<?php echo get_theme_file_uri("/images/home_introduction.png") ?>
+                <img width="500" height="500" src=<?php echo get_theme_file_uri("/images/homeintroduction.png") ?>
                     alt="GREEN-BELI-NFT-INTRODUCTION" />
                 <div class="socials">
                     <h3>Join our Airdrop</h3>
@@ -43,17 +43,17 @@
                 </div>
             </div>
             <div class="introduction__content">
-                <h1>Green Beli – Believe in a<span>Green Earth!</span></h1>
-                <p>Green Beli was born in 2019 with a mission to reduce plastic waste, promote the green
-                    lifestyle and raise the community's awareness of environmental protection through media
-                    campaigns.</p>
-                <p>Following and promoting the values and vision of the Green Beli project, Green Beli NFT Game
-                    was born with the mission of using the cryptocurrency platform to raise funds for
-                    environmental protection.</p>
-                <p>The project releases GRBE token and NFT items so that you can own and use them to join the
-                    game. By doing that, you can earn profits, and also join us to build a fund for
-                    environmental activities (30% of the $GRBE Ecosystem Fund will sponsor other organizations
-                    to protect the environment).</p>
+                <h1>Green Beli<span>Play2earn NFT Game & <br> Eco Friendly Project</span></h1>
+                <p>Green Beli was founded in 2019 with a mission to reduce plastic waste, promote a green lifestyle and
+                    raise the community's environmental awareness through media campaigns.
+                </p>
+                <p>As a part of the Green Beli project, the Green Beli play-to-earn NFT Game was conceived of to utilize
+                    the cryptocurrency platform to raise funds for such eco-activities.
+                </p>
+                <p>To join the game, you need to buy and own GRBE tokens and NFT items released exclusively by the
+                    project. Green Beli commits at least 30% of the Green Beli’s Ecosystem Fund to go towards
+                    environmental activities. Accordingly, not only can you make good profits from participating in the
+                    game, you will also indirectly contribute to supporting activities that benefit the environment.</p>
                 <a class="bt bt--md bt--secondary bt--shadow"
                     href="https://docs.google.com/forms/d/e/1FAIpQLSdGdKIdAEwEI6RfPan3R_kyhqfhzb7qAj4yh5dkXjUk6A4waA/viewform"
                     target="_blank" rel="noopener noreferrer">Sign up to claim free $GRBE and NFT Tree</a>

@@ -53,7 +53,10 @@
                         </p>
                         <?php endif; ?>
                     </div>
-
+                    <div class="js-collapse-aside-menu-mobile">
+                        <i class="fal fa-bars"></i>
+                        <i class="fal fa-times"></i>
+                    </div>
                     <nav id="site-navigation" class="main-navigation">
                         <!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
                         <?php esc_html_e( 'Primary Menu', 'greenbeli' ); ?>

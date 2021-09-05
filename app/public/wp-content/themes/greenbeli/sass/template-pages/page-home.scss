@@ -122,7 +122,7 @@
         grid-column-gap: 64px;
         @media (max-width: 1024.98px) {
             grid-column-gap: 32px;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
         }
         @media (max-width: 767.98px) {
             grid-template-columns: 1fr;
@@ -154,13 +154,13 @@
             font-weight: 900;
             word-break: break-word;
             span {
-                font-size: 3.5rem;
+                font-size: 2.75rem;
                 display: block;
             }
-            @media (max-width: 1024.98px) {
+            @media (max-width: 1199.98px) {
                 font-size: 2rem;
                 span {
-                    font-size: 3rem;
+                    font-size: 2.25rem;
                 }
             }
             @media (max-width: 767.98px) {

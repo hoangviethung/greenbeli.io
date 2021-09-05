@@ -28,6 +28,39 @@
     }
 }
 
+.js-collapse-aside-menu-mobile {
+    display: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    width: 24px;
+    height: 24px;
+    > i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.3s all ease-in-out;
+        &:last-child {
+            opacity: 0;
+        }
+    }
+    &.active {
+        > i {
+            &:first-child {
+                opacity: 0;
+            }
+            &:last-child {
+                opacity: 1;
+            }
+        }
+    }
+    @media (max-width: 1024.98px) {
+        display: inline-flex;
+    }
+}
+
 .site-header-wrapper {
     display: flex;
     justify-content: space-between;
