@@ -26,6 +26,10 @@
         width: 100%;
         height: 100%;
     }
+    @media (max-width: 1024.98px) {
+        height: 80px;
+        width: 80px;
+    }
 }
 
 .js-collapse-aside-menu-mobile {
