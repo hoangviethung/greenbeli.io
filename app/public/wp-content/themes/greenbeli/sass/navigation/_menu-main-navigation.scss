@@ -1,9 +1,8 @@
 /** === Main menu === */
-
 .main-navigation {
     @media (max-width: 1024.98px) {
         position: fixed;
-        top: 80px;
+        top: 56px;
         left: 0;
         bottom: 0;
         flex-direction: column;
@@ -13,6 +12,7 @@
         background-color: map-get($map: $theme-colors, $key: neutral-white);
         transform: translateX(-100%);
         transition: all 0.3s ease-in-out;
+        z-index: 500;
         &.active {
             transform: translateX(0);
         }
@@ -30,14 +30,17 @@
 
 #primary-menu {
     display: flex;
+    align-items: center;
     .menu-item {
+        &.bt {
+            > a {
+                color: inherit;
+            }
+        }
         > a {
-            color: map-get($map: $theme-colors, $key: txt-gray);
+            color: map-get($map: $theme-colors, $key: txt-body);
             font-weight: 600;
             transition: all 0.3s ease-in-out;
-            &:hover {
-                color: map-get($map: $theme-colors, $key: txt-body);
-            }
         }
         + .menu-item {
             margin-left: 32px;

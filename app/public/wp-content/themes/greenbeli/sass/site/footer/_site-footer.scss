@@ -1,80 +1,80 @@
 .site-footer {
-	padding: 24px 0;
-	background-color: #5ba37a;
-	border-top: 1px solid
-		rgba(
-			$color: map-get($map: $theme-colors, $key: neutral-black),
-			$alpha: 0.1
-		);
+    padding: 24px 0;
+    background-color: #5ba37a;
+    border-top: 1px solid
+        rgba(
+            $color: map-get($map: $theme-colors, $key: neutral-black),
+            $alpha: 0.1
+        );
 }
 
 .footer-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	grid-gap: 32px;
-	@media (max-width: 575.98px) {
-		display: block;
-	}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-gap: 32px;
+    @media (max-width: 575.98px) {
+        display: block;
+    }
 }
 
 .footer__logo {
-	display: block;
-	max-width: 150px;
-	margin: 0 auto;
-	img {
-		filter: brightness(0) invert(1);
-	}
+    display: block;
+    max-width: 150px;
+    margin: 0 auto;
+    img {
+        filter: brightness(0) invert(1);
+    }
 }
 
 .footer-right {
-	margin-top: 44px;
-	@media (max-width: 575.98px) {
-		margin-top: 24px;
-	}
+    margin-top: 44px;
+    @media (max-width: 575.98px) {
+        margin-top: 24px;
+    }
 }
 
 .footer__title {
-	font-size: 1.125rem;
-	color: map-get($map: $theme-colors, $key: neutral-white);
-	margin-bottom: 16px;
-	text-align: center;
+    font-size: 1.125rem;
+    color: map-get($map: $theme-colors, $key: neutral-white);
+    margin-bottom: 16px;
+    text-align: center;
 }
 
 .footer__socials {
-	display: flex;
-	justify-content: center;
-	> a {
-		display: inline-flex;
-		justify-content: center;
-		align-items: center;
-		width: 32px;
-		height: 32px;
-		border-radius: 8px;
-		color: #5ba37a;
-		background-color: map-get($map: $theme-colors, $key: neutral-white);
-		transition: .3s all ease-in-out;
-		+ a {
-			margin-left: 8px;
-		}
-		&:hover {
-			opacity: 0.8;
-		}
-	}
+    display: flex;
+    justify-content: center;
+    > a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        color: #5ba37a;
+        background-color: map-get($map: $theme-colors, $key: neutral-white);
+        transition: 0.3s all ease-in-out;
+        + a {
+            margin-left: 8px;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 }
 
 .footer__nav {
-	display: flex;
-	justify-content: center;
-	margin-top: 16px;
-	width: 100%;
-	margin-bottom: 24px;
-	> a {
-		display: inline-block;
-		color: map-get($map: $theme-colors, $key: neutral-white);
-		font-weight: 600;
-		+ a {
-			margin-top: 16px;
-		}
-	}
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    width: 100%;
+    margin-bottom: 24px;
+    > a {
+        display: inline-block;
+        color: map-get($map: $theme-colors, $key: neutral-white);
+        font-weight: 600;
+        + a {
+            margin-top: 16px;
+        }
+    }
 }

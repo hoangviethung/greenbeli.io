@@ -1,14 +1,9 @@
 .site-header {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 150px;
+    height: 56px;
     z-index: 302;
     background-color: map-get($map: $theme-colors, $key: neutral-white);
-    @media (max-width: 1024.98px) {
-        height: 80px;
-    }
 }
 
 .site-branding {
@@ -16,8 +11,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 105px;
-    width: 105px;
+    max-width: 120px;
     img {
         height: 100%;
     }
@@ -25,10 +19,6 @@
         display: block;
         width: 100%;
         height: 100%;
-    }
-    @media (max-width: 1024.98px) {
-        height: 80px;
-        width: 80px;
     }
 }
 

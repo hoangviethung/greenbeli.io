@@ -1,221 +1,176 @@
 @import "../variables-site/colors";
 
-.section-before-helper {
+.introduction {
     position: relative;
-    padding-top: 50px;
-    &::before {
-        content: "";
-        bottom: 100%;
-        margin-bottom: -10px;
-        position: absolute;
-        background-size: cover;
-        background-repeat: no-repeat;
-        left: 0;
-        right: 0;
-        z-index: 1;
-        height: 100px;
-        @media (max-width: 575.98px) {
-            content: none;
-        }
-    }
-    &--light {
-        &::before {
-            background-image: url("/wp-content/themes/greenbeli/images/helper/section_bg_primary_light.svg");
-        }
-    }
-    &--dark {
-        &::before {
-            background-image: url("/wp-content/themes/greenbeli/images/helper/section_bg_primary_dark.svg");
-        }
-    }
-    &--darkness {
-        &::before {
-            background-image: url("/wp-content/themes/greenbeli/images/helper/section_bg_primary_darkness.svg");
-        }
-    }
-}
-
-.section-after-helper {
-    position: relative;
-    padding-bottom: 50px;
-    &::after {
-        content: "";
-        position: absolute;
-        background-size: cover;
-        background-repeat: no-repeat;
-        left: 0;
-        right: 0;
-        z-index: 1;
-        height: 100px;
-        top: 100%;
-        margin-top: -10px;
-        transform: rotate(180deg);
-        @media (max-width: 575.98px) {
-            content: none;
-        }
-    }
-    &--light {
-        &::after {
-            background-image: url("/wp-content/themes/greenbeli/images/helper/section_bg_primary_light.svg");
-        }
-    }
-    &--dark {
-        &::after {
-            background-image: url("/wp-content/themes/greenbeli/images/helper/section_bg_primary_dark.svg");
-        }
-    }
-    &--darkness {
-        &::after {
-            background-image: url("/wp-content/themes/greenbeli/images/helper/section_bg_primary_darkness.svg");
-        }
-    }
-}
-
-.socials {
-    h3 {
-        font-size: 1.5rem;
-        text-align: center;
-        margin: 16px 0;
-    }
-    ul {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    li {
-        -ms-flex: 0 0 44px;
-        flex: 0 0 44px;
-        max-width: 44px;
-        height: 44px;
-        background-color: lighten(
-            $color: map-get($map: $theme-colors, $key: primary),
-            $amount: 50%
-        );
-        border-radius: 8px;
-        box-shadow: 0 6px
-            lighten(
-                $color: map-get($map: $theme-colors, $key: primary),
-                $amount: 40%
-            );
-        margin-bottom: 6px;
-        > a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+    .main-slider {
+        height: 520px;
+        .background {
             height: 100%;
-            width: 100%;
-            font-size: 1rem;
-            color: map-get($map: $theme-colors, $key: primary);
-        }
-        + li {
-            margin-left: 16px;
-        }
-    }
-}
-
-.home-introduction {
-    padding: 50px 0;
-    .introduction__wrapper {
-        display: grid;
-        align-items: center;
-        grid-template-columns: 0.8fr 1fr;
-        grid-column-gap: 64px;
-        @media (max-width: 1024.98px) {
-            grid-column-gap: 32px;
-            grid-template-columns: 1fr;
-        }
-        @media (max-width: 767.98px) {
-            grid-template-columns: 1fr;
-        }
-    }
-    .introduction__image {
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-        @media (max-width: 767.98px) {
-            display: grid;
-            align-items: center;
-            margin-right: 0;
-            margin-left: 0;
-            grid-template-columns: 200px auto;
-        }
-        @media (max-width: 575.98px) {
-            grid-template-columns: 1fr;
             img {
-                width: 250px;
-                margin: 0 auto;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+            @media (max-width: 767.98px) {
+                height: 250px;
             }
         }
-    }
-    .introduction__content {
-        h1 {
-            color: map-get($map: $theme-colors, $key: primary);
-            font-size: 2.25rem;
-            font-weight: 900;
-            word-break: break-word;
-            span {
-                font-size: 2.75rem;
-                display: block;
+        .content-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            @media (max-width: 767.98px) {
+                position: static;
+                padding: 16px 0;
+                background-color: lighten(
+                    $color: map-get($map: $theme-colors, $key: primary),
+                    $amount: 45%
+                );
             }
-            @media (max-width: 1199.98px) {
-                font-size: 2rem;
-                span {
-                    font-size: 2.25rem;
+        }
+        .content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 70%;
+            h3 {
+                color: map-get($map: $theme-colors, $key: secondary);
+                font-size: 1.5rem;
+                @media (max-width: 1024.98px) {
+                    font-size: 1.125rem;
+                }
+            }
+            h2 {
+                color: map-get($map: $theme-colors, $key: primary);
+                font-size: 2.75rem;
+                margin-bottom: 8px;
+                font-weight: 900;
+                @media (max-width: 1024.98px) {
+                    font-size: 2rem;
+                }
+                @media (max-width: 767.98px) {
+                    font-size: 1.5rem;
+                }
+            }
+            p {
+                font-size: 1.125rem;
+                @media (max-width: 1024.98px) {
+                    font-size: 1rem;
                 }
             }
             @media (max-width: 767.98px) {
-                font-size: 2rem;
-            }
-            @media (max-width: 575.98px) {
-                font-size: 1.5rem;
+                max-width: 100%;
             }
         }
-        p {
-            font-size: 1rem;
-            + p {
-                margin-top: 16px;
-            }
-            &:nth-last-child(2) {
-                margin-bottom: 24px;
-            }
-            @media (max-width: 767.98px) {
-                font-size: 0.875rem;
-                margin-bottom: 16px;
-            }
-        }
-        @media (max-width: 575.98px) {
-            text-align: center;
+        .content__actions {
             margin-top: 24px;
-            .bt--md {
-                font-size: 0.875rem;
+            .bt {
+                + .bt {
+                    margin-left: 16px;
+                }
             }
+        }
+        @media (max-width: 1199.98px) {
+            height: 400px;
+        }
+        @media (max-width: 767.98px) {
+            height: auto;
         }
     }
-
-    @media (max-width: 1024.98px) {
-        padding: 0;
+    .thumbs-slider {
+        width: 56px;
+        position: absolute;
+        right: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 100;
+        .swiper-slide {
+            cursor: pointer;
+            height: 56px !important;
+            border-radius: 8px;
+            overflow: hidden;
+            &:after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                border: 3px solid transparent;
+                transition: 0.3s all ease-in-out;
+                border-radius: 8px;
+            }
+            &:last-child {
+                margin-bottom: 0 !important;
+            }
+            &.swiper-slide-thumb-active {
+                &:after {
+                    border-color: map-get(
+                        $map: $theme-colors,
+                        $key: neutral-white
+                    );
+                }
+            }
+            @media (max-width: 767.98px) {
+                height: 44px !important;
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+        @media (max-width: 767.98px) {
+            top: 125px;
+            width: 44px;
+            right: 16px;
+        }
     }
 }
 
-.home-features {
+.mystery-seed {
+    padding: 80px 0;
     background-color: lighten(
         $color: map-get($map: $theme-colors, $key: primary),
         $amount: 50%
     );
-    padding: 50px 0;
-    .features__list {
+    .content {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 16px;
-        grid-row-gap: 24px;
-        margin-top: 56px;
+        grid-gap: 32px;
+        grid-template-columns: 0.7fr 1fr;
+        margin-top: 24px;
         @media (max-width: 767.98px) {
-            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 16px;
         }
         @media (max-width: 575.98px) {
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: 1fr;
         }
     }
+    .left {
+        text-align: center;
+        .bt {
+            margin-top: 24px;
+        }
+    }
+    @media (max-width: 1024.98px) {
+        padding: 40px 0;
+    }
+    @media (max-width: 767.98px) {
+        padding: 16px 0;
+    }
+}
+
+.features {
+    background-color: lighten(
+        $color: map-get($map: $theme-colors, $key: primary),
+        $amount: 45%
+    );
+    padding: 80px 0;
     .features__item {
         .item__img {
             img {
@@ -241,7 +196,6 @@
                 }
             }
             p {
-                font-size: 1.125rem;
                 + p {
                     margin-top: 8px;
                 }
@@ -253,165 +207,36 @@
                 }
             }
         }
-        @media (max-width: 767.98px) {
-            grid-column: span 2;
-            &:nth-last-child(1):nth-child(odd) {
-                grid-column: 2 / span 2;
-            }
-        }
-        @media (max-width: 575.98px) {
-            grid-column: span 1;
-            &:nth-last-child(1):nth-child(odd) {
-                grid-column: 1 / span 1;
-            }
-        }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: map-get($map: $theme-colors, $key: primary);
+    }
+    @media (max-width: 1024.98px) {
+        padding: 40px 0;
+    }
+    @media (max-width: 767.98px) {
+        padding: 16px 0;
     }
 }
 
-.home-how-to-play {
+.grbe-token,
+.gameflow {
     background-color: lighten(
         $color: map-get($map: $theme-colors, $key: primary),
         $amount: 50%
     );
-    .steps__wrapper {
-        position: relative;
-        display: flex;
-        margin-right: auto;
-        margin-left: auto;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 56px;
-    }
-
-    .steps__content,
-    .steps__timeline {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .steps__content {
-        .content__item {
-            flex: 0 0 calc(50% - 88px);
-            max-width: calc(50% - 88px);
-            min-height: 208px;
-            &:nth-child(2n + 1) {
-                margin-left: auto;
-            }
-            h4,
-            p {
-                @media (max-width: 767.98px) {
-                    text-align: center;
-                }
-            }
-            h4 {
-                font-size: 2rem;
-                margin-bottom: 8px;
-                @media (max-width: 1024.98px) {
-                    font-size: 1.5rem;
-                }
-            }
-            p {
-                font-size: 1.125rem;
-                @media (max-width: 1024.98px) {
-                    font-size: 0.875rem;
-                }
-                + p {
-                    margin-top: 4px;
-                }
-            }
-            .timeline__item {
-                display: none;
-                margin-bottom: 8px;
-                margin-left: auto;
-                margin-right: auto;
-                @media (max-width: 767.98px) {
-                    display: flex;
-                }
-            }
-            @media (max-width: 767.98px) {
-                flex: 0 0 100%;
-                max-width: 100%;
-                min-height: auto;
-                + .content__item {
-                    margin-top: 24px;
-                }
-            }
-        }
-    }
-
-    .steps__timeline {
-        position: absolute;
-        width: 88px;
-        align-items: center;
-        @media (max-width: 767.98px) {
-            display: none;
-        }
-    }
-
-    .steps__line,
-    .steps__line--js {
-        position: absolute;
-        width: 4px;
-        top: 16px;
-    }
-
-    .steps__line {
-        background-color: #81c439;
-        height: 100%;
-    }
-
-    .timeline__item {
-        font-size: 2.5rem;
-        font-weight: 900;
-        color: map-get($map: $theme-colors, $key: neutral-white);
-        position: relative;
-        z-index: 2;
-        display: flex;
-        width: 80px;
-        height: 128px;
-        margin-bottom: 80px;
-        justify-content: center;
-        align-items: center;
-        background-image: url("/wp-content/themes/greenbeli/images/leaf.png");
-        background-size: cover;
-    }
-
-    .steps__end {
-        position: relative;
-        max-width: 150px;
-        width: 100%;
-        margin-top: -1%;
-        @media (max-width: 767.98px) {
-            display: none;
-        }
-    }
-    .section-main-action {
-        display: flex;
-        justify-content: center;
-        margin-top: 44px;
-    }
-}
-
-.home-grbe-token {
-    background-color: lighten(
-        $color: map-get($map: $theme-colors, $key: primary),
-        $amount: 45%
-    );
-    .section-title {
-        margin-top: 56px;
-        @media (max-width: 575.98px) {
-            margin-top: 0;
-        }
-    }
-    .grbe_token__image {
+    padding: 80px 0;
+    .grbe_token__image,
+    .gameflow__image {
         img {
             display: block;
             margin-left: auto;
             margin-right: auto;
         }
     }
-    .grbe_token__content {
+    .grbe_token__content,
+    .gameflow__content {
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 32px;
@@ -422,13 +247,20 @@
             margin-bottom: 24px;
         }
     }
+    @media (max-width: 1024.98px) {
+        padding: 40px 0;
+    }
+    @media (max-width: 767.98px) {
+        padding: 16px 0;
+    }
 }
 
-.home-percentage {
+.percentage {
     background-color: lighten(
         $color: map-get($map: $theme-colors, $key: primary),
-        $amount: 50%
+        $amount: 45%
     );
+    padding: 80px 0;
     .section-title {
         margin-bottom: 24px;
         h3 {
@@ -473,7 +305,7 @@
                 font-size: 0.875rem;
             }
         }
-        .percentage {
+        .percentage__item {
             color: map-get($map: $theme-colors, $key: neutral-white);
             background-color: var(--data-color);
             font-weight: 700;
@@ -517,80 +349,41 @@
             }
         }
     }
-}
-
-.home-nft-items-coming-soon {
-    background-color: lighten(
-        $color: map-get($map: $theme-colors, $key: primary),
-        $amount: 45%
-    );
-    .section-title {
-        span {
-            @media (max-width: 767.98px) {
-                font-size: 1rem;
-            }
-        }
+    @media (max-width: 1024.98px) {
+        padding: 40px 0;
     }
-    .nft_items_coming_soon__wrapper {
-        position: relative;
-        background-image: url("/wp-content/themes/greenbeli/images/home_nft_items_coming_soon_bg.png");
-        background-size: cover;
-        background-position: center right;
-        background-repeat: no-repeat;
-        height: 700px;
-        @media (max-width: 1024.98px) {
-            height: 400px;
-            background-position: center left;
-        }
-        @media (max-width: 575.98px) {
-            background-position: center center;
-            height: 500px;
-            .bt--lg {
-                font-size: 0.6rem;
-            }
-        }
-    }
-    .nft_items_coming_soon__content {
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        @media (max-width: 1024.98px) {
-            top: 50%;
-            max-width: 80%;
-            width: 100%;
-        }
-        @media (max-width: 575.98px) {
-            top: 0;
-            transform: translate(-50%, 0);
-        }
-    }
-    .nft_items_coming_soon__action {
-        display: flex;
-        justify-content: center;
-        margin-top: 24px;
+    @media (max-width: 767.98px) {
+        padding: 16px 0;
     }
 }
 
-.home-tokenomics {
+.tokenomics {
     background-color: lighten(
         $color: map-get($map: $theme-colors, $key: primary),
         $amount: 50%
     );
+    padding: 80px 0;
     .tokenomics__image {
         img {
             display: block;
             margin: 0 auto;
         }
     }
+    @media (max-width: 1024.98px) {
+        padding: 40px 0;
+    }
+    @media (max-width: 767.98px) {
+        padding: 16px 0;
+    }
 }
 
-.home-stats {
+.stats {
     background-color: lighten(
         $color: map-get($map: $theme-colors, $key: primary),
-        $amount: 45%
+        $amount: 50%
     );
-    .stats {
+    padding: 80px 0;
+    .stats-list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         margin-top: 32px;
@@ -600,7 +393,6 @@
             grid-template-columns: repeat(2, 1fr);
         }
     }
-
     .stat__item {
         p {
             font-size: 1.125rem;
@@ -644,13 +436,20 @@
             width: 100%;
         }
     }
+    @media (max-width: 1024.98px) {
+        padding: 40px 0;
+    }
+    @media (max-width: 767.98px) {
+        padding: 16px 0;
+    }
 }
 
-.home-roadmap {
+.roadmap {
     background-color: lighten(
         $color: map-get($map: $theme-colors, $key: primary),
         $amount: 45%
     );
+    padding: 80px 0;
     .roadmap__item {
         margin-left: auto;
         margin-right: auto;
@@ -771,21 +570,27 @@
             }
         }
     }
+    @media (max-width: 1024.98px) {
+        padding: 40px 0;
+    }
+    @media (max-width: 767.98px) {
+        padding: 16px 0;
+    }
 }
 
-.home-leadership {
+.leadership {
     background-color: lighten(
         $color: map-get($map: $theme-colors, $key: primary),
-        $amount: 50%
+        $amount: 45%
     );
+    padding: 80px 0;
     .leadership-slider {
         .swiper-button-prev,
         .swiper-button-next {
             color: map-get($map: $theme-colors, $key: primary);
         }
     }
-    .leadership-slider,
-    .advisors {
+    .leadership-slider {
         position: relative;
         margin: 24px 0;
     }
@@ -813,38 +618,43 @@
             padding-left: 16px;
         }
     }
-}
-
-.home-advisors {
-    margin-top: 56px;
     .advisors {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 100px;
-        grid-row-gap: 32px;
-
-        @media (max-width: 1024.98px) {
-            grid-column-gap: 56px;
-        }
-        @media (max-width: 767.98px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        @media (max-width: 575.98px) {
-            display: block;
-            grid-template-columns: repeat(1, 1fr);
-            .advisor-item {
-                + .advisor-item {
-                    margin-top: 24px;
+        margin-top: 56px;
+        .advisors-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 100px;
+            grid-row-gap: 32px;
+            margin-top: 24px;
+            @media (max-width: 1024.98px) {
+                grid-column-gap: 56px;
+            }
+            @media (max-width: 767.98px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media (max-width: 575.98px) {
+                display: block;
+                grid-template-columns: repeat(1, 1fr);
+                .advisor-item {
+                    + .advisor-item {
+                        margin-top: 24px;
+                    }
                 }
             }
         }
     }
+    @media (max-width: 1024.98px) {
+        padding: 40px 0;
+    }
+    @media (max-width: 767.98px) {
+        padding: 16px 0;
+    }
 }
 
-.home-partners-investors {
+.partners-investors {
     background-color: #5ba37a;
-    padding-bottom: 50px;
-    .partners-investors {
+    padding: 80px 0;
+    .partners-investors-list {
         display: grid;
         grid-gap: 24px;
         margin-top: 44px;

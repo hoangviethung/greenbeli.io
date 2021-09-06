@@ -1,8 +1,13 @@
 /** === Layout === */
+body {
+    &.no-scroll {
+        overflow-y: hidden;
+    }
+}
+
 #page {
     position: relative;
     width: 100%;
-    padding-top: 150px;
     &:after {
         content: "";
         position: fixed;
@@ -12,8 +17,9 @@
         right: 0;
         opacity: 0;
         visibility: hidden;
-        background-color: rgba($color: #000000, $alpha: 0.16);
+        background-color: rgba($color: #000000, $alpha: 0.8);
         transition: 0.3s all ease-in-out;
+        z-index: 300;
     }
     &.overlay {
         &:after {

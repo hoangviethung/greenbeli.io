@@ -15,8 +15,8 @@
     <div class="container">
         <div class="footer-wrapper">
             <div class="footer-left">
-                <a class="footer__logo" href="index.html">
-                    <img src=<?php echo get_theme_file_uri("/images/logo.png") ?> alt="LOGO-GREEN-BELI-NFT" />
+                <a class="footer__logo" href="/">
+                    <img class="lazyload" src=<?php echo get_theme_file_uri("/images/logo.png") ?> alt="LOGO-GREEN-BELI-NFT" />
                 </a>
                 <div class="footer__nav">
                     <a class="bt bt--secondary bt--shadow" href="https://greenbeli.gitbook.io/green-beli/"

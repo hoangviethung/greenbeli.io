@@ -143,7 +143,7 @@ function greenbeli_scripts() {
 	wp_enqueue_style( 'greenbeli-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'greenbeli-style', 'rtl', 'replace' );
 	wp_enqueue_script( 'greenbeli-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
+    wp_enqueue_script('greenbeli-lazyload', get_template_directory_uri() . '/libs/lazysizes.min.js', array(), _S_VERSION, true);
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
