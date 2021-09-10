@@ -20,6 +20,8 @@
             spaceBetween: 24,
             speed: 1500,
             loop: true,
+            preloadImages: false,
+            lazy: true,
             breakpoints: {
                 575: {
                     slidesPerView: 2,
@@ -41,6 +43,8 @@
             spaceBetween: 24,
             speed: 1500,
             loop: true,
+            preloadImages: false,
+            lazy: true,
             breakpoints: {
                 575: {
                     slidesPerView: 2,
@@ -57,10 +61,11 @@
     }
     function scrollToSection() {
         $("#primary-menu .menu-item a")
-            .not("[target='_blank']")
+            .not("[target='_blank'],[href='#']")
             .on("click", function (e) {
                 e.preventDefault();
                 var aid = $(this).attr("href");
+                console.log(aid);
                 resetAsideMenuMobile();
                 $("html,body").animate(
                     { scrollTop: $(aid).offset().top },

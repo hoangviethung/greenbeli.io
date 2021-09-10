@@ -55,6 +55,9 @@ BASIC PANEL -->
     <a href="javascript:void(0)"><i class="fa fa-minus-square"></i>Setup</a>
 </div>
 <div id="s2-db-basic">
+    <div class="s2-db-basic-title">
+        Database Connection
+    </div>
     <?php if ($is_overwrite_mode) : ?>
         <div id="s2-db-basic-overwrite" class="gray-panel" >
             <b style='color:maroon'>Ready to connect to existing sites database? </b><br/>
@@ -81,7 +84,9 @@ BASIC PANEL -->
                     <?php if ($is_standard_mode) : ?>
                         <option value="create">Create New Database</option>
                     <?php endif; ?>
-                    <option value="empty" selected>Connect and Remove All Data</option>
+                    <option value="empty" selected>Remove All Data</option>
+                    <option value="null" disabled="disabled">Backup and Rename Existing Tables (Pro Only)</option>
+                    <option value="null" disabled="disabled">Manual SQL Execution (Pro Only)</option>
                 </select>
             </td>
         </tr>
@@ -120,26 +125,8 @@ BASIC PANEL -->
         </tr>
     </table>
 </div>
-<br/><br/>
+<br/>
 
-<!-- =========================================
-BASIC: DB VALIDATION -->
-<div class="hdr-sub1 toggle-hdr" data-type="toggle" data-target="#s2-dbtest-area-basic">
-    <a href="javascript:void(0)"><i class="fa fa-minus-square"></i>Validation</a>
-</div>
-
-<div id="s2-dbtest-area-basic" class="s2-dbtest-area hdr-sub1-area">
-    <div id="s2-dbrefresh-basic">
-        <a href="javascript:void(0)" onclick="DUPX.testDBConnect()"><i class="fa fa-sync"></i> Retry Test</a>
-    </div>
-    <div style="clear:both"></div>
-    <div id="s2-dbtest-hb-basic" class="s2-dbtest-hb">
-        <div class="message">
-            To continue click the 'Test Database' button <br/>
-            to	perform a database integrity check.
-        </div>
-    </div>
-</div>
 
 <?php if (!$is_dbtest_mode) : ?>
     <!-- =========================================
@@ -208,9 +195,29 @@ BASIC: DB VALIDATION -->
                 </td>
             </tr>
         </table>
-    </div>
-    <br/><br/>
+    </div><br/>
 <?php endif; ?>
+
+
+
+<!-- =========================================
+BASIC: DB VALIDATION -->
+<div class="hdr-sub1 toggle-hdr" data-type="toggle" data-target="#s2-dbtest-area-basic">
+    <a href="javascript:void(0)"><i class="fa fa-minus-square"></i>Validation</a>
+</div>
+
+<div id="s2-dbtest-area-basic" class="s2-dbtest-area hdr-sub1-area">
+    <div id="s2-dbrefresh-basic">
+        <a href="javascript:void(0)" onclick="DUPX.testDBConnect()"><i class="fa fa-sync"></i> Retry Test</a>
+    </div>
+    <div style="clear:both"></div>
+    <div id="s2-dbtest-hb-basic" class="s2-dbtest-hb">
+        <div class="message">
+            To continue click the 'Test Database' button <br/>
+            to	perform a database integrity check.
+        </div>
+    </div>
+</div>
 
 
 

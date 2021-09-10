@@ -32,6 +32,8 @@ $rand_txt[0] = $atext0;
     div#dup-progress-area h2.title {background-color:#efefef; margin:0px}
     div#dup-progress-area span.label {font-weight:bold}
     div#dup-msg-success {color:#18592A; padding:5px;}
+    div.dup-no-mu {font-size:13px; margin-top:15px; color:maroon; line-height:18px}
+    sup.dup-new {font-weight: normal; color:#b10202; font-size:12px}
 
     div.dup-msg-success-stats{color:#999;margin:5px 0; font-size:11px; line-height:13px}
     div.dup-msg-success-links {margin:20px 5px 5px 5px; font-size: 13px;}
@@ -42,7 +44,7 @@ $rand_txt[0] = $atext0;
     div#dup-create-area-nolink, div#dup-create-area-link {float:right; font-weight: bold; margin: 0; padding: 0}
     div#dup-create-area-link {display:none; margin-left: -5px}
     div#dup-progress-area div.dup-panel-panel { border-top: 1px solid silver}
-    fieldset.download-area {border:2px dashed #dfdfdf; padding:20px 20px 10px 20px; border-radius:9px; margin: auto; width:400px }
+    fieldset.download-area {border:2px dashed #b5b5b5; padding:20px 20px 10px 20px; border-radius:9px; margin: auto; width:400px }
     fieldset.download-area legend {font-weight: bold; font-size: 16px; margin:auto}
     button#dup-btn-installer, button#dup-btn-archive { line-height: 28px; min-width: 150px}
     div.one-click-download {margin:15px 0 10px 0; font-size:16px; font-weight: bold}
@@ -53,7 +55,10 @@ $rand_txt[0] = $atext0;
     button.button {font-size:16px !important; height:30px !important; font-weight:bold; padding:0px 10px 5px 10px !important; min-width: 150px }
     span.dup-btn-size {font-size:11px;font-weight: normal}
     p.get-pro {font-size:13px; color:#222; border-top:1px solid #eeeeee; padding:5px 0 0 0; margin:0; font-style:italic}
-    div.dup-howto-exe {font-size:16px; font-style: italic; font-weight: bold; margin:45px 0 45px 0}
+    div.dup-howto-exe {font-size:14px; font-weight: bold; margin:45px 0 20px 0; line-height:20px;color:#000; padding-top:10px; border-top:1px solid #eee}
+    div.dup-howto-exe-title {font-size:16px; margin:0 0 8px 0; color:#000}
+    div.dup-howto-exe small {font-weight: normal; display: block; margin-top: -2px; font-style: italic; font-size:11px; color:#777 }
+    div.dup-howto-exe a {margin-top: 8px; display: inline-block}
 
     /*HOST TIMEOUT */
     div#dup-msg-error {color:maroon; padding:5px;}
@@ -129,14 +134,13 @@ TOOL BAR: STEPS -->
 			</div>
 
 			<div class="dup-msg-success-stats">
-					<!--b><?php esc_html_e('Name', 'duplicator'); ?>:</b> <span id="data-name-hash"></span><br/-->
 				<b><?php esc_html_e('Process Time', 'duplicator'); ?>:</b> <span id="data-time"></span><br/>
 			</div><br/>
 
 			<!-- DOWNLOAD FILES -->
 			<fieldset class="download-area">
 				<legend>
-					&nbsp; <?php esc_html_e("Download Files", 'duplicator') ?> <i class="fa fa-download"></i> &nbsp;
+					&nbsp; <?php esc_html_e("Download Package Files", 'duplicator') ?> <i class="fa fa-download"></i> &nbsp;
 				</legend>
 				<button id="dup-btn-installer" class="button button-primary button-large" title="<?php esc_attr_e("Click to download installer file", 'duplicator') ?>">
 					<i class="fa fa-bolt fa-sm"></i> <?php esc_html_e("Installer", 'duplicator') ?> &nbsp;
@@ -160,18 +164,39 @@ TOOL BAR: STEPS -->
 				</div>
                 <div style="margin-top:20px; font-size:11px">
                     <span id="dup-click-to-copy-installer-name" class="link-style no-decoration" data-dup-copy-text="<?php echo esc_attr(DUP_Installer::DEFAULT_INSTALLER_FILE_NAME_WITHOUT_HASH); ?>">
-                        <?php
-                        esc_html_e("[Copy Installer Name to Clipboard]", 'duplicator');
-                        ?>
+                        <?php esc_html_e("[Copy Installer Name to Clipboard]", 'duplicator'); ?>
                         <i class="far fa-copy"></i>
                     </span>
                 </div>
 			</fieldset>
 
-			<div class="dup-howto-exe">
-				<a href="https://snapcreek.com/duplicator/docs/quick-start/?utm_source=duplicator_free&utm_medium=wordpress_plugin&utm_content=package_built_install_help&utm_campaign=duplicator_free#quick-040-q" target="_blank">
-					<?php esc_html_e('How do I install this Package?', 'duplicator'); ?>
-				</a>
+            <?php
+                if (is_multisite()) {
+                    echo '<div class="dup-no-mu">';
+                    echo '<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;';
+                    esc_html_e('Notice: Duplicator Lite does not officially support WordPress multisite.', 'duplicator');
+                    echo "<br/>";
+                    esc_html_e('We strongly recommend upgrading to ', 'duplicator');
+                    echo "&nbsp;<i><a href='https://snapcreek.com/duplicator/?utm_source=duplicator_free&utm_medium=wordpress_plugin&utm_content=free_is_mu_warn6&utm_campaign=duplicator_pro' target='_blank'>[" . esc_html__('Duplicator Pro', 'duplicator') . "]</a></i>.";
+                    echo '</div>';
+                }
+            ?>
+
+			<div class="dup-howto-exe">               
+                <div class="dup-howto-exe-title"><?php esc_html_e('How Do I Install This Package?', 'duplicator'); ?></div>
+				<a href="https://snapcreek.com/duplicator/docs/quick-start/?utm_source=duplicator_free&utm_medium=wordpress_plugin&utm_content=package_built_install_help1&utm_campaign=duplicator_free#quick-040-q" target="_blank"><?php esc_html_e('Classic Install Method', 'duplicator'); ?></a><br/>
+                <small><?php esc_html_e("Install to an empty directory on this or a different server.", 'duplicator');?></small>
+
+                &nbsp; &nbsp; 
+                <a href="https://snapcreek.com/duplicator/docs/quick-start/?utm_source=duplicator_free&utm_medium=wordpress_plugin&utm_content=package_built_install_help2&utm_campaign=duplicator_free#quick-043-q" target="_blank">
+                    <?php esc_html_e('Overwrite Install Method', 'duplicator'); ?>
+                </a>
+                <sup class="dup-new"><?php esc_html_e('new', 'duplicator'); ?></sup>
+                <br/>
+                
+                <small><?php esc_html_e("Quickly overwrite an existing WordPress site.", 'duplicator');?></small>                
+                <a href="https://snapcreek.com/duplicator/docs/quick-start/?utm_source=duplicator_free&utm_medium=wordpress_plugin&utm_content=package_built_install_help3&utm_campaign=duplicator_free#install_site" target="_blank"><?php esc_html_e('View All Methods', 'duplicator'); ?></a><br/>
+                <small><?php esc_html_e("Learn about all install types.", 'duplicator');?></small>
 			</div>
 
 			<p class="get-pro">
@@ -284,7 +309,7 @@ TOOL BAR: STEPS -->
 						<li>
 							<?php esc_html_e('Complete the package build and follow the ', 'duplicator'); ?>
 							<?php
-							printf('%s "<a href="https://snapcreek.com/duplicator/docs/quick-start/?utm_source=duplicator_free&utm_medium=wordpress_plugin&utm_content=host_interupt_2partlink&utm_campaign=build_issues#quick-060-q" target="faq">%s</a>".',
+							printf('%s "<a href="https://snapcreek.com/duplicator/docs/quick-start/?utm_source=duplicator_free&utm_medium=wordpress_plugin&utm_content=host_interupt_2partlink2&utm_campaign=build_issues#quick-060-q" target="faq">%s</a>".',
 								'', esc_html__('Quick Start Two-Part Install Instructions', 'duplicator'));
 							?>
 						</li>

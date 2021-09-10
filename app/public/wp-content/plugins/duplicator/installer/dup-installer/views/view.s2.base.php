@@ -56,6 +56,7 @@ $cpnl_supported =  DUPX_U::$on_php_53_plus ? true : false;
 		<input type="hidden" name="view" value="step2" />
 		<input type="hidden" name="csrf_token" value="<?php echo DUPX_CSRF::generate('step2'); ?>">
 		<input type="hidden" name="secure-pass" value="<?php echo DUPX_U::esc_attr($_POST['secure-pass']); ?>" />
+		<input type="hidden" name="secure-archive" value="<?php echo DUPX_U::esc_attr($_POST['secure-archive']); ?>" />		
 		<input type="hidden" name="logging" id="logging" value="<?php echo DUPX_U::esc_attr($_POST['logging']); ?>" />
 		<input type="hidden" name="dbcolsearchreplace"/>
 		<input type="hidden" name="ctrl_action" value="ctrl-step2" />
@@ -64,9 +65,6 @@ $cpnl_supported =  DUPX_U::$on_php_53_plus ? true : false;
 		<input type="hidden" name="exe_safe_mode" id="exe-safe-mode"  value="<?php echo DUPX_U::esc_attr($_POST['exe_safe_mode']); ?>"/>
 		<textarea name="dbtest-response" id="debug-dbtest-json"></textarea>
 	</div>
-
-	<!-- DATABASE CHECKS -->
-	<?php require_once('view.s2.dbtest.php');	?>
 
 	<!-- BASIC TAB -->
 	<div id="s2-basic-pane">
@@ -77,6 +75,9 @@ $cpnl_supported =  DUPX_U::$on_php_53_plus ? true : false;
 	<div id="s2-cpnl-pane" style="display: none">
 		<?php require_once('view.s2.cpnl.lite.php'); ?>
 	</div>
+
+    	<!-- VALIDATION -->
+	<?php require_once('view.s2.dbtest.php');	?>
 </form>
 
 
@@ -125,6 +126,7 @@ Auto Posts to view.step3.php  -->
 		<input type="hidden" name="view" value="step3" />
 		<input type="hidden" name="csrf_token" value="<?php echo DUPX_CSRF::generate('step3'); ?>">
 		<input type="hidden" name="secure-pass" value="<?php echo DUPX_U::esc_attr($_POST['secure-pass']); ?>" />
+		<input type="hidden" name="secure-archive" value="<?php echo DUPX_U::esc_attr($_POST['secure-archive']); ?>" />
 		<input type="hidden" name="logging" id="ajax-logging" />
 		<input type="hidden" name="dbaction" id="ajax-dbaction" />
 		<input type="hidden" name="dbhost" id="ajax-dbhost" />

@@ -19,7 +19,7 @@
                     <img class="lazyload" src=<?php echo get_theme_file_uri("/images/logo.png") ?> alt="LOGO-GREEN-BELI-NFT" />
                 </a>
                 <div class="footer__nav">
-                    <a class="bt bt--secondary bt--shadow" href="https://greenbeli.gitbook.io/green-beli/"
+                    <a class="bt bt--secondary" href="https://greenbeli.gitbook.io/green-beli/"
                         target="_blank" rel="noopener noreferrer">Documents</a>
                 </div>
             </div>

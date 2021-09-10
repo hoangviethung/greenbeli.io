@@ -72,8 +72,9 @@
                 <div class="swiper-slide">
                     <div class="features__item">
                         <div class="item__img">
-                            <img width="160" height="160" src=<?php echo get_theme_file_uri("/images/farming.svg") ?>
-                                alt="FARMING" />
+                            <img class="swiper-lazy" width="160" height="160"
+                                src=<?php echo get_theme_file_uri("/images/farming.svg") ?> alt="FARMING" />
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="item__content">
                             <h4>FARMING</h4>
@@ -86,8 +87,9 @@
                 <div class="swiper-slide">
                     <div class="features__item">
                         <div class="item__img">
-                            <img width="160" height="160" src=<?php echo get_theme_file_uri("/images/gaming.svg") ?>
-                                alt="GAMING" />
+                            <img class="swiper-lazy" width="160" height="160"
+                                src=<?php echo get_theme_file_uri("/images/gaming.svg") ?> alt="GAMING" />
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="item__content">
                             <h4>Gaming (PvP)</h4>
@@ -101,8 +103,9 @@
                 <div class="swiper-slide">
                     <div class="features__item">
                         <div class="item__img">
-                            <img width="160" height="160" src=<?php echo get_theme_file_uri("/images/breeding.svg") ?>
-                                alt="Breeding" />
+                            <img class="swiper-lazy" width="160" height="160"
+                                src=<?php echo get_theme_file_uri("/images/breeding.svg") ?> alt="Breeding" />
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="item__content">
                             <h4>Breeding</h4>
@@ -115,8 +118,9 @@
                 <div class="swiper-slide">
                     <div class="features__item">
                         <div class="item__img">
-                            <img width="160" height="160" src=<?php echo get_theme_file_uri("/images/fusion.svg") ?>
-                                alt="Fusion" />
+                            <img class="swiper-lazy" width="160" height="160"
+                                src=<?php echo get_theme_file_uri("/images/fusion.svg") ?> alt="Fusion" />
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="item__content">
                             <h4>Fusion</h4>
@@ -129,8 +133,9 @@
                 <div class="swiper-slide">
                     <div class="features__item">
                         <div class="item__img">
-                            <img width="160" height="160" src=<?php echo get_theme_file_uri("/images/nft-market.svg") ?>
-                                alt="NFT-Marketplace" />
+                            <img class="swiper-lazy" width="160" height="160"
+                                src=<?php echo get_theme_file_uri("/images/nft-market.svg") ?> alt="NFT-Marketplace" />
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="item__content">
                             <h4>NFT Marketplace</h4>
@@ -188,7 +193,10 @@
             </div>
             <div class="percentage__content">
                 <div class="section-title">
-                    <h3>$GRBE Ecosystem <br />Fund Allocation</h3><span>Green Beli Ecosystem Fund is the total fund obtained from selling in-game assets (seeds, land, and NFT items) and fees charged for activities performed on Green Beli platform, including Breeding, Fusion and marketplace transactions. </span>
+                    <h3>$GRBE Ecosystem <br />Fund Allocation</h3><span>Green Beli Ecosystem Fund is the total fund
+                        obtained from selling in-game assets (seeds, land, and NFT items) and fees charged for
+                        activities performed on Green Beli platform, including Breeding, Fusion and marketplace
+                        transactions. </span>
                 </div>
                 <ul>
                     <li>
@@ -317,8 +325,11 @@
             <h3>Stats</h3>
         </div>
         <div class="stats__content">
-            <p>Green Beli commits at least 30% of the Green Beli Ecosystem Fund to go towards eco-activities. Accordingly, not only can you make good profits from participating in the game, you will also indirectly contribute to supporting activities that benefit the environment.</p>
-            <p>Green Beli takes great pride in successfully building a community of thousands of environment-lovers and spreading the message of environmental protection.</p>
+            <p>Green Beli commits at least 30% of the Green Beli Ecosystem Fund to go towards eco-activities.
+                Accordingly, not only can you make good profits from participating in the game, you will also indirectly
+                contribute to supporting activities that benefit the environment.</p>
+            <p>Green Beli takes great pride in successfully building a community of thousands of environment-lovers and
+                spreading the message of environmental protection.</p>
         </div>
         <div class="stats-list">
             <div class="stat__item wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">
@@ -350,9 +361,9 @@
                 <p>Environmental activities and media campaigns</p>
             </div>
         </div>
-        <div class="stat__actions"><a class="bt bt--md bt--primary bt--shadow"
+        <div class="stat__actions"><a class="bt bt--md bt--primary"
                 href="https://greenbeli.gitbook.io/green-beli/stats" target="_blank" rel="noopener noreferrer">See more
-                our campaigns</a><a class="bt bt--md bt--primary bt--shadow" href="https://www.facebook.com/GreenBeli"
+                our campaigns</a><a class="bt bt--md bt--primary" href="https://www.facebook.com/GreenBeli"
                 target="_blank" rel="noopener noreferrer">Visit our community on Facebook</a></div>
     </div>
 </section>
@@ -367,7 +378,9 @@
                 <div class="swiper-slide">
                     <div class="leadership-item">
                         <div class="leadership-img">
-                            <img src=<?php echo get_theme_file_uri("/images/khoanguyen.png") ?> alt="Khoa-Nguyen" />
+                            <img class="swiper-lazy" src=<?php echo get_theme_file_uri("/images/khoanguyen.png") ?>
+                                alt="Khoa-Nguyen" />
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="leadership-info">
                             <h3>Khoa Nguyen</h3>
@@ -378,7 +391,9 @@
                 <div class="swiper-slide">
                     <div class="leadership-item">
                         <div class="leadership-img">
-                            <img src=<?php echo get_theme_file_uri("/images/karenyle.jpg")?> alt="Kareny-Le" />
+                            <img class="swiper-lazy" src=<?php echo get_theme_file_uri("/images/karenyle.jpg")?>
+                                alt="Kareny-Le" />
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="leadership-info">
                             <h3>Kary Le</h3>
@@ -389,7 +404,9 @@
                 <div class="swiper-slide">
                     <div class="leadership-item">
                         <div class="leadership-img">
-                            <img src=<?php echo get_theme_file_uri("/images/misuetran.jpg") ?> alt="Misue-Tran" />
+                            <img class="swiper-lazy" src=<?php echo get_theme_file_uri("/images/misuetran.jpg") ?>
+                                alt="Misue-Tran" />
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="leadership-info">
                             <h3>Misue Tran</h3>
@@ -400,7 +417,9 @@
                 <div class="swiper-slide">
                     <div class="leadership-item">
                         <div class="leadership-img">
-                            <img src=<?php echo get_theme_file_uri("/images/orinphan.jpg") ?> alt="Thu-Phan" />
+                            <img class="swiper-lazy" src=<?php echo get_theme_file_uri("/images/orinphan.jpg") ?>
+                                alt="Thu-Phan" />
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="leadership-info">
                             <h3>Thu Phan</h3>
@@ -411,7 +430,9 @@
                 <div class="swiper-slide">
                     <div class="leadership-item">
                         <div class="leadership-img">
-                            <img src=<?php echo get_theme_file_uri("/images/thaonguyen.png") ?> alt="Thao-Nguyen" />
+                            <img class="swiper-lazy" src=<?php echo get_theme_file_uri("/images/thaonguyen.png") ?>
+                                alt="Thao-Nguyen" />
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="leadership-info">
                             <h3>Thao Nguyen</h3>
@@ -422,7 +443,9 @@
                 <div class="swiper-slide">
                     <div class="leadership-item">
                         <div class="leadership-img">
-                            <img src=<?php echo  get_theme_file_uri("/images/sahnbui.jpg") ?> alt="Sahn-Bui" />
+                            <img class="swiper-lazy" src=<?php echo  get_theme_file_uri("/images/sahnbui.jpg") ?>
+                                alt="Sahn-Bui" />
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="leadership-info">
                             <h3>Sahn Bui</h3>
