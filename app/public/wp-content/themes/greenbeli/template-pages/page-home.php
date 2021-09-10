@@ -43,7 +43,7 @@
     </div>
 </section>
 <!-- Mystery Seed-->
-<section class="mystery-seed" id="mystery-seed">
+<!-- <section class="mystery-seed" id="mystery-seed">
     <div class="container">
         <div class="section-title ta-c">
             <h3>Mystery Seed</h3>
@@ -60,7 +60,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- Features-->
 <section class="features" id="features">
     <div class="container">
@@ -72,7 +72,7 @@
                 <div class="swiper-slide">
                     <div class="features__item">
                         <div class="item__img">
-                            <img width="160" height="160" src=<?php echo get_theme_file_uri("/images/feature-01.png") ?>
+                            <img width="160" height="160" src=<?php echo get_theme_file_uri("/images/farming.svg") ?>
                                 alt="FARMING" />
                         </div>
                         <div class="item__content">
@@ -86,8 +86,8 @@
                 <div class="swiper-slide">
                     <div class="features__item">
                         <div class="item__img">
-                            <img width="160" height="160" src=<?php echo get_theme_file_uri("/images/feature-02.png") ?>
-                                alt="Gaming" />
+                            <img width="160" height="160" src=<?php echo get_theme_file_uri("/images/gaming.svg") ?>
+                                alt="GAMING" />
                         </div>
                         <div class="item__content">
                             <h4>Gaming (PvP)</h4>
@@ -101,7 +101,7 @@
                 <div class="swiper-slide">
                     <div class="features__item">
                         <div class="item__img">
-                            <img width="160" height="160" src=<?php echo get_theme_file_uri("/images/feature-03.png") ?>
+                            <img width="160" height="160" src=<?php echo get_theme_file_uri("/images/breeding.svg") ?>
                                 alt="Breeding" />
                         </div>
                         <div class="item__content">
@@ -115,7 +115,7 @@
                 <div class="swiper-slide">
                     <div class="features__item">
                         <div class="item__img">
-                            <img width="160" height="160" src=<?php echo get_theme_file_uri("/images/feature-01.png") ?>
+                            <img width="160" height="160" src=<?php echo get_theme_file_uri("/images/fusion.svg") ?>
                                 alt="Fusion" />
                         </div>
                         <div class="item__content">
@@ -129,18 +129,19 @@
                 <div class="swiper-slide">
                     <div class="features__item">
                         <div class="item__img">
-                            <img width="160" height="160" src=<?php echo get_theme_file_uri("/images/feature-01.png") ?>
+                            <img width="160" height="160" src=<?php echo get_theme_file_uri("/images/nft-market.svg") ?>
                                 alt="NFT-Marketplace" />
-                        </div <div class="item__content">
-                        <h4>NFT Marketplace</h4>
-                        <p>Game items can be traded through our in-game NFT marketplace with high liquidity. </p>
+                        </div>
+                        <div class="item__content">
+                            <h4>NFT Marketplace</h4>
+                            <p>Game items can be traded through our in-game NFT marketplace with high liquidity. </p>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    </div>
     </div>
 </section>
 <!-- Game Flow-->
@@ -187,8 +188,7 @@
             </div>
             <div class="percentage__content">
                 <div class="section-title">
-                    <h3>$GRBE Ecosystem <br />Fund Allocation</h3><span>$GRBE Ecosystem Fund is the total amount of
-                        $GRBE obtained after selling NFT Tree and NFT items.</span>
+                    <h3>$GRBE Ecosystem <br />Fund Allocation</h3><span>Green Beli Ecosystem Fund is the total fund obtained from selling in-game assets (seeds, land, and NFT items) and fees charged for activities performed on Green Beli platform, including Breeding, Fusion and marketplace transactions. </span>
                 </div>
                 <ul>
                     <li>
@@ -317,11 +317,8 @@
             <h3>Stats</h3>
         </div>
         <div class="stats__content">
-            <span>As mentioned above, 30% of the tokens in the Ecosystem Fund will be used to fund
-                environmental protection activities globally.</span>
-            <span>Currently, Green Beli has built a large community of environmental lovers, and this is a solid premise
-                to spread the good values of the project. The more players join us, the greener the earth will
-                be.</span>
+            <p>Green Beli commits at least 30% of the Green Beli Ecosystem Fund to go towards eco-activities. Accordingly, not only can you make good profits from participating in the game, you will also indirectly contribute to supporting activities that benefit the environment.</p>
+            <p>Green Beli takes great pride in successfully building a community of thousands of environment-lovers and spreading the message of environmental protection.</p>
         </div>
         <div class="stats-list">
             <div class="stat__item wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">
