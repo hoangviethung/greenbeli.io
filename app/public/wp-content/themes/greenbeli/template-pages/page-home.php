@@ -189,7 +189,7 @@
                     <div class="features__item">
                         <div class="item__img">
                             <img class="swiper-lazy" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/farming.svg") ?> alt="FARMING" />
+                                src=<?php echo get_theme_file_uri("/images/farming.png") ?> alt="FARMING" />
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="item__content">
@@ -204,7 +204,7 @@
                     <div class="features__item">
                         <div class="item__img">
                             <img class="swiper-lazy" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/gaming.svg") ?> alt="GAMING" />
+                                src=<?php echo get_theme_file_uri("/images/gaming.png") ?> alt="GAMING" />
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="item__content">
@@ -235,7 +235,7 @@
                     <div class="features__item">
                         <div class="item__img">
                             <img class="swiper-lazy" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/fusion.svg") ?> alt="Fusion" />
+                                src=<?php echo get_theme_file_uri("/images/fusion.png") ?> alt="Fusion" />
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="item__content">
@@ -250,7 +250,7 @@
                     <div class="features__item">
                         <div class="item__img">
                             <img class="swiper-lazy" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/nft-market.svg") ?> alt="NFT-Marketplace" />
+                                src=<?php echo get_theme_file_uri("/images/nft-market.png") ?> alt="NFT-Marketplace" />
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="item__content">
