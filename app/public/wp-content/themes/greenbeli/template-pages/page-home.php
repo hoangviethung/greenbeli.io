@@ -8,22 +8,23 @@
 <section class="introduction" id="introduction">
     <div class="main-slider swiper-container">
         <div class="swiper-wrapper">
-            <?php for($i=1;$i<4;$i++){ ?>
+            <?php for($i=1;$i<2;$i++){ ?>
             <div class="swiper-slide">
                 <div class="background">
-                    <img src=<?php echo get_theme_file_uri("/images/introduction-01.jpg") ?> alt="GREEN-BELI-BANNER">
+                    <img src=<?php echo get_theme_file_uri("/images/introduction-01.png") ?> alt="GREEN-BELI-BANNER">
                 </div>
                 <div class="content-wrapper">
                     <div class="container h-100">
                         <div class="content">
                             <div class="content__content">
-                                <h3>Play-to-Earn NFT Game</h3>
-                                <h2>Keep calm <br> and plant your NFT Tree!</h2>
-                                <p>Join our environment-loving community and help protect the Earth.</p>
+                                <h3>NFT Game</h3>
+                                <h2>play to earn</h2>
+                                <p>Let’s play and earn GRBE! Join the Meeb world and build a powerful team to battle
+                                    against other players.</p>
                             </div>
                             <div class="content__actions">
-                                <a href="#" class="bt bt--secondary">Play now</a>
-                                <a href="#" class="bt bt--primary">Go to App</a>
+                                <a href="#" class="bt bt--md bt--shadow bt--primary-2-light">Play now</a>
+                                <a href="#" class="bt bt--md bt--shadow bt--secondary">Go to App</a>
                             </div>
                         </div>
                     </div>
@@ -34,9 +35,9 @@
     </div>
     <div class="thumbs-slider swiper-container">
         <div class="swiper-wrapper">
-            <?php for($i=1;$i<4;$i++){ ?>
+            <?php for($i=1;$i<2;$i++){ ?>
             <div class="swiper-slide">
-                <img src=<?php echo get_theme_file_uri("/images/introduction-01.jpg") ?> alt="GREEN-BELI-BANNER">
+                <img src=<?php echo get_theme_file_uri("/images/introduction-01.png") ?> alt="GREEN-BELI-BANNER">
             </div>
             <?php } ?>
         </div>
@@ -51,16 +52,115 @@
         <div class="content">
             <div class="left">
                 <img class="lazyload" width="722" height="738"
-                    src=<?php echo get_theme_file_uri("/images/mistery-seed.jpg") ?> alt="Mystery-Seed" />
+                    src=<?php echo get_theme_file_uri("/images/mistery-seed.png") ?> alt="Mystery-Seed" />
                 <a class="bt bt--primary" href="#" target="_blank" rel="noopener noreferrer">Buy Now!</a>
             </div>
             <div class="right">
                 <img class="lazyload" width="722" height="738"
-                    src=<?php echo get_theme_file_uri("/images/mistery-seed.jpg") ?> alt="Mystery-Seed" />
+                    src=<?php echo get_theme_file_uri("/images/mistery-seed.png") ?> alt="Mystery-Seed" />
             </div>
         </div>
     </div>
 </section> -->
+<!-- CHARACTERS -->
+<section class="characters">
+    <div class="container">
+        <div class="section-title ta-c">
+            <h3>characters</h3>
+        </div>
+        <div class="characters-slider">
+            <div class="left">
+                <div class="thumbs-slider swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide character-item active">
+                            <div class="img">
+                                <img src=<?php echo get_theme_file_uri("/images/fire.png") ?> alt="character-fire">
+                            </div>
+                            <div class="name">Fire</div>
+                        </div>
+                        <div class="swiper-slide character-item">
+                            <div class="img">
+                                <img src=<?php echo get_theme_file_uri("/images/earth.png") ?> alt="character-earth">
+                            </div>
+                            <div class="name">Earth</div>
+                        </div>
+                        <div class="swiper-slide character-item">
+                            <div class="img">
+                                <img src=<?php echo get_theme_file_uri("/images/metal.png") ?> alt="character-metal">
+                            </div>
+                            <div class="name">Metal</div>
+                        </div>
+                        <div class="swiper-slide character-item">
+                            <div class="img">
+                                <img src=<?php echo get_theme_file_uri("/images/water.png") ?> alt="character-water">
+                            </div>
+                            <div class="name">Water</div>
+                        </div>
+                        <div class="swiper-slide character-item">
+                            <div class="img">
+                                <img src=<?php echo get_theme_file_uri("/images/wood.png") ?> alt="character-wood">
+                            </div>
+                            <div class="name">Wood</div>
+                        </div>
+                    </div>
+                    <div class="characters-information">
+                        <div class="item-character-information show">
+                            <h3>Fire</h3>
+                            <p>Growing from coal, possessing the ability to withstand heat, helping regenerate dead
+                                lands.</p>
+                            <p>Anti-fire, coal mining, anti-desertification.</p>
+                        </div>
+                        <div class="item-character-information">
+                            <h3>Earth</h3>
+                            <p>Where there is land, there are trees covering and maintaining fertility.</p>
+                            <p>Preventing domestic waste, harmful microorganisms in the ground, reducing the risk of
+                                earthquakes and landslides.</p>
+                        </div>
+                        <div class="item-character-information">
+                            <h3>Metal</h3>
+                            <p>Growing up from industrial and electronic wastes. The body is nourished by iron.</p>
+                            <p>Preventing humans from using machines to cut forests and exploiting natural resources.
+                            </p>
+                        </div>
+                        <div class="item-character-information">
+                            <h3>Water</h3>
+                            <p>Having strong roots, helping maintain soil structure, reduce the flow rate, keep soil
+                                nutrients, prevent flooding.</p>
+                            <p>Anti-flood, reduce drought, avoid soil erosion.</p>
+                        </div>
+                        <div class="item-character-information">
+                            <h3>Wood</h3>
+                            <p>Having an extraordinary ability to photosynthesize, turning CO2 into Oxygen even in the
+                                dark.</p>
+                            <p>Against air pollution, smog, and noise pollution.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="main-slider swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src=<?php echo get_theme_file_uri("/images/fire.png") ?> alt="fire">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src=<?php echo get_theme_file_uri("/images/earth.png") ?> alt="earth">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src=<?php echo get_theme_file_uri("/images/metal.png") ?> alt="metal">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src=<?php echo get_theme_file_uri("/images/water.png") ?> alt="water">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src=<?php echo get_theme_file_uri("/images/wood.png") ?> alt="character-wood">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- Features-->
 <section class="features" id="features">
     <div class="container">
@@ -92,7 +192,7 @@
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="item__content">
-                            <h4>Gaming (PvP)</h4>
+                            <h4>Gaming</h4>
                             <p>Together we are strong! Train your NFT Trees and team up with other NFT trees to jointly
                                 battle
                                 against the Boss (Fire, Water, Wood, Soil, Metal). Try to win and move up the
@@ -170,10 +270,10 @@
 <section class="grbe-token" id="grbe-token">
     <div class="container">
         <div class="section-title ta-c">
-            <h3>GRBE Token ($GRBE)</h3>
+            <h3>GRBE Token</h3>
         </div>
         <div class="grbe_token__content">
-            <p>$GRBE token is the game token, enabling players to buy in-game assets and enjoy all game features. $GRBE
+            <p>GRBE token is the game token, enabling players to buy in-game assets and enjoy all game features. $GRBE
                 can also be used as rewards and to exchange for NFT Tree. An amount of GRBE tokens will be burnt from
                 time to time to keep the token price’s growth.</p>
         </div>
@@ -193,31 +293,10 @@
             </div>
             <div class="percentage__content">
                 <div class="section-title">
-                    <h3>$GRBE Ecosystem <br />Fund Allocation</h3><span>Green Beli Ecosystem Fund is the total fund
-                        obtained from selling in-game assets (seeds, land, and NFT items) and fees charged for
-                        activities performed on Green Beli platform, including Breeding, Fusion and marketplace
-                        transactions. </span>
+                    <h3>GREEN BELI ECOSYSTEM FUND</h3>
                 </div>
-                <ul>
-                    <li>
-                        <div class="percentage__item" style="--data-color: #4EC48F"><span>50%</span></div>
-                        <div class="txt">
-                            <h4>Burn</h4>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="percentage__item" style="--data-color: #97CD69"><span>20%</span></div>
-                        <div class="txt">
-                            <h4>Operation</h4>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="percentage__item" style="--data-color: #61C46E"><span>30%</span></div>
-                        <div class="txt">
-                            <h4>Sponsor for environmental activities</h4>
-                        </div>
-                    </li>
-                </ul>
+                <p><b>Green Beli Ecosystem Fund</b> is the total fund obtained from selling in-game assets (seeds, land, and NFT items) and fees charged for activities performed on Green Beli platform, including Breeding, Fusion and marketplace transactions.</p>
+                <p>Green Beli commits <b>at least 30%</b> of Green Beli's Ecosystem Fund to go towards activities that benefit the environment.</p>
             </div>
         </div>
     </div>
@@ -361,9 +440,9 @@
                 <p>Environmental activities and media campaigns</p>
             </div>
         </div>
-        <div class="stat__actions"><a class="bt bt--md bt--primary"
+        <div class="stat__actions"><a class="bt bt--shadow bt--md bt--primary-2-light"
                 href="https://greenbeli.gitbook.io/green-beli/stats" target="_blank" rel="noopener noreferrer">See more
-                our campaigns</a><a class="bt bt--md bt--primary" href="https://www.facebook.com/GreenBeli"
+                our campaigns</a><a class="bt bt--shadow bt--md bt--secondary" href="https://www.facebook.com/GreenBeli"
                 target="_blank" rel="noopener noreferrer">Visit our community on Facebook</a></div>
     </div>
 </section>

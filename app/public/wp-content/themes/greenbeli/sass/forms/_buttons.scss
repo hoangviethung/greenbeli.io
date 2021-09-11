@@ -1,76 +1,95 @@
 .bt {
-	display: inline-flex;
-	justify-content: center;
-	padding: 0.44rem 1.22rem;
-	border-radius: 1.22rem;
-	transition: 0.3s all ease-in-out;
-	span {
-		font-weight: 600;
-		display: inline-block;
-		position: relative;
-	}
-	&--primary {
-		color: map-get($map: $theme-colors, $key: neutral-white);
-		background-color: map-get($map: $theme-colors, $key: primary);
-		&.bt--shadow {
-			box-shadow: 0 6px
-				darken(
-					$color: map-get($map: $theme-colors, $key: primary),
-					$amount: 5%
-				);
-			&:active {
-				box-shadow: 0 4px
-					darken(
-						$color: map-get($map: $theme-colors, $key: primary),
-						$amount: 10%
-					);
-			}
-		}
-	}
-	&--secondary {
-		color: map-get($map: $theme-colors, $key: neutral-white);
-		background-color: map-get($map: $theme-colors, $key: secondary);
-		&.bt--shadow {
-			box-shadow: 0 6px
-				darken(
-					$color: map-get($map: $theme-colors, $key: secondary),
-					$amount: 5%
-				);
-			&:active {
-				box-shadow: 0 4px
-					darken(
-						$color: map-get($map: $theme-colors, $key: secondary),
-						$amount: 10%
-					);
-			}
-		}
-	}
-	&--shadow {
-		margin-bottom: 6px;
-		&:active {
-			transform: translateY(4px);
-		}
-	}
-	&--md {
-		font-size: 1rem;
-		padding: 0.88rem 1.88rem;
-		@media (max-width: 575.98px) {
-			font-size: 1rem;
-			padding: 1rem 1.4rem;
-		}
-		@media (max-width: 320.98px) {
-			font-size: 0.875rem;
-		}
-	}
-	&--lg {
-		font-size: 1.125rem;
-		padding: 1.2rem 2rem;
-		@media (max-width: 575.98px) {
-			font-size: 1rem;
-			padding: 1rem 1.4rem;
-		}
-		@media (max-width: 320.98px) {
-			font-size: 0.875rem;
-		}
-	}
+    display: inline-flex;
+    justify-content: center;
+    padding: 0.44rem 1.22rem;
+    border-radius: 1.22rem;
+    transition: 0.3s all ease-in-out;
+    span {
+        font-weight: 600;
+        display: inline-block;
+        position: relative;
+    }
+    &--primary {
+        color: map-get($map: $theme-colors, $key: neutral-white);
+        background-color: map-get($map: $theme-colors, $key: primary);
+        &.bt--shadow {
+            box-shadow: 0 6px
+                darken(
+                    $color: map-get($map: $theme-colors, $key: primary),
+                    $amount: 5%
+                );
+            &:active {
+                box-shadow: 0 4px
+                    darken(
+                        $color: map-get($map: $theme-colors, $key: primary),
+                        $amount: 10%
+                    );
+            }
+        }
+    }
+    &--primary-2-light {
+        color: map-get($map: $theme-colors, $key: neutral-white);
+        background-color: map-get($map: $theme-colors, $key: primary-2-light);
+        &.bt--shadow {
+            box-shadow: 0 6px
+                darken(
+                    $color: map-get($map: $theme-colors, $key: primary-2-light),
+                    $amount: 5%
+                );
+            &:active {
+                box-shadow: 0 4px
+                    darken(
+                        $color:
+                            map-get($map: $theme-colors, $key: primary-2-light),
+                        $amount: 10%
+                    );
+            }
+        }
+    }
+    &--secondary {
+        color: map-get($map: $theme-colors, $key: neutral-white);
+        background-color: map-get($map: $theme-colors, $key: secondary);
+        &.bt--shadow {
+            box-shadow: 0 6px
+                darken(
+                    $color: map-get($map: $theme-colors, $key: secondary),
+                    $amount: 5%
+                );
+            &:active {
+                box-shadow: 0 4px
+                    darken(
+                        $color: map-get($map: $theme-colors, $key: secondary),
+                        $amount: 10%
+                    );
+            }
+        }
+    }
+    &--shadow {
+        margin-bottom: 6px;
+        &:active {
+            transform: translateY(4px);
+        }
+    }
+    &--md {
+        font-size: 1rem;
+        padding: 0.88rem 1.88rem;
+        @media (max-width: 575.98px) {
+            font-size: 1rem;
+            padding: 1rem 1.4rem;
+        }
+        @media (max-width: 320.98px) {
+            font-size: 0.875rem;
+        }
+    }
+    &--lg {
+        font-size: 1.125rem;
+        padding: 1.2rem 2rem;
+        @media (max-width: 575.98px) {
+            font-size: 1rem;
+            padding: 1rem 1.4rem;
+        }
+        @media (max-width: 320.98px) {
+            font-size: 0.875rem;
+        }
+    }
 }

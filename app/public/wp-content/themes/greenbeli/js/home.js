@@ -19,6 +19,9 @@
             slidesPerView: 1,
             spaceBetween: 24,
             speed: 1500,
+            autoplay: {
+                delay: 3000,
+            },
             loop: true,
             preloadImages: false,
             lazy: true,
@@ -42,6 +45,9 @@
             slidesPerView: 1,
             spaceBetween: 24,
             speed: 1500,
+            autoplay: {
+                delay: 3000,
+            },
             loop: true,
             preloadImages: false,
             lazy: true,
@@ -56,6 +62,49 @@
             navigation: {
                 nextEl: ".leadership-slider .swiper-button-next",
                 prevEl: ".leadership-slider .swiper-button-prev",
+            },
+        });
+    }
+    function initSlierCharacters() {
+        const thumbsSwiper = new Swiper(".characters-slider .thumbs-slider", {
+            slidesPerView: 3,
+            spaceBetween: 24,
+            breakpoints: {
+                // 768: {
+                //     slidesPerView: 3,
+                // },
+                576: {
+                    slidesPerView: 5,
+                },
+            },
+            on: {
+                click: function () {
+                    console.log();
+                    if (this.clickedSlide != undefined) {
+                        $(".item-character-information").each(function (
+                            index,
+                            item,
+                        ) {
+                            $(item).removeClass("show");
+                        });
+                        $(".item-character-information")
+                            .eq(this.clickedIndex)
+                            .addClass("show");
+                    }
+                },
+            },
+        });
+        const main = new Swiper(".characters-slider .main-slider", {
+            slidesPerView: 1,
+            watchSlidesProgress: true,
+            observer: true,
+            simulateTouch: false,
+            thumbs: {
+                swiper: thumbsSwiper,
+            },
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true,
             },
         });
     }
@@ -91,6 +140,7 @@
         initSlierIntroduction();
         initSlierFeatures();
         initSlierLeaderShip();
+        initSlierCharacters();
         scrollToSection();
         collapseAsideMenuMobile();
     });
