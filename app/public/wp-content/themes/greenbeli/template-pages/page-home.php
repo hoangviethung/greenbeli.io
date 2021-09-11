@@ -69,92 +69,108 @@
             <h3>characters</h3>
         </div>
         <div class="characters-slider">
-            <div class="left">
-                <div class="thumbs-slider swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide character-item active">
+            <div class="main-slider swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="wrapper">
                             <div class="img">
-                                <img src=<?php echo get_theme_file_uri("/images/fire.png") ?> alt="character-fire">
+                                <img src=<?php echo get_theme_file_uri("/images/fire.png") ?> alt="fire">
                             </div>
-                            <div class="name">Fire</div>
+                            <div class="info">
+                                <h2>Fire</h2>
+                                <p>Growing from coal, possessing the ability to withstand heat, helping regenerate dead
+                                    lands.</p>
+                                <p>Anti-fire, coal mining, anti-desertification.</p>
+                            </div>
                         </div>
-                        <div class="swiper-slide character-item">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="wrapper">
                             <div class="img">
-                                <img src=<?php echo get_theme_file_uri("/images/earth.png") ?> alt="character-earth">
+                                <img src=<?php echo get_theme_file_uri("/images/earth.png") ?> alt="earth">
                             </div>
-                            <div class="name">Earth</div>
+                            <div class="info">
+                                <h2>Earth</h2>
+                                <p>Where there is land, there are trees covering and maintaining fertility.</p>
+                                <p>Preventing domestic waste, harmful microorganisms in the ground, reducing the risk of
+                                    earthquakes and landslides.</p>
+                            </div>
                         </div>
-                        <div class="swiper-slide character-item">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="wrapper">
                             <div class="img">
-                                <img src=<?php echo get_theme_file_uri("/images/metal.png") ?> alt="character-metal">
+                                <img src=<?php echo get_theme_file_uri("/images/metal.png") ?> alt="metal">
                             </div>
-                            <div class="name">Metal</div>
+                            <div class="info">
+                                <h2>Metal</h2>
+                                <p>Growing up from industrial and electronic wastes. The body is nourished by iron.</p>
+                                <p>Preventing humans from using machines to cut forests and exploiting natural
+                                    resources.
+                                </p>
+                            </div>
                         </div>
-                        <div class="swiper-slide character-item">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="wrapper">
                             <div class="img">
-                                <img src=<?php echo get_theme_file_uri("/images/water.png") ?> alt="character-water">
+                                <img src=<?php echo get_theme_file_uri("/images/water.png") ?> alt="water">
                             </div>
-                            <div class="name">Water</div>
+                            <div class="info">
+                                <h2>Water</h2>
+                                <p>Having strong roots, helping maintain soil structure, reduce the flow rate, keep soil
+                                    nutrients, prevent flooding.</p>
+                                <p>Anti-flood, reduce drought, avoid soil erosion.</p>
+                            </div>
                         </div>
-                        <div class="swiper-slide character-item">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="wrapper">
                             <div class="img">
                                 <img src=<?php echo get_theme_file_uri("/images/wood.png") ?> alt="character-wood">
                             </div>
-                            <div class="name">Wood</div>
-                        </div>
-                    </div>
-                    <div class="characters-information">
-                        <div class="item-character-information show">
-                            <h3>Fire</h3>
-                            <p>Growing from coal, possessing the ability to withstand heat, helping regenerate dead
-                                lands.</p>
-                            <p>Anti-fire, coal mining, anti-desertification.</p>
-                        </div>
-                        <div class="item-character-information">
-                            <h3>Earth</h3>
-                            <p>Where there is land, there are trees covering and maintaining fertility.</p>
-                            <p>Preventing domestic waste, harmful microorganisms in the ground, reducing the risk of
-                                earthquakes and landslides.</p>
-                        </div>
-                        <div class="item-character-information">
-                            <h3>Metal</h3>
-                            <p>Growing up from industrial and electronic wastes. The body is nourished by iron.</p>
-                            <p>Preventing humans from using machines to cut forests and exploiting natural resources.
-                            </p>
-                        </div>
-                        <div class="item-character-information">
-                            <h3>Water</h3>
-                            <p>Having strong roots, helping maintain soil structure, reduce the flow rate, keep soil
-                                nutrients, prevent flooding.</p>
-                            <p>Anti-flood, reduce drought, avoid soil erosion.</p>
-                        </div>
-                        <div class="item-character-information">
-                            <h3>Wood</h3>
-                            <p>Having an extraordinary ability to photosynthesize, turning CO2 into Oxygen even in the
-                                dark.</p>
-                            <p>Against air pollution, smog, and noise pollution.</p>
+                            <div class="info">
+                                <h2>Wood</h2>
+                                <p>Having an extraordinary ability to photosynthesize, turning CO2 into Oxygen even in
+                                    the
+                                    dark.</p>
+                                <p>Against air pollution, smog, and noise pollution.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="right">
-                <div class="main-slider swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src=<?php echo get_theme_file_uri("/images/fire.png") ?> alt="fire">
+            <div class="thumbs-slider swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="img">
+                            <img src=<?php echo get_theme_file_uri("/images/fire.png") ?> alt="character-fire">
                         </div>
-                        <div class="swiper-slide">
-                            <img src=<?php echo get_theme_file_uri("/images/earth.png") ?> alt="earth">
+                        <div class="name">Fire</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img">
+                            <img src=<?php echo get_theme_file_uri("/images/earth.png") ?> alt="character-earth">
                         </div>
-                        <div class="swiper-slide">
-                            <img src=<?php echo get_theme_file_uri("/images/metal.png") ?> alt="metal">
+                        <div class="name">Earth</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img">
+                            <img src=<?php echo get_theme_file_uri("/images/metal.png") ?> alt="character-metal">
                         </div>
-                        <div class="swiper-slide">
-                            <img src=<?php echo get_theme_file_uri("/images/water.png") ?> alt="water">
+                        <div class="name">Metal</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img">
+                            <img src=<?php echo get_theme_file_uri("/images/water.png") ?> alt="character-water">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="name">Water</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img">
                             <img src=<?php echo get_theme_file_uri("/images/wood.png") ?> alt="character-wood">
                         </div>
+                        <div class="name">Wood</div>
                     </div>
                 </div>
             </div>
@@ -204,7 +220,7 @@
                     <div class="features__item">
                         <div class="item__img">
                             <img class="swiper-lazy" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/breeding.svg") ?> alt="Breeding" />
+                                src=<?php echo get_theme_file_uri("/images/breeding.png") ?> alt="Breeding" />
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="item__content">
@@ -295,8 +311,11 @@
                 <div class="section-title">
                     <h3>GREEN BELI ECOSYSTEM FUND</h3>
                 </div>
-                <p><b>Green Beli Ecosystem Fund</b> is the total fund obtained from selling in-game assets (seeds, land, and NFT items) and fees charged for activities performed on Green Beli platform, including Breeding, Fusion and marketplace transactions.</p>
-                <p>Green Beli commits <b>at least 30%</b> of Green Beli's Ecosystem Fund to go towards activities that benefit the environment.</p>
+                <p><b>Green Beli Ecosystem Fund</b> is the total fund obtained from selling in-game assets (seeds, land,
+                    and NFT items) and fees charged for activities performed on Green Beli platform, including Breeding,
+                    Fusion and marketplace transactions.</p>
+                <p>Green Beli commits <b>at least 30%</b> of Green Beli's Ecosystem Fund to go towards activities that
+                    benefit the environment.</p>
             </div>
         </div>
     </div>
