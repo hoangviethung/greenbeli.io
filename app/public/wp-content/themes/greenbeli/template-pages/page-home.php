@@ -11,14 +11,17 @@
             <?php for($i=1;$i<2;$i++){ ?>
             <div class="swiper-slide">
                 <div class="background">
-                    <img src=<?php echo get_theme_file_uri("/images/introduction-01.png") ?> alt="GREEN-BELI-BANNER">
+                    <img class="lazyload" width="1920" height="520"
+                        src=<?php echo get_theme_file_uri("/images/introduction-01.png") ?>
+                        alt="GREEN-BELI-PLAY-TO-EARN">
                 </div>
                 <div class="content-wrapper">
                     <div class="container h-100">
                         <div class="content">
                             <div class="content__content">
-                                <h3>NFT Game</h3>
-                                <h2>play to earn</h2>
+                                <h3>GREEN BELI NFT GAME</h3>
+                                <h2>PLAY TO EARN</h2>
+                                <p>Keep calm and plant your NFT Tree!</p>
                                 <p>Let’s play and earn GRBE! Join the Meeb world and build a powerful team to battle
                                     against other players.</p>
                             </div>
@@ -37,33 +40,15 @@
         <div class="swiper-wrapper">
             <?php for($i=1;$i<2;$i++){ ?>
             <div class="swiper-slide">
-                <img src=<?php echo get_theme_file_uri("/images/introduction-01.png") ?> alt="GREEN-BELI-BANNER">
+                <img class="lazyload" width="56" height="56"
+                    src=<?php echo get_theme_file_uri("/images/introduction-01.png") ?> alt="GREEN-BELI-BANNER">
             </div>
             <?php } ?>
         </div>
     </div>
 </section>
-<!-- Mystery Seed-->
-<!-- <section class="mystery-seed" id="mystery-seed">
-    <div class="container">
-        <div class="section-title ta-c">
-            <h3>Mystery Seed</h3>
-        </div>
-        <div class="content">
-            <div class="left">
-                <img class="lazyload" width="722" height="738"
-                    src=<?php echo get_theme_file_uri("/images/mistery-seed.png") ?> alt="Mystery-Seed" />
-                <a class="bt bt--primary" href="#" target="_blank" rel="noopener noreferrer">Buy Now!</a>
-            </div>
-            <div class="right">
-                <img class="lazyload" width="722" height="738"
-                    src=<?php echo get_theme_file_uri("/images/mistery-seed.png") ?> alt="Mystery-Seed" />
-            </div>
-        </div>
-    </div>
-</section> -->
 <!-- CHARACTERS -->
-<section class="characters">
+<section class="characters" id="characters">
     <div class="container">
         <div class="section-title ta-c">
             <h3>characters</h3>
@@ -74,7 +59,8 @@
                     <div class="swiper-slide">
                         <div class="wrapper">
                             <div class="img">
-                                <img src=<?php echo get_theme_file_uri("/images/fire.png") ?> alt="fire">
+                                <img class="lazyload" width="400" height="400"
+                                    src=<?php echo get_theme_file_uri("/images/fire.png") ?> alt="CHARACTER-FIRE">
                             </div>
                             <div class="info">
                                 <h2>Fire</h2>
@@ -87,7 +73,8 @@
                     <div class="swiper-slide">
                         <div class="wrapper">
                             <div class="img">
-                                <img src=<?php echo get_theme_file_uri("/images/earth.png") ?> alt="earth">
+                                <img class="lazyload" width="400" height="400"
+                                    src=<?php echo get_theme_file_uri("/images/earth.png") ?> alt="CHARACTER-EARTH">
                             </div>
                             <div class="info">
                                 <h2>Earth</h2>
@@ -100,7 +87,8 @@
                     <div class="swiper-slide">
                         <div class="wrapper">
                             <div class="img">
-                                <img src=<?php echo get_theme_file_uri("/images/metal.png") ?> alt="metal">
+                                <img class="lazyload" width="400" height="400"
+                                    src=<?php echo get_theme_file_uri("/images/metal.png") ?> alt="CHARACTER-METAL">
                             </div>
                             <div class="info">
                                 <h2>Metal</h2>
@@ -114,7 +102,8 @@
                     <div class="swiper-slide">
                         <div class="wrapper">
                             <div class="img">
-                                <img src=<?php echo get_theme_file_uri("/images/water.png") ?> alt="water">
+                                <img class="lazyload" width="400" height="400"
+                                    src=<?php echo get_theme_file_uri("/images/water.png") ?> alt="CHARACTER-WATER">
                             </div>
                             <div class="info">
                                 <h2>Water</h2>
@@ -127,7 +116,8 @@
                     <div class="swiper-slide">
                         <div class="wrapper">
                             <div class="img">
-                                <img src=<?php echo get_theme_file_uri("/images/wood.png") ?> alt="character-wood">
+                                <img class="lazyload" width="400" height="400"
+                                    src=<?php echo get_theme_file_uri("/images/wood.png") ?> alt="CHARACTER-WOOD">
                             </div>
                             <div class="info">
                                 <h2>Wood</h2>
@@ -144,31 +134,36 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="img">
-                            <img src=<?php echo get_theme_file_uri("/images/fire.png") ?> alt="character-fire">
+                            <img class="lazyload" width="160" height="160"
+                                src=<?php echo get_theme_file_uri("/images/fire.png") ?> alt="CHARACTER-FIRE">
                         </div>
                         <div class="name">Fire</div>
                     </div>
                     <div class="swiper-slide">
                         <div class="img">
-                            <img src=<?php echo get_theme_file_uri("/images/earth.png") ?> alt="character-earth">
+                            <img class="lazyload" width="160" height="160"
+                                src=<?php echo get_theme_file_uri("/images/earth.png") ?> alt="CHARACTER-EARTH">
                         </div>
                         <div class="name">Earth</div>
                     </div>
                     <div class="swiper-slide">
                         <div class="img">
-                            <img src=<?php echo get_theme_file_uri("/images/metal.png") ?> alt="character-metal">
+                            <img class="lazyload" width="160" height="160"
+                                src=<?php echo get_theme_file_uri("/images/metal.png") ?> alt="CHARACTER-METAL">
                         </div>
                         <div class="name">Metal</div>
                     </div>
                     <div class="swiper-slide">
                         <div class="img">
-                            <img src=<?php echo get_theme_file_uri("/images/water.png") ?> alt="character-water">
+                            <img class="lazyload" width="160" height="160"
+                                src=<?php echo get_theme_file_uri("/images/water.png") ?> alt="CHARACTER-WATER">
                         </div>
                         <div class="name">Water</div>
                     </div>
                     <div class="swiper-slide">
                         <div class="img">
-                            <img src=<?php echo get_theme_file_uri("/images/wood.png") ?> alt="character-wood">
+                            <img class="lazyload" width="160" height="160"
+                                src=<?php echo get_theme_file_uri("/images/wood.png") ?> alt="CHARACTER-WOOD">
                         </div>
                         <div class="name">Wood</div>
                     </div>
@@ -189,7 +184,7 @@
                     <div class="features__item">
                         <div class="item__img">
                             <img class="swiper-lazy" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/farming.png") ?> alt="FARMING" />
+                                src=<?php echo get_theme_file_uri("/images/farming.png") ?> alt="FEATURE-FARMING" />
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="item__content">
@@ -204,7 +199,7 @@
                     <div class="features__item">
                         <div class="item__img">
                             <img class="swiper-lazy" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/gaming.png") ?> alt="GAMING" />
+                                src=<?php echo get_theme_file_uri("/images/gaming.png") ?> alt="FEATURE-GAMING" />
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="item__content">
@@ -220,7 +215,7 @@
                     <div class="features__item">
                         <div class="item__img">
                             <img class="swiper-lazy" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/breeding.png") ?> alt="Breeding" />
+                                src=<?php echo get_theme_file_uri("/images/breeding.png") ?> alt="FEATURE-BREEDING" />
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="item__content">
@@ -235,7 +230,7 @@
                     <div class="features__item">
                         <div class="item__img">
                             <img class="swiper-lazy" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/fusion.png") ?> alt="Fusion" />
+                                src=<?php echo get_theme_file_uri("/images/fusion.png") ?> alt="FEATURE-FUSION" />
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="item__content">
@@ -250,7 +245,8 @@
                     <div class="features__item">
                         <div class="item__img">
                             <img class="swiper-lazy" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/nft-market.png") ?> alt="NFT-Marketplace" />
+                                src=<?php echo get_theme_file_uri("/images/nft-market.png") ?>
+                                alt="FEATURE-NFT-MARKETPLACE" />
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="item__content">
@@ -277,7 +273,7 @@
                 stats of your NFT Trees through Breeding and Fusion.</p>
         </div>
         <div class="gameflow__image">
-            <img class="lazyload" width="100%" height="100%"
+            <img class="lazyload" width="1068" height="472"
                 src=<?php echo get_theme_file_uri("/images/game-flow.png") ?> alt="GAME-FLOW" />
         </div>
     </div>
@@ -304,8 +300,8 @@
     <div class="container">
         <div class="percentage__wrapper">
             <div class="percentage__image">
-                <img class="lazyload" width="650" height="780"
-                    src=<?php echo get_theme_file_uri("/images/percentage.png") ?> alt="GRBE-TOKEN" />
+                <img class="lazyload" width="722" height="708"
+                    src=<?php echo get_theme_file_uri("/images/percentage.png") ?> alt="GREEN-BELI-ECOSYSTEM-FUND" />
             </div>
             <div class="percentage__content">
                 <div class="section-title">
@@ -327,7 +323,8 @@
             <h3>Tokenomics</h3>
         </div>
         <div class="tokenomics__image">
-            <img src=<?php echo get_theme_file_uri("/images/tokenomics.png") ?> alt="tokennomics" />
+            <img class="lazyload" width="1068" height="668"
+                src=<?php echo get_theme_file_uri("/images/tokenomics.png") ?> alt="TOKENOMICS" />
         </div>
     </div>
 </section>
@@ -430,30 +427,30 @@
                 spreading the message of environmental protection.</p>
         </div>
         <div class="stats-list">
-            <div class="stat__item wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">
-                <div class="value"><img class="lazyload" src=<?php echo get_theme_file_uri("/images/stats-bg.png") ?>
-                        alt="Stats" />
+            <div class="stat__item">
+                <div class="value"><img class="lazyload" width="186" height="200"
+                        src=<?php echo get_theme_file_uri("/images/stats-bg.png") ?> alt="STATS" />
                     <h4>11M+</h4>
                 </div>
                 <p>TOP Facebook post reach</p>
             </div>
-            <div class="stat__item wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
-                <div class="value"><img class="lazyload" src=<?php echo get_theme_file_uri("/images/stats-bg.png") ?>
-                        alt="Stats" />
+            <div class="stat__item">
+                <div class="value"><img class="lazyload" width="186" height="200"
+                        src=<?php echo get_theme_file_uri("/images/stats-bg.png") ?> alt="STATS" />
                     <h4>80,000+</h4>
                 </div>
                 <p>Followers on Facebook</p>
             </div>
-            <div class="stat__item wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".6s">
-                <div class="value"><img class="lazyload" src=<?php echo get_theme_file_uri("/images/stats-bg.png") ?>
-                        alt="Stats" />
+            <div class="stat__item">
+                <div class="value"><img class="lazyload" width="186" height="200"
+                        src=<?php echo get_theme_file_uri("/images/stats-bg.png") ?> alt="STATS" />
                     <h4>1,000+</h4>
                 </div>
                 <p>Green locations across Asia and worldwide</p>
             </div>
-            <div class="stat__item wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".8s">
-                <div class="value"><img class="lazyload" src=<?php echo get_theme_file_uri("/images/stats-bg.png") ?>
-                        alt="Stats" />
+            <div class="stat__item">
+                <div class="value"><img class="lazyload" width="186" height="200"
+                        src=<?php echo get_theme_file_uri("/images/stats-bg.png") ?> alt="STATS" />
                     <h4>50+</h4>
                 </div>
                 <p>Environmental activities and media campaigns</p>
@@ -476,8 +473,8 @@
                 <div class="swiper-slide">
                     <div class="leadership-item">
                         <div class="leadership-img">
-                            <img class="swiper-lazy" src=<?php echo get_theme_file_uri("/images/khoanguyen.png") ?>
-                                alt="Khoa-Nguyen" />
+                            <img class="swiper-lazy" width="150" height="150"
+                                src=<?php echo get_theme_file_uri("/images/khoanguyen.png") ?> alt="KHOA-NGUYEN" />
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="leadership-info">
@@ -489,8 +486,8 @@
                 <div class="swiper-slide">
                     <div class="leadership-item">
                         <div class="leadership-img">
-                            <img class="swiper-lazy" src=<?php echo get_theme_file_uri("/images/karenyle.jpg")?>
-                                alt="Kareny-Le" />
+                            <img class="swiper-lazy" width="150" height="150"
+                                src=<?php echo get_theme_file_uri("/images/karenyle.jpg")?> alt="KARY-LE" />
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="leadership-info">
@@ -502,8 +499,8 @@
                 <div class="swiper-slide">
                     <div class="leadership-item">
                         <div class="leadership-img">
-                            <img class="swiper-lazy" src=<?php echo get_theme_file_uri("/images/misuetran.jpg") ?>
-                                alt="Misue-Tran" />
+                            <img class="swiper-lazy" width="150" height="150"
+                                src=<?php echo get_theme_file_uri("/images/misuetran.jpg") ?> alt="MISUE-TRAN" />
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="leadership-info">
@@ -515,8 +512,8 @@
                 <div class="swiper-slide">
                     <div class="leadership-item">
                         <div class="leadership-img">
-                            <img class="swiper-lazy" src=<?php echo get_theme_file_uri("/images/orinphan.jpg") ?>
-                                alt="Thu-Phan" />
+                            <img class="swiper-lazy" width="150" height="150"
+                                src=<?php echo get_theme_file_uri("/images/orinphan.jpg") ?> alt="THU-PHAN" />
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="leadership-info">
@@ -528,8 +525,8 @@
                 <div class="swiper-slide">
                     <div class="leadership-item">
                         <div class="leadership-img">
-                            <img class="swiper-lazy" src=<?php echo get_theme_file_uri("/images/thaonguyen.png") ?>
-                                alt="Thao-Nguyen" />
+                            <img class="swiper-lazy" width="150" height="150"
+                                src=<?php echo get_theme_file_uri("/images/thaonguyen.png") ?> alt="THAO-NGUYEN" />
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="leadership-info">
@@ -541,8 +538,8 @@
                 <div class="swiper-slide">
                     <div class="leadership-item">
                         <div class="leadership-img">
-                            <img class="swiper-lazy" src=<?php echo  get_theme_file_uri("/images/sahnbui.jpg") ?>
-                                alt="Sahn-Bui" />
+                            <img class="swiper-lazy" width="150" height="150"
+                                src=<?php echo  get_theme_file_uri("/images/sahnbui.jpg") ?> alt="SAHN-BUI" />
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="leadership-info">
@@ -565,7 +562,7 @@
                 <div class="advisor-item">
                     <div class="advisor-img">
                         <img class="lazyload" src=<?php echo get_theme_file_uri("/images/victortruong.jpg") ?>
-                            alt="Victor-Truong" />
+                            alt="VICTOR-TRUONG" />
                     </div>
                     <div class="advisor-info">
                         <h3>Victor Truong</h3>
@@ -580,7 +577,7 @@
                 <div class="advisor-item">
                     <div class="advisor-img">
                         <img class="lazyload" src=<?php echo get_theme_file_uri("/images/scofield.jpg")?>
-                            alt="Victor-Truong" />
+                            alt="SCOFIELD" />
                     </div>
                     <div class="advisor-info">
                         <h3>Scofield</h3>
@@ -594,7 +591,7 @@
                 <div class="advisor-item">
                     <div class="advisor-img">
                         <img class="lazyload" src=<?php echo get_theme_file_uri("/images/crisdtran.jpg")?>
-                            alt="CRIS-D.TRAN" />
+                            alt="CRIS-D-TRAN" />
                     </div>
                     <div class="advisor-info">
                         <h3>Cris D.Tran</h3>
@@ -617,15 +614,19 @@
         </div>
         <div class="partners-investors-list">
             <div class="item-investor">
-                <img class="lazyload" src=<?php echo get_theme_file_uri("/images/fim.png")?> alt="FIM" />
+                <img width="164" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/fim.png")?>
+                    alt="FIM" />
             </div>
             <div class="item-investor">
-                <img class="lazyload" src=<?php echo get_theme_file_uri("/images/upfi.png")?> alt="upfi" />
+                <img width="165" height="51" class="lazyload" src=<?php echo get_theme_file_uri("/images/upfi.png")?>
+                    alt="upfi" />
             </div>
             <div class="item-investor">
-                <img class="lazyload" src=<?php echo get_theme_file_uri("/images/bscstation.png")?> alt="BSCStation" />
+                <img width="188" height="75" class="lazyload"
+                    src=<?php echo get_theme_file_uri("/images/bscstation.png")?> alt="BSCStation" />
             </div>
         </div>
     </div>
 </section>
 <?php get_footer(); ?>
+<?php get_template_part( 'template-parts/socials-fixed', 'socials-fixed' ); ?>

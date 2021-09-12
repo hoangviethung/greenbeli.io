@@ -135,32 +135,71 @@
     }
 }
 
-.mystery-seed {
-    padding: 80px 0;
+.characters {
     background-color: lighten(
         $color: map-get($map: $theme-colors, $key: primary),
         $amount: 50%
     );
-    .content {
-        display: grid;
-        grid-gap: 32px;
-        grid-template-columns: 0.7fr 1fr;
-        margin-top: 24px;
+    padding: 40px 0;
+    .characters-slider {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .main-slider {
+        padding-bottom: 32px;
+        margin-bottom: 32px;
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+        .wrapper {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr 1fr;
+            @media (max-width: 575.98px) {
+                grid-template-columns: 1fr;
+            }
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 4px;
+            @media (max-width: 575.98px) {
+                text-align: center;
+            }
+        }
+        p {
+            font-size: 1rem;
+            + p {
+                margin-top: 8px;
+            }
+            @media (max-width: 575.98px) {
+                text-align: center;
+                font-size: 0.875rem;
+            }
+        }
         @media (max-width: 767.98px) {
-            grid-gap: 16px;
-        }
-        @media (max-width: 575.98px) {
-            grid-template-columns: 1fr;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
         }
     }
-    .left {
-        text-align: center;
-        .bt {
-            margin-top: 24px;
+    .thumbs-slider {
+        .img {
+            cursor: pointer;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
         }
-    }
-    @media (max-width: 1024.98px) {
-        padding: 40px 0;
+        .name {
+            text-align: center;
+        }
+        .swiper-slide {
+            &:not(.swiper-slide-thumb-active) {
+                .img {
+                    filter: grayscale(100%);
+                }
+            }
+        }
     }
     @media (max-width: 767.98px) {
         padding: 16px 0;
@@ -583,80 +622,10 @@
         padding: 16px 0;
     }
 }
-.characters {
-    background-color: lighten(
-        $color: map-get($map: $theme-colors, $key: primary),
-        $amount: 50%
-    );
-    padding: 40px 0;
-    .characters-slider {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-    .main-slider {
-        padding-bottom: 32px;
-        margin-bottom: 32px;
-        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
-        .wrapper {
-            display: grid;
-            align-items: center;
-            grid-template-columns: 1fr 1fr;
-            @media (max-width: 575.98px) {
-                grid-template-columns: 1fr;
-            }
-        }
-        img {
-            display: block;
-            margin: 0 auto;
-        }
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 4px;
-            @media (max-width: 575.98px) {
-                text-align: center;
-            }
-        }
-        p {
-            font-size: 1rem;
-            + p {
-                margin-top: 8px;
-            }
-            @media (max-width: 575.98px) {
-                text-align: center;
-                font-size: 0.875rem;
-            }
-        }
-        @media (max-width: 767.98px) {
-            padding-bottom: 16px;
-            margin-bottom: 16px;
-        }
-    }
-    .thumbs-slider {
-        .img {
-            cursor: pointer;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-        }
-        .name {
-            text-align: center;
-        }
-        .swiper-slide {
-            &:not(.swiper-slide-thumb-active) {
-                .img {
-                    filter: grayscale(100%);
-                }
-            }
-        }
-    }
-    @media (max-width: 767.98px) {
-        padding: 16px 0;
-    }
-}
 
 .partners-investors {
     background-color: #5ba37a;
-    padding: 80px 0;
+    padding: 40px 0;
     .partners-investors-list {
         display: grid;
         grid-gap: 24px;
@@ -676,5 +645,8 @@
             max-height: 75px;
             width: auto;
         }
+    }
+    @media (max-width: 767.98px) {
+        padding: 16px 0;
     }
 }
