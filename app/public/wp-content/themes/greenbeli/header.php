@@ -32,6 +32,10 @@
         <header id="masthead" class="site-header">
             <div class="container h-100">
                 <div class="site-header-wrapper">
+                <div class="js-collapse-aside-menu-mobile">
+                        <i class="fal fa-bars"></i>
+                        <i class="fal fa-times"></i>
+                    </div>
                     <div class="site-branding">
                         <?php the_custom_logo();
                             if ( is_front_page() && is_home() ) :
@@ -55,10 +59,6 @@
                             <?php echo $greenbeli_description;?>
                         </p>
                         <?php endif; ?>
-                    </div>
-                    <div class="js-collapse-aside-menu-mobile">
-                        <i class="fal fa-bars"></i>
-                        <i class="fal fa-times"></i>
                     </div>
                     <nav id="site-navigation" class="main-navigation">
                         <?php

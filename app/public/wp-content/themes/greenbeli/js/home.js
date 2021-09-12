@@ -90,6 +90,27 @@
             },
         });
     }
+    function initSlierInvestors() {
+        const swiper = new Swiper(".partners-investors-slider", {
+            slidesPerView: 2,
+            slidesPerColumn: 2,
+            slidesPerGroup: 5,
+            slidesPerColumnFill: "row",
+            spaceBetween: 32,
+            autoplay: {
+                delay: 3000,
+            },
+            speed: 3000,
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,
+                },
+                1200: {
+                    slidesPerView: 5,
+                },
+            },
+        });
+    }
     function scrollToSection() {
         $("#primary-menu .menu-item a")
             .not("[target='_blank'],[href='#']")
@@ -123,6 +144,7 @@
         initSlierFeatures();
         initSlierLeaderShip();
         initSlierCharacters();
+        initSlierInvestors();
         scrollToSection();
         collapseAsideMenuMobile();
     });

@@ -3,11 +3,27 @@ body {
     &.no-scroll {
         overflow-y: hidden;
     }
+    &.admin-bar {
+        .site-header {
+            top: 32px;
+            @media (max-width: 782px) {
+                position: absolute;
+                top: 0;
+            }
+        }
+        .main-navigation {
+            top: calc(56px + 32px);
+            @media (max-width: 782px) {
+                top: calc(56px + 46px);
+            }
+        }
+    }
 }
 
 #page {
     position: relative;
     width: 100%;
+    padding-top: 56px;
     &:after {
         content: "";
         position: fixed;

@@ -20,9 +20,9 @@
                         <div class="content">
                             <div class="content__content">
                                 <h3>GREEN BELI NFT GAME</h3>
-                                <h2>PLAY TO EARN</h2>
+                                <h2>The First Eco Friendly GameFi</h2>
                                 <p>Keep calm and plant your NFT Tree!</p>
-                                <p>Join our environment-loving community and help protect the Earth.</p>
+                                <p>Join our Greenbie community and help protect the Earth.</p>
                             </div>
                             <div class="content__actions">
                                 <a href="#" class="bt bt--md bt--shadow bt--primary-2-light">Play now</a>
@@ -188,7 +188,7 @@
                         </div>
                         <div class="item__content">
                             <h4>FARMING</h4>
-                            <p>Enjoy our Solo Farming & Community Farming features and earn more GBRE. Explore our
+                            <p>Enjoy our Solo Farming & Community Farming features and earn more GRBE. Explore our
                                 Beneficiary Garden (no-loss jackpot) and get a chance to become the luckiest farmer.
                                 Remember, higher Farming stats, higher returns.</p>
                         </div>
@@ -203,10 +203,8 @@
                         </div>
                         <div class="item__content">
                             <h4>Gaming</h4>
-                            <p>Together we are strong! Train your NFT Trees and team up with other NFT trees to jointly
-                                battle
-                                against the Boss (Fire, Water, Wood, Soil, Metal). Try to win and move up the
-                                leaderboard!</p>
+                            <p>Together we are strong! Train your NFT Trees and team up with other NFT trees joining
+                                exciting turn-based boss battles. Try to win and move up the leaderboard!</p>
                         </div>
                     </div>
                 </div>
@@ -267,8 +265,8 @@
             <h3>Game Flow</h3>
         </div>
         <div class="gameflow__content">
-            <p>Collect and fuse your own NFT Trees, then join PvP and Farming to earn GBRE. Lands and NFT items that can
-                be bought on NFT Marketplace can help you win more rewards. You can also improve the performance and
+            <p>Collect and fuse your own NFT Trees, then join PvP and Farming to earn GRBE. Lands and NFT items that can
+                be bought on NFT Marketplace will help you win more rewards. You can also improve the performance and
                 stats of your NFT Trees through Breeding and Fusion.</p>
         </div>
         <div class="gameflow__image">
@@ -284,9 +282,9 @@
             <h3>GRBE Token</h3>
         </div>
         <div class="grbe_token__content">
-            <p>GRBE token is the game token, enabling players to buy in-game assets and enjoy all game features. $GRBE
-                can also be used as rewards and to exchange for NFT Tree. An amount of GRBE tokens will be burnt from
-                time to time to keep the token price’s growth.</p>
+            <p>GRBE token is the game native token, enabling players to purchase in-game assets and enjoy all game
+                features. GRBE can also be used as rewards and to exchange for NFT Tree. An amount of GRBE tokens will
+                be burnt from time to time to keep the token price’s growth.</p>
         </div>
         <div class="grbe_token__image">
             <img class="lazyload" width="452" height="274"
@@ -304,11 +302,11 @@
             </div>
             <div class="percentage__content">
                 <div class="section-title">
-                    <h3>GREEN BELI ECOSYSTEM FUND</h3>
+                    <h3>GREEN BELI'S ECOSYSTEM FUND</h3>
                 </div>
-                <p><b>Green Beli Ecosystem Fund</b> is the total fund obtained from selling in-game assets (seeds, land,
-                    and NFT items) and fees charged for activities performed on Green Beli platform, including Breeding,
-                    Fusion and marketplace transactions.</p>
+                <p><b>Green Beli's Ecosystem Fund</b> is the total fund obtained from selling in-game assets (seeds,
+                    land, and NFT items) and fees charged for activities performed on Green Beli platform, including
+                    Breeding, Fusion and marketplace transactions.</p>
                 <p>Green Beli commits <b>at least 30%</b> of Green Beli's Ecosystem Fund to go towards activities that
                     benefit the environment.</p>
             </div>
@@ -416,12 +414,9 @@
 <section class="stats">
     <div class="container">
         <div class="section-title ta-c">
-            <h3>Stats</h3>
+            <h3>STATS</h3>
         </div>
         <div class="stats__content">
-            <p>Green Beli commits at least 30% of the Green Beli Ecosystem Fund to go towards eco-activities.
-                Accordingly, not only can you make good profits from participating in the game, you will also indirectly
-                contribute to supporting activities that benefit the environment.</p>
             <p>Green Beli takes great pride in successfully building a community of thousands of environment-lovers and
                 spreading the message of environmental protection.</p>
         </div>
@@ -429,37 +424,37 @@
             <div class="stat__item">
                 <div class="value"><img class="lazyload" width="186" height="200"
                         src=<?php echo get_theme_file_uri("/images/stats-bg.png") ?> alt="STATS" />
-                    <h4>11M+</h4>
+                    <h4>50,038+</h4>
                 </div>
-                <p>TOP Facebook post reach</p>
+                <p>TELEGRAM MEMBERS</p>
             </div>
             <div class="stat__item">
                 <div class="value"><img class="lazyload" width="186" height="200"
                         src=<?php echo get_theme_file_uri("/images/stats-bg.png") ?> alt="STATS" />
-                    <h4>80,000+</h4>
+                    <h4>34,842+</h4>
                 </div>
-                <p>Followers on Facebook</p>
+                <p>TWITTER FOLLOWERS</p>
             </div>
             <div class="stat__item">
                 <div class="value"><img class="lazyload" width="186" height="200"
                         src=<?php echo get_theme_file_uri("/images/stats-bg.png") ?> alt="STATS" />
-                    <h4>1,000+</h4>
+                    <h4>24,424+</h4>
                 </div>
-                <p>Green locations across Asia and worldwide</p>
+                <p>DISCORD FOLLOWERS</p>
             </div>
             <div class="stat__item">
                 <div class="value"><img class="lazyload" width="186" height="200"
                         src=<?php echo get_theme_file_uri("/images/stats-bg.png") ?> alt="STATS" />
-                    <h4>50+</h4>
+                    <h4>61,056+</h4>
                 </div>
-                <p>Environmental activities and media campaigns</p>
+                <p>FACEBOOK FOLLOWERS</p>
             </div>
         </div>
-        <div class="stat__actions"><a class="bt bt--shadow bt--md bt--primary-2-light"
-                href="https://greenbeli.gitbook.io/green-beli/stats" target="_blank" rel="noopener noreferrer">See more
-                our campaigns</a><a class="bt bt--shadow bt--md bt--secondary" href="https://www.facebook.com/GreenBeli"
-                target="_blank" rel="noopener noreferrer">Visit our community on Facebook</a></div>
-    </div>
+        <div class="stat__actions">
+            <a class="bt bt--shadow bt--md bt--primary-2-light" href="https://greenbeli.gitbook.io/green-beli/stats"
+                target="_blank" rel="noopener noreferrer">See more
+                our campaigns</a>
+        </div>
 </section>
 <!-- Home Leadership-->
 <section class="leadership">
@@ -560,8 +555,8 @@
             <div class="advisors-list">
                 <div class="advisor-item">
                     <div class="advisor-img">
-                        <img width="150" height="150" class="lazyload" src=<?php echo get_theme_file_uri("/images/victortruong.jpg") ?>
-                            alt="VICTOR-TRUONG" />
+                        <img width="150" height="150" class="lazyload"
+                            src=<?php echo get_theme_file_uri("/images/victortruong.jpg") ?> alt="VICTOR-TRUONG" />
                     </div>
                     <div class="advisor-info">
                         <h3>Victor Truong</h3>
@@ -575,8 +570,8 @@
                 </div>
                 <div class="advisor-item">
                     <div class="advisor-img">
-                        <img width="150" height="150" class="lazyload" src=<?php echo get_theme_file_uri("/images/scofield.jpg")?>
-                            alt="SCOFIELD" />
+                        <img width="150" height="150" class="lazyload"
+                            src=<?php echo get_theme_file_uri("/images/scofield.jpg")?> alt="SCOFIELD" />
                     </div>
                     <div class="advisor-info">
                         <h3>Scofield</h3>
@@ -589,8 +584,8 @@
                 </div>
                 <div class="advisor-item">
                     <div class="advisor-img">
-                        <img width="150" height="150" class="lazyload" src=<?php echo get_theme_file_uri("/images/crisdtran.jpg")?>
-                            alt="CRIS-D-TRAN" />
+                        <img width="150" height="150" class="lazyload"
+                            src=<?php echo get_theme_file_uri("/images/crisdtran.jpg")?> alt="CRIS-D-TRAN" />
                     </div>
                     <div class="advisor-info">
                         <h3>Cris D.Tran</h3>
@@ -611,18 +606,88 @@
         <div class="section-title ta-c">
             <h3 class="txt-light">BACKERS & INVESTORS</h3>
         </div>
-        <div class="partners-investors-list">
-            <div class="item-investor">
-                <img width="164" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/fim.png")?>
-                    alt="FIM" />
-            </div>
-            <div class="item-investor">
-                <img width="165" height="51" class="lazyload" src=<?php echo get_theme_file_uri("/images/upfi.png")?>
-                    alt="upfi" />
-            </div>
-            <div class="item-investor">
-                <img width="188" height="75" class="lazyload"
-                    src=<?php echo get_theme_file_uri("/images/bscstation.png")?> alt="BSCStation" />
+        <div class="partners-investors-slider swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img width="188" height="75" class="lazyload"
+                        src=<?php echo get_theme_file_uri("/images/bscstation.png")?> alt="BSCStation" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="188" height="74" class="lazyload"
+                        src=<?php echo get_theme_file_uri("/images/au21.png")?> alt="au21" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="188" height="62" class="lazyload"
+                        src=<?php echo get_theme_file_uri("/images/basic-capital.png")?> alt="Basic-Capital" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="122" height="75" class="lazyload"
+                    src=<?php echo get_theme_file_uri("/images/x21.png")?> alt="x21" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="158" height="75" class="lazyload"
+                    src=<?php echo get_theme_file_uri("/images/m6.png")?> alt="m6" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="194" height="51" class="lazyload"
+                    src=<?php echo get_theme_file_uri("/images/dreamboat.png")?> alt="dreamboat" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="164" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/fim.png")?>
+                        alt="FIM" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="188" height="68" class="lazyload" src=<?php echo get_theme_file_uri("/images/onebit.png")?>
+                        alt="onebit" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="177" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/vb-ventures.png")?>
+                        alt="vb-ventures" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="188" height="71" class="lazyload" src=<?php echo get_theme_file_uri("/images/crypto-ic.png")?>
+                        alt="crypto-ic" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="75" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/titans.png")?>
+                        alt="titans" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="188" height="61" class="lazyload" src=<?php echo get_theme_file_uri("/images/sgn.png")?>
+                        alt="sgn" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="188" height="49" class="lazyload" src=<?php echo get_theme_file_uri("/images/moongems.png")?>
+                        alt="moongems" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="83" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/revel-lab.png")?>
+                        alt="revel-lab" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="188" height="74" class="lazyload" src=<?php echo get_theme_file_uri("/images/astro.png")?>
+                        alt="astro" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="177" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/bas.png")?>
+                        alt="bas" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="188" height="62" class="lazyload" src=<?php echo get_theme_file_uri("/images/ss-ventures.png")?>
+                        alt="ss-ventures" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="155" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/wild-cat.png")?>
+                        alt="wild-cat" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="165" height="51" class="lazyload"
+                        src=<?php echo get_theme_file_uri("/images/upfi.png")?> alt="upfi" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="103" height="75" class="lazyload"
+                        src=<?php echo get_theme_file_uri("/images/df.png")?> alt="df" />
+                </div>
             </div>
         </div>
     </div>

@@ -1,5 +1,7 @@
 .site-header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 56px;
     z-index: 302;
@@ -19,6 +21,9 @@
         display: block;
         width: 100%;
         height: 100%;
+    }
+    @media (max-width: 1024.98px) {
+        margin: 0 auto;
     }
 }
 
@@ -60,4 +65,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    @media (max-width: 1024.98px) {
+        justify-content: flex-start;
+    }
 }
