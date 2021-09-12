@@ -22,8 +22,7 @@
                                 <h3>GREEN BELI NFT GAME</h3>
                                 <h2>PLAY TO EARN</h2>
                                 <p>Keep calm and plant your NFT Tree!</p>
-                                <p>Let’s play and earn GRBE! Join the Meeb world and build a powerful team to battle
-                                    against other players.</p>
+                                <p>Join our environment-loving community and help protect the Earth.</p>
                             </div>
                             <div class="content__actions">
                                 <a href="#" class="bt bt--md bt--shadow bt--primary-2-light">Play now</a>
