@@ -561,7 +561,7 @@
             <div class="advisors-list">
                 <div class="advisor-item">
                     <div class="advisor-img">
-                        <img class="lazyload" src=<?php echo get_theme_file_uri("/images/victortruong.jpg") ?>
+                        <img width="150" height="150" class="lazyload" src=<?php echo get_theme_file_uri("/images/victortruong.jpg") ?>
                             alt="VICTOR-TRUONG" />
                     </div>
                     <div class="advisor-info">
@@ -576,7 +576,7 @@
                 </div>
                 <div class="advisor-item">
                     <div class="advisor-img">
-                        <img class="lazyload" src=<?php echo get_theme_file_uri("/images/scofield.jpg")?>
+                        <img width="150" height="150" class="lazyload" src=<?php echo get_theme_file_uri("/images/scofield.jpg")?>
                             alt="SCOFIELD" />
                     </div>
                     <div class="advisor-info">
@@ -590,7 +590,7 @@
                 </div>
                 <div class="advisor-item">
                     <div class="advisor-img">
-                        <img class="lazyload" src=<?php echo get_theme_file_uri("/images/crisdtran.jpg")?>
+                        <img width="150" height="150" class="lazyload" src=<?php echo get_theme_file_uri("/images/crisdtran.jpg")?>
                             alt="CRIS-D-TRAN" />
                     </div>
                     <div class="advisor-info">
