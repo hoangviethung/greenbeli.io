@@ -8,21 +8,23 @@
 <section class="introduction" id="introduction">
     <div class="main-slider swiper-container">
         <div class="swiper-wrapper">
-            <?php for($i=1;$i<2;$i++){ ?>
             <div class="swiper-slide">
                 <div class="background">
-                    <img class="lazyload" width="1920" height="520"
-                        src=<?php echo get_theme_file_uri("/images/introduction-01.png") ?>
-                        alt="GREEN-BELI-PLAY-TO-EARN">
+                    <?php 
+                        $image = get_field('hero_banner_image');
+                        if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                        width="<?php echo esc_attr($image['width']); ?>"
+                        height="<?php echo esc_attr($image['height']); ?>" />
+                    <?php endif; ?>
                 </div>
                 <div class="content-wrapper">
                     <div class="container h-100">
                         <div class="content">
                             <div class="content__content">
-                                <h3>GREEN BELI NFT GAME</h3>
-                                <h2>The First Eco Friendly GameFi</h2>
-                                <p>Keep calm and plant your NFT Tree!</p>
-                                <p>Join our Greenbie community and help protect the Earth.</p>
+                                <h3><?php echo get_field("hero_banner_text_1") ?></h3>
+                                <h2><?php echo get_field("hero_banner_text_2") ?></h2>
+                                <?php echo get_field("hero_banner_text_3") ?>
                             </div>
                             <div class="content__actions">
                                 <a href="#" class="bt bt--md bt--shadow bt--primary-2-light">Play now</a>
@@ -32,17 +34,19 @@
                     </div>
                 </div>
             </div>
-            <?php } ?>
         </div>
     </div>
     <div class="thumbs-slider swiper-container">
         <div class="swiper-wrapper">
-            <?php for($i=1;$i<2;$i++){ ?>
             <div class="swiper-slide">
-                <img class="lazyload" width="56" height="56"
-                    src=<?php echo get_theme_file_uri("/images/introduction-01.png") ?> alt="GREEN-BELI-BANNER">
+                <?php 
+                        $image = get_field('hero_banner_image');
+                        if( !empty( $image ) ): ?>
+                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                    width="<?php echo esc_attr($image['width']); ?>"
+                    height="<?php echo esc_attr($image['height']); ?>" />
+                <?php endif; ?>
             </div>
-            <?php } ?>
         </div>
     </div>
 </section>
@@ -50,7 +54,7 @@
 <section class="characters" id="characters">
     <div class="container">
         <div class="section-title ta-c">
-            <h3>characters</h3>
+            <h3><?php echo get_field("title_section_characters") ?></h3>
         </div>
         <div class="characters-slider">
             <div class="main-slider swiper-container">
@@ -175,83 +179,32 @@
 <section class="features" id="features">
     <div class="container">
         <div class="section-title ta-c">
-            <h3>Features</h3>
+            <h3><?php echo get_field("title_section_features") ?></h3>
         </div>
         <div class="features-slider swiper-container">
             <div class="swiper-wrapper">
+                <?php
+                for ($i = 1; $i <= 5; $i++) { ?>
                 <div class="swiper-slide">
                     <div class="features__item">
                         <div class="item__img">
-                            <img class="swiper-lazy" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/farming.png") ?> alt="FEATURE-FARMING" />
+                            <?php 
+                            $image = get_field("image_feature_".$i);
+                            if( !empty( $image ) ): ?>
+                            <img class="swiper-lazy" src="<?php echo esc_url($image['url']); ?>"
+                                alt="<?php echo esc_attr($image['alt']); ?>"
+                                width="<?php echo esc_attr($image['width']); ?>"
+                                height="<?php echo esc_attr($image['height']); ?>" />
+                            <?php endif; ?>
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="item__content">
-                            <h4>FARMING</h4>
-                            <p>Enjoy our Solo Farming & Community Farming features and earn more GRBE. Explore our
-                                Beneficiary Garden (no-loss jackpot) and get a chance to become the luckiest farmer.
-                                Remember, higher Farming stats, higher returns.</p>
+                            <h4><?php echo get_field("title_feature_".$i) ?></h4>
+                            <p><?php echo get_field("content_feature_".$i) ?></p>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="features__item">
-                        <div class="item__img">
-                            <img class="swiper-lazy" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/gaming.png") ?> alt="FEATURE-GAMING" />
-                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                        </div>
-                        <div class="item__content">
-                            <h4>Gaming</h4>
-                            <p>Together we are strong! Train your NFT Trees and team up with other NFT trees joining
-                                exciting turn-based boss battles. Try to win and move up the leaderboard!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="features__item">
-                        <div class="item__img">
-                            <img class="swiper-lazy" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/breeding.png") ?> alt="FEATURE-BREEDING" />
-                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                        </div>
-                        <div class="item__content">
-                            <h4>Breeding</h4>
-                            <p>Breed new NFT Trees in the Regeneration Pool. The regenerating rate is random and depends
-                                on the
-                                balance of the NFT’s ecosystem.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="features__item">
-                        <div class="item__img">
-                            <img class="swiper-lazy" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/fusion.png") ?> alt="FEATURE-FUSION" />
-                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                        </div>
-                        <div class="item__content">
-                            <h4>Fusion</h4>
-                            <p>Increase your NFT Tree's star level by Fusion feature. The level of the star determines
-                                the
-                                damages the NFT Tree can make and the rewards it can receive.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="features__item">
-                        <div class="item__img">
-                            <img class="swiper-lazy" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/nft-market.png") ?>
-                                alt="FEATURE-NFT-MARKETPLACE" />
-                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                        </div>
-                        <div class="item__content">
-                            <h4>NFT Marketplace</h4>
-                            <p>Game items can be traded through our in-game NFT marketplace with high liquidity. </p>
-                        </div>
-                    </div>
-                </div>
+                <?php }?>
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -262,16 +215,18 @@
 <section class="gameflow" id="gameflow">
     <div class="container">
         <div class="section-title ta-c">
-            <h3>Game Flow</h3>
+            <h3><?php echo get_field("title_section_gameflow") ?></h3>
         </div>
         <div class="gameflow__content">
-            <p>Collect and fuse your own NFT Trees, then join PvP and Farming to earn GRBE. Lands and NFT items that can
-                be bought on NFT Marketplace will help you win more rewards. You can also improve the performance and
-                stats of your NFT Trees through Breeding and Fusion.</p>
+            <p><?php echo get_field("content_section_gameflow") ?></p>
         </div>
         <div class="gameflow__image">
-            <img class="lazyload" width="1068" height="472"
-                src=<?php echo get_theme_file_uri("/images/game-flow.png") ?> alt="GAME-FLOW" />
+            <?php 
+            $image = get_field("image_section_gameflow");
+            if( !empty( $image ) ): ?>
+            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
+            <?php endif; ?>
         </div>
     </div>
 </section>
@@ -621,72 +576,72 @@
                         src=<?php echo get_theme_file_uri("/images/basic-capital.png")?> alt="Basic-Capital" />
                 </div>
                 <div class="swiper-slide">
-                    <img width="122" height="75" class="lazyload"
-                    src=<?php echo get_theme_file_uri("/images/x21.png")?> alt="x21" />
+                    <img width="122" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/x21.png")?>
+                        alt="x21" />
                 </div>
                 <div class="swiper-slide">
-                    <img width="158" height="75" class="lazyload"
-                    src=<?php echo get_theme_file_uri("/images/m6.png")?> alt="m6" />
+                    <img width="158" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/m6.png")?>
+                        alt="m6" />
                 </div>
                 <div class="swiper-slide">
                     <img width="194" height="51" class="lazyload"
-                    src=<?php echo get_theme_file_uri("/images/dreamboat.png")?> alt="dreamboat" />
+                        src=<?php echo get_theme_file_uri("/images/dreamboat.png")?> alt="dreamboat" />
                 </div>
                 <div class="swiper-slide">
                     <img width="164" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/fim.png")?>
                         alt="FIM" />
                 </div>
                 <div class="swiper-slide">
-                    <img width="188" height="68" class="lazyload" src=<?php echo get_theme_file_uri("/images/onebit.png")?>
-                        alt="onebit" />
+                    <img width="188" height="68" class="lazyload"
+                        src=<?php echo get_theme_file_uri("/images/onebit.png")?> alt="onebit" />
                 </div>
                 <div class="swiper-slide">
-                    <img width="177" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/vb-ventures.png")?>
-                        alt="vb-ventures" />
+                    <img width="177" height="75" class="lazyload"
+                        src=<?php echo get_theme_file_uri("/images/vb-ventures.png")?> alt="vb-ventures" />
                 </div>
                 <div class="swiper-slide">
-                    <img width="188" height="71" class="lazyload" src=<?php echo get_theme_file_uri("/images/crypto-ic.png")?>
-                        alt="crypto-ic" />
+                    <img width="188" height="71" class="lazyload"
+                        src=<?php echo get_theme_file_uri("/images/crypto-ic.png")?> alt="crypto-ic" />
                 </div>
                 <div class="swiper-slide">
-                    <img width="75" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/titans.png")?>
-                        alt="titans" />
+                    <img width="75" height="75" class="lazyload"
+                        src=<?php echo get_theme_file_uri("/images/titans.png")?> alt="titans" />
                 </div>
                 <div class="swiper-slide">
                     <img width="188" height="61" class="lazyload" src=<?php echo get_theme_file_uri("/images/sgn.png")?>
                         alt="sgn" />
                 </div>
                 <div class="swiper-slide">
-                    <img width="188" height="49" class="lazyload" src=<?php echo get_theme_file_uri("/images/moongems.png")?>
-                        alt="moongems" />
+                    <img width="188" height="49" class="lazyload"
+                        src=<?php echo get_theme_file_uri("/images/moongems.png")?> alt="moongems" />
                 </div>
                 <div class="swiper-slide">
-                    <img width="83" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/revel-lab.png")?>
-                        alt="revel-lab" />
+                    <img width="83" height="75" class="lazyload"
+                        src=<?php echo get_theme_file_uri("/images/revel-lab.png")?> alt="revel-lab" />
                 </div>
                 <div class="swiper-slide">
-                    <img width="188" height="74" class="lazyload" src=<?php echo get_theme_file_uri("/images/astro.png")?>
-                        alt="astro" />
+                    <img width="188" height="74" class="lazyload"
+                        src=<?php echo get_theme_file_uri("/images/astro.png")?> alt="astro" />
                 </div>
                 <div class="swiper-slide">
                     <img width="177" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/bas.png")?>
                         alt="bas" />
                 </div>
                 <div class="swiper-slide">
-                    <img width="188" height="62" class="lazyload" src=<?php echo get_theme_file_uri("/images/ss-ventures.png")?>
-                        alt="ss-ventures" />
+                    <img width="188" height="62" class="lazyload"
+                        src=<?php echo get_theme_file_uri("/images/ss-ventures.png")?> alt="ss-ventures" />
                 </div>
                 <div class="swiper-slide">
-                    <img width="155" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/wild-cat.png")?>
-                        alt="wild-cat" />
+                    <img width="155" height="75" class="lazyload"
+                        src=<?php echo get_theme_file_uri("/images/wild-cat.png")?> alt="wild-cat" />
                 </div>
                 <div class="swiper-slide">
                     <img width="165" height="51" class="lazyload"
                         src=<?php echo get_theme_file_uri("/images/upfi.png")?> alt="upfi" />
                 </div>
                 <div class="swiper-slide">
-                    <img width="103" height="75" class="lazyload"
-                        src=<?php echo get_theme_file_uri("/images/df.png")?> alt="df" />
+                    <img width="103" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/df.png")?>
+                        alt="df" />
                 </div>
             </div>
         </div>
