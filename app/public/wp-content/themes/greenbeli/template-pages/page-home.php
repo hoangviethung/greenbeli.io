@@ -185,11 +185,12 @@
             <div class="swiper-wrapper">
                 <?php
                 for ($i = 1; $i <= 5; $i++) { ?>
+                <?php $feature_item = get_field("feature_item_".$i); ?>
                 <div class="swiper-slide">
                     <div class="features__item">
                         <div class="item__img">
                             <?php 
-                            $image = get_field("image_feature_".$i);
+                            $image = $feature_item["image"];
                             if( !empty( $image ) ): ?>
                             <img class="swiper-lazy" src="<?php echo esc_url($image['url']); ?>"
                                 alt="<?php echo esc_attr($image['alt']); ?>"
@@ -199,8 +200,8 @@
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="item__content">
-                            <h4><?php echo get_field("title_feature_".$i) ?></h4>
-                            <p><?php echo get_field("content_feature_".$i) ?></p>
+                            <h4><?php echo $feature_item["title"] ?></h4>
+                            <p><?php echo $feature_item["content"] ?></p>
                         </div>
                     </div>
                 </div>
@@ -234,36 +235,39 @@
 <section class="grbe-token" id="grbe-token">
     <div class="container">
         <div class="section-title ta-c">
-            <h3>GRBE Token</h3>
+            <h3><?php echo get_field("title_section_grbe_token") ?></h3>
         </div>
         <div class="grbe_token__content">
-            <p>GRBE token is the game native token, enabling players to purchase in-game assets and enjoy all game
-                features. GRBE can also be used as rewards and to exchange for NFT Tree. An amount of GRBE tokens will
-                be burnt from time to time to keep the token price’s growth.</p>
+            <p><?php echo get_field("conten_section_grbe_token") ?></p>
         </div>
         <div class="grbe_token__image">
-            <img class="lazyload" width="452" height="274"
-                src=<?php echo get_theme_file_uri("/images/grbe-token.png") ?> alt="GRBE-TOKEN" />
+            <?php 
+            $image = get_field("image_section_rgbe_token");
+            if( !empty( $image ) ): ?>
+            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
+            <?php endif; ?>
         </div>
     </div>
 </section>
-<!-- Percentage-->
-<section class="percentage" id="percentage">
+<!-- ECOSYSTEM FUND -->
+<section class="ecosystem-fund" id="ecosystem-fund">
     <div class="container">
-        <div class="percentage__wrapper">
-            <div class="percentage__image">
-                <img class="lazyload" width="722" height="708"
-                    src=<?php echo get_theme_file_uri("/images/percentage.png") ?> alt="GREEN-BELI-ECOSYSTEM-FUND" />
+        <div class="ecosystem_fund__wrapper">
+            <div class="ecosystem_fund__image">
+                <?php 
+                $image = get_field("image_section_ecosystem_fund");
+                if( !empty( $image ) ): ?>
+                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                    width="<?php echo esc_attr($image['width']); ?>"
+                    height="<?php echo esc_attr($image['height']); ?>" />
+                <?php endif; ?>
             </div>
-            <div class="percentage__content">
+            <div class="ecosystem_fund__content">
                 <div class="section-title">
-                    <h3>GREEN BELI'S ECOSYSTEM FUND</h3>
+                    <h3><?php echo get_field("title_section_ecosystem_fund") ?></h3>
                 </div>
-                <p><b>Green Beli's Ecosystem Fund</b> is the total fund obtained from selling in-game assets (seeds,
-                    land, and NFT items) and fees charged for activities performed on Green Beli platform, including
-                    Breeding, Fusion and marketplace transactions.</p>
-                <p>Green Beli commits <b>at least 30%</b> of Green Beli's Ecosystem Fund to go towards activities that
-                    benefit the environment.</p>
+                <?php echo get_field("content_section_ecosystem_fund") ?>
             </div>
         </div>
     </div>
@@ -272,11 +276,15 @@
 <section class="tokenomics" id="tokenomics">
     <div class="container">
         <div class="section-title ta-c">
-            <h3>Tokenomics</h3>
+            <h3><?php echo get_field("title_section_tokenomics") ?></h3>
         </div>
         <div class="tokenomics__image">
-            <img class="lazyload" width="1068" height="668"
-                src=<?php echo get_theme_file_uri("/images/tokenomics.png") ?> alt="TOKENOMICS" />
+            <?php 
+            $image = get_field("image_section_tokenomics");
+            if( !empty( $image ) ): ?>
+            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
+            <?php endif; ?>
         </div>
     </div>
 </section>
@@ -376,34 +384,23 @@
                 spreading the message of environmental protection.</p>
         </div>
         <div class="stats-list">
+            <?php
+            for ($i = 1; $i <= 4; $i++) { ?>
             <div class="stat__item">
-                <div class="value"><img class="lazyload" width="186" height="200"
-                        src=<?php echo get_theme_file_uri("/images/stats-bg.png") ?> alt="STATS" />
-                    <h4>50,038+</h4>
+                <?php $stat_item = get_field("stats_items_".$i); ?>
+                <div class="value">
+                    <?php 
+                    $image = get_field("stats_item_background");
+                    if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                        width="<?php echo esc_attr($image['width']); ?>"
+                        height="<?php echo esc_attr($image['height']); ?>" />
+                    <?php endif; ?>
+                    <h4><?php echo $stat_item['value_item'] ?></h4>
                 </div>
-                <p>TELEGRAM MEMBERS</p>
+                <p><?php echo $stat_item['name_item'] ?></p>
             </div>
-            <div class="stat__item">
-                <div class="value"><img class="lazyload" width="186" height="200"
-                        src=<?php echo get_theme_file_uri("/images/stats-bg.png") ?> alt="STATS" />
-                    <h4>34,842+</h4>
-                </div>
-                <p>TWITTER FOLLOWERS</p>
-            </div>
-            <div class="stat__item">
-                <div class="value"><img class="lazyload" width="186" height="200"
-                        src=<?php echo get_theme_file_uri("/images/stats-bg.png") ?> alt="STATS" />
-                    <h4>24,424+</h4>
-                </div>
-                <p>DISCORD FOLLOWERS</p>
-            </div>
-            <div class="stat__item">
-                <div class="value"><img class="lazyload" width="186" height="200"
-                        src=<?php echo get_theme_file_uri("/images/stats-bg.png") ?> alt="STATS" />
-                    <h4>61,056+</h4>
-                </div>
-                <p>FACEBOOK FOLLOWERS</p>
-            </div>
+            <?php }?>
         </div>
         <div class="stat__actions">
             <a class="bt bt--shadow bt--md bt--primary-2-light" href="https://greenbeli.gitbook.io/green-beli/stats"
@@ -648,4 +645,4 @@
     </div>
 </section>
 <?php get_footer(); ?>
-<?php get_template_part( 'template-parts/socials-fixed', 'socials-fixed' ); ?>
+<?php get_template_part('template-parts/socials-fixed', 'socials-fixed'); ?>

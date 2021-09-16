@@ -295,13 +295,13 @@
     }
 }
 
-.percentage {
+.ecosystem-fund {
     background-color: lighten(
         $color: map-get($map: $theme-colors, $key: primary),
         $amount: 45%
     );
     padding: 40px 0;
-    .percentage__wrapper {
+    .ecosystem_fund__wrapper {
         display: grid;
         align-items: center;
         grid-template-columns: 0.8fr 1fr;
@@ -310,13 +310,13 @@
             grid-template-columns: 1fr;
         }
     }
-    .percentage__image {
+    .ecosystem_fund__image {
         @media (max-width: 767.98px) {
             max-width: 250px;
             margin: 0 auto;
         }
     }
-    .percentage__content {
+    .ecosystem_fund__content {
         .section-title {
             margin-bottom: 16px;
         }
