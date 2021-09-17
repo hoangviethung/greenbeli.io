@@ -77,9 +77,9 @@
         const main = new Swiper(".characters-slider .main-slider", {
             slidesPerView: 1,
             watchSlidesProgress: true,
-            autoplay: {
-                delay: 5000,
-            },
+            // autoplay: {
+            //     delay: 5000,
+            // },
             simulateTouch: false,
             thumbs: {
                 swiper: thumbsSwiper,

@@ -59,117 +59,49 @@
         <div class="characters-slider">
             <div class="main-slider swiper-container">
                 <div class="swiper-wrapper">
+                    <?php
+                    for ($i = 1; $i <= 5; $i++) { ?>
+                    <?php $character_item = get_field("item_character_".$i); ?>
                     <div class="swiper-slide">
                         <div class="wrapper">
                             <div class="img">
-                                <img class="lazyload" width="400" height="400"
-                                    src=<?php echo get_theme_file_uri("/images/fire.png") ?> alt="CHARACTER-FIRE">
+                                <?php 
+                                        $image = $character_item["image"];
+                                        if( !empty( $image ) ): ?>
+                                <img src="<?php echo esc_url($image['url']); ?>"
+                                    alt="<?php echo esc_attr($image['alt']); ?>"
+                                    width="<?php echo esc_attr($image['width']); ?>"
+                                    height="<?php echo esc_attr($image['height']); ?>" />
+                                <?php endif; ?>
                             </div>
                             <div class="info">
-                                <h2>Fire</h2>
-                                <p>Growing from coal, possessing the ability to withstand heat, helping regenerate dead
-                                    lands.</p>
-                                <p>Anti-fire, coal mining, anti-desertification.</p>
+                                <h2><?php echo $character_item["name"] ?></h2>
+                                <?php echo $character_item["information"] ?>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="wrapper">
-                            <div class="img">
-                                <img class="lazyload" width="400" height="400"
-                                    src=<?php echo get_theme_file_uri("/images/earth.png") ?> alt="CHARACTER-EARTH">
-                            </div>
-                            <div class="info">
-                                <h2>Earth</h2>
-                                <p>Where there is land, there are trees covering and maintaining fertility.</p>
-                                <p>Preventing domestic waste, harmful microorganisms in the ground, reducing the risk of
-                                    earthquakes and landslides.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="wrapper">
-                            <div class="img">
-                                <img class="lazyload" width="400" height="400"
-                                    src=<?php echo get_theme_file_uri("/images/metal.png") ?> alt="CHARACTER-METAL">
-                            </div>
-                            <div class="info">
-                                <h2>Metal</h2>
-                                <p>Growing up from industrial and electronic wastes. The body is nourished by iron.</p>
-                                <p>Preventing humans from using machines to cut forests and exploiting natural
-                                    resources.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="wrapper">
-                            <div class="img">
-                                <img class="lazyload" width="400" height="400"
-                                    src=<?php echo get_theme_file_uri("/images/water.png") ?> alt="CHARACTER-WATER">
-                            </div>
-                            <div class="info">
-                                <h2>Water</h2>
-                                <p>Having strong roots, helping maintain soil structure, reduce the flow rate, keep soil
-                                    nutrients, prevent flooding.</p>
-                                <p>Anti-flood, reduce drought, avoid soil erosion.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="wrapper">
-                            <div class="img">
-                                <img class="lazyload" width="400" height="400"
-                                    src=<?php echo get_theme_file_uri("/images/wood.png") ?> alt="CHARACTER-WOOD">
-                            </div>
-                            <div class="info">
-                                <h2>Wood</h2>
-                                <p>Having an extraordinary ability to photosynthesize, turning CO2 into Oxygen even in
-                                    the
-                                    dark.</p>
-                                <p>Against air pollution, smog, and noise pollution.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php }?>
                 </div>
             </div>
             <div class="thumbs-slider swiper-container">
                 <div class="swiper-wrapper">
+                    <?php
+                    for ($i = 1; $i <= 5; $i++) { ?>
+                    <?php $character_item = get_field("item_character_".$i); ?>
                     <div class="swiper-slide">
                         <div class="img">
-                            <img class="lazyload" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/fire.png") ?> alt="CHARACTER-FIRE">
+                            <?php 
+                                        $image = $character_item["image"];
+                                        if( !empty( $image ) ): ?>
+                            <img src="<?php echo esc_url($image['url']); ?>"
+                                alt="<?php echo esc_attr($image['alt']); ?>"
+                                width="<?php echo esc_attr($image['width']); ?>"
+                                height="<?php echo esc_attr($image['height']); ?>" />
+                            <?php endif; ?>
                         </div>
-                        <div class="name">Fire</div>
+                        <div class="name"><?php echo $character_item["name"] ?></div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="img">
-                            <img class="lazyload" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/earth.png") ?> alt="CHARACTER-EARTH">
-                        </div>
-                        <div class="name">Earth</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="img">
-                            <img class="lazyload" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/metal.png") ?> alt="CHARACTER-METAL">
-                        </div>
-                        <div class="name">Metal</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="img">
-                            <img class="lazyload" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/water.png") ?> alt="CHARACTER-WATER">
-                        </div>
-                        <div class="name">Water</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="img">
-                            <img class="lazyload" width="160" height="160"
-                                src=<?php echo get_theme_file_uri("/images/wood.png") ?> alt="CHARACTER-WOOD">
-                        </div>
-                        <div class="name">Wood</div>
-                    </div>
+                    <?php }?>
                 </div>
             </div>
         </div>
