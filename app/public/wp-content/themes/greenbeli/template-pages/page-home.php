@@ -309,11 +309,10 @@
 <section class="stats">
     <div class="container">
         <div class="section-title ta-c">
-            <h3>STATS</h3>
+            <h3><?php echo get_field("title_section_stats")?></h3>
         </div>
         <div class="stats__content">
-            <p>Green Beli takes great pride in successfully building a community of thousands of environment-lovers and
-                spreading the message of environmental protection.</p>
+            <p><?php echo get_field("content_section_stats")?></p>
         </div>
         <div class="stats-list">
             <?php
@@ -344,88 +343,33 @@
 <section class="leadership">
     <div class="container">
         <div class="section-title ta-c">
-            <h3>Meet our Leadership Team</h3>
+            <h3><?php echo get_field("title_seciton_leadership")?></h3>
         </div>
         <div class="leadership-slider swiper-container">
             <div class="swiper-wrapper">
+                <?php
+            for ($i = 1; $i <= 6; $i++) { ?>
+                <?php $item_leadership = get_field("item_leadership_".$i); ?>
                 <div class="swiper-slide">
                     <div class="leadership-item">
                         <div class="leadership-img">
-                            <img class="swiper-lazy" width="150" height="150"
-                                src=<?php echo get_theme_file_uri("/images/khoanguyen.png") ?> alt="KHOA-NGUYEN" />
+                            <?php 
+                            $image = $item_leadership["avatar"];
+                            if( !empty( $image ) ): ?>
+                            <img class="swiper-lazy" src="<?php echo esc_url($image['url']); ?>"
+                                alt="<?php echo esc_attr($image['alt']); ?>"
+                                width="<?php echo esc_attr($image['width']); ?>"
+                                height="<?php echo esc_attr($image['height']); ?>" />
+                            <?php endif; ?>
                             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="leadership-info">
-                            <h3>Khoa Nguyen</h3>
-                            <h4>Co-founder</h4>
+                            <h3><?php echo $item_leadership["name"] ?></h3>
+                            <h4><?php echo $item_leadership["position"] ?></h4>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="leadership-item">
-                        <div class="leadership-img">
-                            <img class="swiper-lazy" width="150" height="150"
-                                src=<?php echo get_theme_file_uri("/images/karenyle.jpg")?> alt="KARY-LE" />
-                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                        </div>
-                        <div class="leadership-info">
-                            <h3>Kary Le</h3>
-                            <h4>Co-founder</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="leadership-item">
-                        <div class="leadership-img">
-                            <img class="swiper-lazy" width="150" height="150"
-                                src=<?php echo get_theme_file_uri("/images/misuetran.jpg") ?> alt="MISUE-TRAN" />
-                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                        </div>
-                        <div class="leadership-info">
-                            <h3>Misue Tran</h3>
-                            <h4>Co-founder</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="leadership-item">
-                        <div class="leadership-img">
-                            <img class="swiper-lazy" width="150" height="150"
-                                src=<?php echo get_theme_file_uri("/images/orinphan.jpg") ?> alt="THU-PHAN" />
-                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                        </div>
-                        <div class="leadership-info">
-                            <h3>Thu Phan</h3>
-                            <h4>Research & Development Lead</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="leadership-item">
-                        <div class="leadership-img">
-                            <img class="swiper-lazy" width="150" height="150"
-                                src=<?php echo get_theme_file_uri("/images/thaonguyen.png") ?> alt="THAO-NGUYEN" />
-                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                        </div>
-                        <div class="leadership-info">
-                            <h3>Thao Nguyen</h3>
-                            <h4>Business Development</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="leadership-item">
-                        <div class="leadership-img">
-                            <img class="swiper-lazy" width="150" height="150"
-                                src=<?php echo  get_theme_file_uri("/images/sahnbui.jpg") ?> alt="SAHN-BUI" />
-                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                        </div>
-                        <div class="leadership-info">
-                            <h3>Sahn Bui</h3>
-                            <h4>Marketing Lead</h4>
-                        </div>
-                    </div>
-                </div>
+                <?php }?>
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
