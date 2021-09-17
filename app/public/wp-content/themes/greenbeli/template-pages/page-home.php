@@ -348,7 +348,7 @@
         <div class="leadership-slider swiper-container">
             <div class="swiper-wrapper">
                 <?php
-            for ($i = 1; $i <= 6; $i++) { ?>
+                for ($i = 1; $i <= 6; $i++) { ?>
                 <?php $item_leadership = get_field("item_leadership_".$i); ?>
                 <div class="swiper-slide">
                     <div class="leadership-item">
@@ -377,53 +377,31 @@
     </div>
     <section class="advisors">
         <div class="section-title ta-c">
-            <h3>Advisors</h3>
+            <h3><?php get_field("title_section_advisors") ?></h3>
         </div>
         <div class="container">
             <div class="advisors-list">
+                <?php for ($i=1; $i <= 3 ; $i++) { ?>
+
+                <?php $item_advisor = get_field("item_advisor_".$i) ?>
+         
                 <div class="advisor-item">
                     <div class="advisor-img">
-                        <img width="150" height="150" class="lazyload"
-                            src=<?php echo get_theme_file_uri("/images/victortruong.jpg") ?> alt="VICTOR-TRUONG" />
+                        <?php 
+                            $image = $item_advisor["avatar"];
+                            if( !empty( $image ) ): ?>
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                            width="<?php echo esc_attr($image['width']); ?>"
+                            height="<?php echo esc_attr($image['height']); ?>" />
+                        <?php endif; ?>
                     </div>
                     <div class="advisor-info">
-                        <h3>Victor Truong</h3>
-                        <h4>Co-founder at DeFi Warrior</h4>
-                        <ul>
-                            <li>FCCA, Certified Internal Auditor</li>
-                            <li>10+ years in Business & Finance</li>
-                            <li>4+ years in crypto investment</li>
-                        </ul>
+                        <h3><?php echo $item_advisor["name"] ?></h3>
+                        <h4><?php echo $item_advisor["postion"] ?></h4>
+                        <?php echo $item_advisor["information"] ?>
                     </div>
                 </div>
-                <div class="advisor-item">
-                    <div class="advisor-img">
-                        <img width="150" height="150" class="lazyload"
-                            src=<?php echo get_theme_file_uri("/images/scofield.jpg")?> alt="SCOFIELD" />
-                    </div>
-                    <div class="advisor-info">
-                        <h3>Scofield</h3>
-                        <h4>Founder at BSC Station</h4>
-                        <ul>
-                            <li>5+ years in blockchain & cryptocurrency</li>
-                            <li>4+ years in blockchain game market & the community development</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="advisor-item">
-                    <div class="advisor-img">
-                        <img width="150" height="150" class="lazyload"
-                            src=<?php echo get_theme_file_uri("/images/crisdtran.jpg")?> alt="CRIS-D-TRAN" />
-                    </div>
-                    <div class="advisor-info">
-                        <h3>Cris D.Tran</h3>
-                        <h4>Co-founder at FAM Central</h4>
-                        <ul>
-                            <li>Former CEO – Infinity Blockchain Ventures</li>
-                            <li>5+ years in crypto</li>
-                        </ul>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </section>
@@ -432,90 +410,23 @@
 <section class="partners-investors">
     <div class="container">
         <div class="section-title ta-c">
-            <h3 class="txt-light">BACKERS & INVESTORS</h3>
+            <h3 class="txt-light"></h3>
         </div>
         <div class="partners-investors-slider swiper-container">
             <div class="swiper-wrapper">
+                <?php
+                for ($i = 1; $i <= 18; $i++) { ?>
+                <?php $images_investor = get_field("images_investor"); ?>
                 <div class="swiper-slide">
-                    <img width="188" height="75" class="lazyload"
-                        src=<?php echo get_theme_file_uri("/images/bscstation.png")?> alt="BSCStation" />
+                    <?php 
+                    $image = $images_investor["item_".$i];
+                    if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                        width="<?php echo esc_attr($image['width']); ?>"
+                        height="<?php echo esc_attr($image['height']); ?>" />
+                    <?php endif; ?>
                 </div>
-                <div class="swiper-slide">
-                    <img width="188" height="74" class="lazyload"
-                        src=<?php echo get_theme_file_uri("/images/au21.png")?> alt="au21" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="188" height="62" class="lazyload"
-                        src=<?php echo get_theme_file_uri("/images/basic-capital.png")?> alt="Basic-Capital" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="122" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/x21.png")?>
-                        alt="x21" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="158" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/m6.png")?>
-                        alt="m6" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="194" height="51" class="lazyload"
-                        src=<?php echo get_theme_file_uri("/images/dreamboat.png")?> alt="dreamboat" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="164" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/fim.png")?>
-                        alt="FIM" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="188" height="68" class="lazyload"
-                        src=<?php echo get_theme_file_uri("/images/onebit.png")?> alt="onebit" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="177" height="75" class="lazyload"
-                        src=<?php echo get_theme_file_uri("/images/vb-ventures.png")?> alt="vb-ventures" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="188" height="71" class="lazyload"
-                        src=<?php echo get_theme_file_uri("/images/crypto-ic.png")?> alt="crypto-ic" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="75" height="75" class="lazyload"
-                        src=<?php echo get_theme_file_uri("/images/titans.png")?> alt="titans" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="188" height="61" class="lazyload" src=<?php echo get_theme_file_uri("/images/sgn.png")?>
-                        alt="sgn" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="188" height="49" class="lazyload"
-                        src=<?php echo get_theme_file_uri("/images/moongems.png")?> alt="moongems" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="83" height="75" class="lazyload"
-                        src=<?php echo get_theme_file_uri("/images/revel-lab.png")?> alt="revel-lab" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="188" height="74" class="lazyload"
-                        src=<?php echo get_theme_file_uri("/images/astro.png")?> alt="astro" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="177" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/bas.png")?>
-                        alt="bas" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="188" height="62" class="lazyload"
-                        src=<?php echo get_theme_file_uri("/images/ss-ventures.png")?> alt="ss-ventures" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="155" height="75" class="lazyload"
-                        src=<?php echo get_theme_file_uri("/images/wild-cat.png")?> alt="wild-cat" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="165" height="51" class="lazyload"
-                        src=<?php echo get_theme_file_uri("/images/upfi.png")?> alt="upfi" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="103" height="75" class="lazyload" src=<?php echo get_theme_file_uri("/images/df.png")?>
-                        alt="df" />
-                </div>
+                <?php }?>
             </div>
         </div>
     </div>
