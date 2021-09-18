@@ -398,7 +398,7 @@
                         </div>
                         <div class="advisor-info">
                             <h3><?php echo $item_advisor["name"] ?></h3>
-                            <h4><?php echo $item_advisor["postion"] ?></h4>
+                            <h4><?php echo $item_advisor["position"] ?></h4>
                             <?php echo $item_advisor["information"] ?>
                         </div>
                     </div>

@@ -132,8 +132,8 @@
                 },
             },
             navigation: {
-                nextEl: ".leadership-slider .swiper-button-next",
-                prevEl: ".leadership-slider .swiper-button-prev",
+                nextEl: ".advisors-slider .swiper-button-next",
+                prevEl: ".advisors-slider .swiper-button-prev",
             },
         });
     }
