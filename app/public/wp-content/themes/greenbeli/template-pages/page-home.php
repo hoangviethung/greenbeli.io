@@ -377,14 +377,14 @@
     </div>
     <section class="advisors">
         <div class="section-title ta-c">
-            <h3><?php get_field("title_section_advisors") ?></h3>
+            <h3><?php echo get_field("title_section_advisors") ?></h3>
         </div>
         <div class="container">
             <div class="advisors-list">
-                <?php for ($i=1; $i <= 3 ; $i++) { ?>
+                <?php for ($i=1; $i <= 5 ; $i++) { ?>
 
                 <?php $item_advisor = get_field("item_advisor_".$i) ?>
-         
+
                 <div class="advisor-item">
                     <div class="advisor-img">
                         <?php 
@@ -410,22 +410,21 @@
 <section class="partners-investors">
     <div class="container">
         <div class="section-title ta-c">
-            <h3 class="txt-light"></h3>
+            <h3 class="txt-light"><?php echo get_field("title_section_backer_investors") ?></h3>
         </div>
         <div class="partners-investors-slider swiper-container">
             <div class="swiper-wrapper">
+                <?php for ($i = 1; $i <= 18; $i++) { ?>
                 <?php
-                for ($i = 1; $i <= 18; $i++) { ?>
-                <?php $images_investor = get_field("images_investor"); ?>
-                <div class="swiper-slide">
-                    <?php 
+                    $images_investor = get_field("images_investor");
                     $image = $images_investor["item_".$i];
                     if( !empty( $image ) ): ?>
+                <div class="swiper-slide">
                     <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
                         width="<?php echo esc_attr($image['width']); ?>"
                         height="<?php echo esc_attr($image['height']); ?>" />
-                    <?php endif; ?>
                 </div>
+                <?php endif; ?>
                 <?php }?>
             </div>
         </div>
