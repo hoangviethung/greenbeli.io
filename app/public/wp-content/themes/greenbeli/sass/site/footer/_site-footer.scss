@@ -1,9 +1,9 @@
 .site-footer {
     padding: 24px 0;
-    background-color: #5ba37a;
+    background-color: map-get($map: $theme-colors, $key: primary-dark);
     border-top: 1px solid
         rgba(
-            $color: map-get($map: $theme-colors, $key: neutral-black),
+            $color: map-get($map: $theme-colors, $key: neutral-white),
             $alpha: 0.1
         );
 }

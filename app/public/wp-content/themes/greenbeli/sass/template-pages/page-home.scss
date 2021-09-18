@@ -560,7 +560,8 @@
         $amount: 45%
     );
     padding: 40px 0;
-    .leadership-slider {
+    .leadership-slider,
+    .advisors-slider {
         .swiper-button-prev,
         .swiper-button-next {
             color: map-get($map: $theme-colors, $key: primary);
@@ -594,30 +595,8 @@
             padding-left: 16px;
         }
     }
-    .advisors {
+    .advisors-slider {
         margin-top: 56px;
-        .advisors-list {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-column-gap: 100px;
-            grid-row-gap: 32px;
-            margin-top: 24px;
-            @media (max-width: 1024.98px) {
-                grid-column-gap: 56px;
-            }
-            @media (max-width: 767.98px) {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            @media (max-width: 575.98px) {
-                display: block;
-                grid-template-columns: repeat(1, 1fr);
-                .advisor-item {
-                    + .advisor-item {
-                        margin-top: 24px;
-                    }
-                }
-            }
-        }
     }
     @media (max-width: 767.98px) {
         padding: 16px 0;
@@ -625,7 +604,7 @@
 }
 
 .partners-investors {
-    background-color: #5ba37a;
+    background-color: map-get($map: $theme-colors, $key: primary-dark);
     padding: 40px 0;
     .partners-investors-slider {
         margin-top: 40px;

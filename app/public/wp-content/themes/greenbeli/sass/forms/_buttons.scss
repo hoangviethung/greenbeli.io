@@ -27,20 +27,20 @@
             }
         }
     }
-    &--primary-2-light {
+    &--primary-light {
         color: map-get($map: $theme-colors, $key: neutral-white);
-        background-color: map-get($map: $theme-colors, $key: primary-2-light);
+        background-color: map-get($map: $theme-colors, $key: primary-light);
         &.bt--shadow {
             box-shadow: 0 6px
                 darken(
-                    $color: map-get($map: $theme-colors, $key: primary-2-light),
+                    $color: map-get($map: $theme-colors, $key: primary-light),
                     $amount: 5%
                 );
             &:active {
                 box-shadow: 0 4px
                     darken(
                         $color:
-                            map-get($map: $theme-colors, $key: primary-2-light),
+                            map-get($map: $theme-colors, $key: primary-light),
                         $amount: 10%
                     );
             }

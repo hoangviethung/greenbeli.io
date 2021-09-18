@@ -34,13 +34,18 @@
     .menu-item {
         &.bt {
             > a {
-                color: inherit;
+                @media (max-width: 1024.98px) {
+                    color: inherit;
+                }
             }
         }
         > a {
-            color: map-get($map: $theme-colors, $key: txt-body);
+            color: map-get($map: $theme-colors, $key: neutral-white);
             font-weight: 600;
             transition: all 0.3s ease-in-out;
+            @media (max-width: 1024.98px) {
+                color: map-get($map: $theme-colors, $key: txt-body);
+            }
         }
         + .menu-item {
             margin-left: 32px;

@@ -27,7 +27,7 @@
                                 <?php echo get_field("hero_banner_text_3") ?>
                             </div>
                             <div class="content__actions">
-                                <a href="#" class="bt bt--md bt--shadow bt--primary-2-light">Play now</a>
+                                <a href="#" class="bt bt--md bt--shadow bt--primary-light">Play now</a>
                                 <a href="#" class="bt bt--md bt--shadow bt--secondary">Go to App</a>
                             </div>
                         </div>
@@ -334,7 +334,7 @@
             <?php }?>
         </div>
         <div class="stat__actions">
-            <a class="bt bt--shadow bt--md bt--primary-2-light" href="https://greenbeli.gitbook.io/green-beli/stats"
+            <a class="bt bt--shadow bt--md bt--primary-light" href="https://greenbeli.gitbook.io/green-beli/stats"
                 target="_blank" rel="noopener noreferrer">See more
                 our campaigns</a>
         </div>
@@ -380,28 +380,32 @@
             <h3><?php echo get_field("title_section_advisors") ?></h3>
         </div>
         <div class="container">
-            <div class="advisors-list">
-                <?php for ($i=1; $i <= 5 ; $i++) { ?>
-
-                <?php $item_advisor = get_field("item_advisor_".$i) ?>
-
-                <div class="advisor-item">
-                    <div class="advisor-img">
-                        <?php 
+            <div class="advisors-slider swiper-container">
+                <div class="swiper-wrapper">
+                    <?php for ($i=1; $i <= 5 ; $i++) { ?>
+                    <?php $item_advisor = get_field("item_advisor_".$i) ?>
+                    <div class="advisor-item swiper-slide">
+                        <div class="advisor-img">
+                            <?php 
                             $image = $item_advisor["avatar"];
                             if( !empty( $image ) ): ?>
-                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
-                            width="<?php echo esc_attr($image['width']); ?>"
-                            height="<?php echo esc_attr($image['height']); ?>" />
-                        <?php endif; ?>
+                            <img class="swiper-lazy" src="<?php echo esc_url($image['url']); ?>"
+                                alt="<?php echo esc_attr($image['alt']); ?>"
+                                width="<?php echo esc_attr($image['width']); ?>"
+                                height="<?php echo esc_attr($image['height']); ?>" />
+                            <?php endif; ?>
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </div>
+                        <div class="advisor-info">
+                            <h3><?php echo $item_advisor["name"] ?></h3>
+                            <h4><?php echo $item_advisor["postion"] ?></h4>
+                            <?php echo $item_advisor["information"] ?>
+                        </div>
                     </div>
-                    <div class="advisor-info">
-                        <h3><?php echo $item_advisor["name"] ?></h3>
-                        <h4><?php echo $item_advisor["postion"] ?></h4>
-                        <?php echo $item_advisor["information"] ?>
-                    </div>
+                    <?php } ?>
                 </div>
-                <?php } ?>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
     </section>

@@ -5,7 +5,7 @@
     width: 100%;
     height: 56px;
     z-index: 302;
-    background-color: map-get($map: $theme-colors, $key: neutral-white);
+    background-color: map-get($map: $theme-colors, $key: primary-dark);
 }
 
 .site-branding {
@@ -28,6 +28,7 @@
 }
 
 .js-collapse-aside-menu-mobile {
+    color: map-get($map: $theme-colors, $key: neutral-white);
     display: none;
     position: relative;
     justify-content: center;

@@ -111,6 +111,32 @@
             },
         });
     }
+    function initSliderAdvisors() {
+        const swiper = new Swiper(".advisors-slider", {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 24,
+            speed: 1500,
+            autoplay: {
+                delay: 3000,
+            },
+            loop: true,
+            preloadImages: false,
+            lazy: true,
+            breakpoints: {
+                575: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+            },
+            navigation: {
+                nextEl: ".leadership-slider .swiper-button-next",
+                prevEl: ".leadership-slider .swiper-button-prev",
+            },
+        });
+    }
     function scrollToSection() {
         $("#primary-menu .menu-item a")
             .not("[target='_blank'],[href='#']")
@@ -145,6 +171,7 @@
         initSlierLeaderShip();
         initSlierCharacters();
         initSlierInvestors();
+        initSliderAdvisors();
         scrollToSection();
         collapseAsideMenuMobile();
     });
