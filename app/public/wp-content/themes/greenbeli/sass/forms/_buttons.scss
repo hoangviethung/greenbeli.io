@@ -66,17 +66,10 @@
     }
     &--shadow {
         margin-bottom: 6px;
-        &:active {
-            transform: translateY(4px);
-        }
     }
     &--md {
         font-size: 1rem;
-        padding: 0.88rem 1.88rem;
-        @media (max-width: 575.98px) {
-            font-size: 1rem;
-            padding: 1rem 1.4rem;
-        }
+        padding: 0.55rem 1.55rem;
         @media (max-width: 320.98px) {
             font-size: 0.875rem;
         }
@@ -91,5 +84,8 @@
         @media (max-width: 320.98px) {
             font-size: 0.875rem;
         }
+    }
+    &:active {
+        transform: translateY(4px);
     }
 }

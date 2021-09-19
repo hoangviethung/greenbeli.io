@@ -165,6 +165,11 @@
         $("#page").removeClass("overlay");
         $("body").removeClass("no-scroll");
     }
+    function hidenTopHeader() {
+        $(".hidden-note .close-hidden-note").on("click", function (e) {
+            $(this).parents(".hidden-note").addClass("hidden");
+        });
+    }
     $(function () {
         initSlierIntroduction();
         initSlierFeatures();
@@ -174,5 +179,6 @@
         initSliderAdvisors();
         scrollToSection();
         collapseAsideMenuMobile();
+        hidenTopHeader();
     });
 })(jQuery);

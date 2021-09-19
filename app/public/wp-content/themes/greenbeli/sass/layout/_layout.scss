@@ -7,14 +7,10 @@ body {
         .site-header {
             top: 32px;
             @media (max-width: 782px) {
-                position: absolute;
-                top: 0;
+                top: 46px;
             }
-        }
-        .main-navigation {
-            top: calc(56px + 32px);
-            @media (max-width: 782px) {
-                top: calc(56px + 46px);
+            @media (max-width: 600px) {
+                top: 0;
             }
         }
     }
@@ -23,7 +19,6 @@ body {
 #page {
     position: relative;
     width: 100%;
-    padding-top: 56px;
     &:after {
         content: "";
         position: fixed;

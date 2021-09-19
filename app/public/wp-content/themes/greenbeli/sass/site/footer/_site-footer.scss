@@ -51,7 +51,7 @@
         width: 32px;
         height: 32px;
         border-radius: 8px;
-        color: #5ba37a;
+        color: map-get($map: $theme-colors, $key: primary-dark);
         background-color: map-get($map: $theme-colors, $key: neutral-white);
         transition: 0.3s all ease-in-out;
         + a {
@@ -75,6 +75,45 @@
         font-weight: 600;
         + a {
             margin-top: 16px;
+        }
+    }
+}
+
+.audit-website {
+    text-align: center;
+    padding: 16px;
+    background-color: map-get($map: $theme-colors, $key: bg-dark);
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+            color: map-get($map: $theme-colors, $key: neutral-white);
+            text-align: center;
+            margin-right: 8px;
+        }
+        img {
+            max-width: 120px;
+        }
+    }
+    .discover-more {
+        color: map-get($map: $theme-colors, $key: neutral-white);
+        display: inline-flex;
+        align-items: center;
+        margin-top: 8px;
+        opacity: 0.5;
+        transition: opacity 0.2s ease;
+        span {
+            margin-right: 4px;
+        }
+        i {
+            transition: 0.3s all ease-in-out;
+        }
+        &:hover {
+            opacity: 1;
+            i {
+                transform: translateX(4px);
+            }
         }
     }
 }
