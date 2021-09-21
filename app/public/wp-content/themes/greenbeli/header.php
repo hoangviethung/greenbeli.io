@@ -40,7 +40,7 @@
                             rel="noopener noreferrer">@GreenBeliChat</a>,
                         Twitter:
                         <a href="https://twitter.com/Green_Beli" target="_blank"
-                            rel="noopener noreferrer">@Green_Beli</a>
+                            rel="noopener noreferrer">@GreenBeli</a>
                         .Be aware of fake contract addresses and fake social groups/accounts!
                     </p>
                 </div>
@@ -87,6 +87,13 @@
                                     )
                                 );
                             ?>
+                            <div class="close-nav-mobile">
+                                <i class="fal fa-times"></i>
+                            </div>
+                            <a class="certik-audit" href="https://www.certik.org/projects/green-beli" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-shield-check"></i>
+                                <span>Certik Audit</span>
+                            </a>
                         </nav>
                     </div>
                 </div>

@@ -252,8 +252,6 @@
                             <li><i class="fad fa-check"></i><span>Initial Seed offering</span></li>
                             <li><i class="fad fa-check"></i><span>NFT Market</span></li>
                             <li><i class="fad fa-check"></i><span>Release Farming & Staking</span></li>
-                            <li><i class="fad fa-check"></i><span>Game Beta release: PvP</span></li>
-                            <li><i class="fad fa-check"></i><span>Release Breeding & Fusion</span></li>
                         </ul>
                     </div>
                 </div>
@@ -265,6 +263,8 @@
                 <div class="block-right">
                     <div class="content">
                         <ul>
+                            <li><i class="fad fa-check"></i><span>Game Beta release: PvP</span></li>
+                            <li><i class="fad fa-check"></i><span>Release Breeding & Fusion</span></li>
                             <li><i class="fad fa-check"></i><span>Play to earn (P2E)</span></li>
                             <li><i class="fad fa-check"></i><span>Release Land & NFT items</span></li>
                             <li><i class="fad fa-check"></i><span>First big Green Beli sponsorship</span></li>
@@ -418,7 +418,7 @@
         </div>
         <div class="partners-investors-slider swiper-container">
             <div class="swiper-wrapper">
-                <?php for ($i = 1; $i <= 18; $i++) { ?>
+                <?php for ($i = 1; $i <= 40; $i++) { ?>
                 <?php
                     $images_investor = get_field("images_investor");
                     $image = $images_investor["item_".$i];

@@ -93,7 +93,7 @@
     function initSlierInvestors() {
         const swiper = new Swiper(".partners-investors-slider", {
             slidesPerView: 2,
-            slidesPerColumn: 2,
+            slidesPerColumn: 3,
             slidesPerGroup: 5,
             slidesPerColumnFill: "row",
             spaceBetween: 32,
@@ -152,11 +152,17 @@
             });
     }
     function collapseAsideMenuMobile() {
-        $(".js-collapse-aside-menu-mobile").on("click", function () {
+        $(".js-collapse-aside-menu-mobile").on("click", function (e) {
             $(this).toggleClass("active");
             $(".main-navigation").toggleClass("active");
             $("#page").toggleClass("overlay");
             $("body").toggleClass("no-scroll");
+        });
+        $(".overlay").on("click", function (e) {
+            $(".js-collapse-aside-menu-mobile").trigger("click");
+        });
+        $(".close-nav-mobile").on("click", function (e) {
+            $(".js-collapse-aside-menu-mobile").trigger("click");
         });
     }
     function resetAsideMenuMobile() {
@@ -168,7 +174,17 @@
     function hidenTopHeader() {
         $(".hidden-note .close-hidden-note").on("click", function (e) {
             $(this).parents(".hidden-note").addClass("hidden");
+            setVariableStyleNavMobile();
         });
+    }
+    function setVariableStyleNavMobile() {
+        $(".main-navigation").attr(
+            "style",
+            `--height-header: ${getHeightHeader()}px`,
+        );
+    }
+    function getHeightHeader() {
+        return $("header.site-header").outerHeight();
     }
     $(function () {
         initSlierIntroduction();
@@ -180,5 +196,8 @@
         scrollToSection();
         collapseAsideMenuMobile();
         hidenTopHeader();
+    });
+    $(window).load(function () {
+        setVariableStyleNavMobile();
     });
 })(jQuery);

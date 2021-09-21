@@ -1,14 +1,16 @@
 /** === Main menu === */
 .main-navigation {
+    display: flex;
+    align-items: center;
     @media (max-width: 1024.98px) {
         position: fixed;
-        top: 56px;
         left: 0;
-        bottom: 0;
         flex-direction: column;
         align-items: flex-start;
-        width: 80%;
+        width: 350px;
         padding: 16px;
+        top: var(--height-header);
+        height: calc(100% - var(--height-header));
         background-color: map-get($map: $theme-colors, $key: neutral-white);
         transform: translateX(-100%);
         transition: all 0.3s ease-in-out;
@@ -17,14 +19,43 @@
             transform: translateX(0);
         }
     }
+    @media (max-width: 600px) {
+        padding-top: 56px;
+    }
+    .close-nav-mobile {
+        font-size: 1.5rem;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        @media (min-width: 600px) {
+            display: none;
+        }
+    }
+    .certik-audit {
+        color: map-get($map: $theme-colors, $key: neutral-white);
+        margin-left: 32px;
+        i {
+            color: map-get($map: $theme-colors, $key: success);
+        }
+        @media (max-width: 1024.98px) {
+            color: map-get($map: $theme-colors, $key: txt-body);
+            margin-top: auto;
+            margin-left: 0;
+        }
+        @media (max-width: 600px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }
 
 .menu-main-menu-container {
+    position: relative;
     @media (max-width: 1024.98px) {
         flex-direction: column;
         margin-left: 0;
         margin-right: 0;
-        margin-bottom: 32px;
+        width: 100%;
     }
 }
 
@@ -58,5 +89,9 @@
     @media (max-width: 1024.98px) {
         flex-direction: column;
         align-items: flex-start;
+        width: 100%;
+    }
+    @media (max-width: 600px) {
+        align-items: center;
     }
 }

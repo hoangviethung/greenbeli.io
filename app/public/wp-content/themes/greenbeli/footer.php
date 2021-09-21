@@ -50,7 +50,7 @@
             width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
         <?php endif; ?>
     </div>
-    <a class="discover-more" href="/" target="_blank" rel="noopener noreferrer">
+    <a class="discover-more" href="https://www.certik.org/projects/green-beli" target="_blank" rel="noopener noreferrer">
         <span>Discover More</span>
         <i class="fal fa-long-arrow-right"></i>
     </a>
