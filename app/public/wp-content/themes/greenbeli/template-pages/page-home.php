@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template Name: Home Page
  */
@@ -8,40 +9,87 @@
 <section class="introduction" id="introduction">
     <div class="main-slider swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="background">
-                    <?php
-                    $image = get_field('hero_banner_image');
-                    if (!empty($image)) : ?>
-                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
-                    <?php endif; ?>
-                </div>
-                <div class="content-wrapper">
-                    <div class="container h-100">
-                        <div class="content">
-                            <div class="content__content">
-                                <h3><?php echo get_field("hero_banner_text_1") ?></h3>
-                                <h2><?php echo get_field("hero_banner_text_2") ?></h2>
-                                <?php echo get_field("hero_banner_text_3") ?>
-                            </div>
-                            <div class="content__actions">
-                                <a href="#" class="bt bt--md bt--shadow bt--primary-light">Play now</a>
-                                <a href="#" class="bt bt--md bt--shadow bt--secondary">Go to App</a>
+            <?php
+            // Check rows exists.
+            if (have_rows('hero_banners')) :
+                // Loop through rows.
+                while (have_rows('hero_banners')) : the_row();
+                    // Load sub field value.
+                    $text_1 = get_sub_field('text_1');
+                    $text_2 = get_sub_field('text_2');
+                    $description = get_sub_field('description');
+                    $image = get_sub_field('image');
+                    $link_1 = get_sub_field('actions')["link_1"];
+                    $link_2 = get_sub_field('actions')["link_2"];
+                    // Do something...
+                    ?>
+                    <div class="swiper-slide">
+                        <div class="background">
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
+                        </div>
+                        <div class="content-wrapper">
+                            <div class="container h-100">
+                                <div class="content">
+                                    <div class="content__content">
+                                        <h3><?php echo $text_2 ?></h3>
+                                        <h2><?php echo $text_2 ?></h2>
+                                        <?php echo $description ?>
+                                    </div>
+                                    <div class="content__actions">
+                                        <?php
+                                                if ($link_1) :
+                                                    $link_url_1 = $link_1['url'];
+                                                    $link_title_1 = $link_1['title'];
+                                                    $link_target_1 = $link_1['target'] ? $link_1['target'] : '_self';
+                                                    ?>
+                                            <a class="bt bt--md bt--shadow bt--primary-light" href="<?php echo esc_url($link_url_1); ?>" target="<?php echo esc_attr($link_target_1); ?>"><?php echo esc_html($link_title_1); ?></a>
+                                        <?php endif; ?>
+                                        <?php
+                                                if ($link_2) :
+                                                    $link_url_2 = $link_2['url'];
+                                                    $link_title_2 = $link_2['title'];
+                                                    $link_target_2 = $link_2['target'] ? $link_2['target'] : '_self';
+                                                    ?>
+                                            <a class="bt bt--md bt--shadow bt--secondary" href="<?php echo esc_url($link_url_2); ?>" target="<?php echo esc_attr($link_target_2); ?>"><?php echo esc_html($link_title_2); ?></a>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+            <?php
+                // End loop.
+                endwhile;
+            // No value.
+            else :
+            // Do something...
+            endif;
+            ?>
         </div>
     </div>
     <div class="thumbs-slider swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <?php
-                $image = get_field('hero_banner_image');
-                if (!empty($image)) : ?>
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
-                <?php endif; ?>
+                // Check rows exists.
+                if (have_rows('hero_banners')) :
+                    // Loop through rows.
+                    while (have_rows('hero_banners')) : the_row();
+                        // Load sub field value.
+                        $image = get_sub_field('image');
+                        // Do something...
+                        ?>
+                        <div class="swiper-slide">
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
+                        </div>
+                <?php
+                    // End loop.
+                    endwhile;
+                // No value.
+                else :
+                // Do something...
+                endif;
+                ?>
             </div>
         </div>
     </div>
@@ -96,7 +144,9 @@
                         // Loop through rows.
                         while (have_rows('characters')) : the_row();
                             // Load sub field value.
-                            $image = get_sub_field('image'); ?>
+                            $image = get_sub_field('image');
+                            // Do something...
+                            ?>
                             <div class="swiper-slide">
                                 <div class="img">
                                     <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
@@ -104,7 +154,6 @@
                                 <div class="name"><?php echo $character_item["name"] ?></div>
                             </div>
                     <?php
-                        // Do something...
                         // End loop.
                         endwhile;
                     // No value.
