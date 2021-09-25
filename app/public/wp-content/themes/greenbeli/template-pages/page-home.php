@@ -63,7 +63,9 @@
                             // Load sub field value.
                             $name = get_sub_field('name');
                             $description = get_sub_field('description');
-                            $image = get_sub_field('image'); ?>
+                            $image = get_sub_field('image');
+                            // Do something...
+                            ?>
                             <div class="swiper-slide">
                                 <div class="wrapper">
                                     <div class="img">
@@ -76,8 +78,7 @@
                                     </div>
                                 </div>
                             </div>
-                    <?
-                        // Do something...
+                    <?php
                         // End loop.
                         endwhile;
                     // No value.
@@ -102,7 +103,7 @@
                                 </div>
                                 <div class="name"><?php echo $character_item["name"] ?></div>
                             </div>
-                    <?
+                    <?php
                         // Do something...
                         // End loop.
                         endwhile;
@@ -132,7 +133,9 @@
                         // Load sub field value.
                         $name = get_sub_field('name');
                         $description = get_sub_field('description');
-                        $image = get_sub_field('image'); ?>
+                        $image = get_sub_field('image');
+                        // Do something...
+                        ?>
                         <div class="swiper-slide">
                             <div class="features__item">
                                 <div class="item__img">
@@ -145,8 +148,7 @@
                                 </div>
                             </div>
                         </div>
-                <?
-                    // Do something...
+                <?php
                     // End loop.
                     endwhile;
                 // No value.
@@ -334,6 +336,7 @@
                     // Load sub field value.
                     $name = get_sub_field('name');
                     $value = get_sub_field('value');
+                    // Do something...
                     ?>
                     <div class="stat__item">
                         <div class="value">
@@ -346,8 +349,7 @@
                         </div>
                         <p><?php echo $name ?></p>
                     </div>
-            <?
-                // Do something...
+            <?php
                 // End loop.
                 endwhile;
             // No value.
@@ -386,6 +388,7 @@
                         $position = get_sub_field('position');
                         $description = get_sub_field('description');
                         $image = get_sub_field('image');
+                        // Do something...
                         ?>
                         <div class="swiper-slide">
                             <div class="leadership-item">
@@ -399,8 +402,7 @@
                                 </div>
                             </div>
                         </div>
-                <?
-                    // Do something...
+                <?php
                     // End loop.
                     endwhile;
                 // No value.
@@ -430,6 +432,7 @@
                             $position = get_sub_field('position');
                             $description = get_sub_field('description');
                             $image = get_sub_field('image');
+                            // Do something...
                             ?>
                             <div class="swiper-slide">
                                 <div class="leadership-item">
@@ -444,8 +447,7 @@
                                     </div>
                                 </div>
                             </div>
-                    <?
-                        // Do something...
+                    <?php
                         // End loop.
                         endwhile;
                     // No value.
@@ -476,10 +478,9 @@
                             <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
                         </div>
                     <?php endforeach; ?>
+                <?php endif; ?>
             </div>
-        <?php endif; ?>
         </div>
-    </div>
     </div>
 </section>
 <?php get_footer(); ?>
