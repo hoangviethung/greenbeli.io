@@ -418,6 +418,7 @@
                 <a class="<?php echo get_field('action_sectoin_stats_1')["class"] ?>" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
             <?php endif; ?>
         </div>
+    </div>
 </section>
 <!-- Home Leadership-->
 <section class="leadership">
