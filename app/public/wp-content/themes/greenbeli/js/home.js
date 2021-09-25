@@ -80,6 +80,8 @@
             autoplay: {
                 delay: 5000,
             },
+            preloadImages: false,
+            lazy: true,
             simulateTouch: false,
             thumbs: {
                 swiper: thumbsSwiper,
