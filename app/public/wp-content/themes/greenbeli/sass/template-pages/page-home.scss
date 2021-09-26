@@ -37,7 +37,20 @@
             flex-direction: column;
             justify-content: center;
             max-width: 50%;
+            @media (max-width: 767.98px) {
+                max-width: 100%;
+            }
+        }
+        .content__content {
+            .logo {
+                display: flex;
+                justify-content: center;
+                max-width: 240px;
+                margin: 0 auto;
+                margin-bottom: 16px;
+            }
             h3 {
+                text-align: center;
                 text-transform: uppercase;
                 color: map-get($map: $theme-colors, $key: secondary);
                 font-size: 1.5rem;
@@ -46,7 +59,11 @@
                 }
             }
             h2 {
-                color: map-get($map: $theme-colors, $key: primary-2);
+                text-align: center;
+                color: darken(
+                    $color: map-get($map: $theme-colors, $key: primary-light),
+                    $amount: 20%
+                );
                 font-size: 2.75rem;
                 margin-bottom: 8px;
                 font-weight: 900;
@@ -64,15 +81,85 @@
                     font-size: 1rem;
                 }
             }
-            @media (max-width: 767.98px) {
-                max-width: 100%;
+        }
+        .content__socials {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            @media (max-width: 575.98px) {
+                right: 16px;
+                bottom: 16px;
             }
         }
-        .content__actions {
-            margin-top: 24px;
-            .bt {
-                + .bt {
-                    margin-left: 16px;
+        .social__item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: map-get($map: $theme-colors, $key: neutral-white);
+            > a {
+                font-size: 1.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                z-index: 1;
+                width: 68px;
+                height: 68px;
+                @media (max-width: 575.98px) {
+                    font-size: 1.125rem;
+                    width: 44px;
+                    height: 44px;
+                }
+            }
+            + .social__item {
+                margin-left: 16px;
+                @media (max-width: 575.98px) {
+                    margin-left: 8px;
+                }
+            }
+            &.telegram {
+                position: relative;
+                @keyframes scaling {
+                    0% {
+                        transform: scale(1.1);
+                        background-color: #70cdff;
+                    }
+                    100% {
+                        transform: scale(1.6);
+                        background-color: #70cdff2d;
+                    }
+                }
+                > a {
+                    color: map-get($map: $theme-colors, $key: neutral-white);
+                    background-color: #1da1f2;
+                    span {
+                        position: relative;
+                    }
+                }
+                &:before,
+                &:after {
+                    content: "";
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    position: absolute;
+                    background-color: #4ec1ff;
+                    animation: scaling 1.5s cubic-bezier(0.12, 0.7, 0.74, 0.71)
+                        infinite;
+                    border-radius: 50%;
+                }
+            }
+            &.twitter {
+                > a {
+                    color: #178ce0;
+                }
+            }
+            &.discord {
+                > a {
+                    color: #5865f2;
                 }
             }
         }
@@ -81,56 +168,6 @@
         }
         @media (max-width: 767.98px) {
             height: auto;
-        }
-    }
-    .thumbs-slider {
-        width: 56px;
-        position: absolute;
-        right: 24px;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 100;
-        .swiper-slide {
-            cursor: pointer;
-            height: 56px !important;
-            border-radius: 8px;
-            overflow: hidden;
-            &:after {
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                border: 3px solid transparent;
-                transition: 0.3s all ease-in-out;
-                border-radius: 8px;
-            }
-            &:last-child {
-                margin-bottom: 0 !important;
-            }
-            &.swiper-slide-thumb-active {
-                &:after {
-                    border-color: map-get(
-                        $map: $theme-colors,
-                        $key: neutral-white
-                    );
-                }
-            }
-            @media (max-width: 767.98px) {
-                height: 44px !important;
-            }
-        }
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center center;
-        }
-        @media (max-width: 767.98px) {
-            top: 125px;
-            width: 44px;
-            right: 16px;
         }
     }
 }

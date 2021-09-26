@@ -1,16 +1,8 @@
 (function ($) {
     function initSlierIntroduction() {
-        const thumbsSwiper = new Swiper(".introduction .thumbs-slider", {
-            slidesPerView: 3,
-            spaceBetween: 16,
-            direction: "vertical",
-        });
         const swiper = new Swiper(".introduction .main-slider", {
             slidesPerView: 1,
             simulateTouch: false,
-            thumbs: {
-                swiper: thumbsSwiper,
-            },
         });
     }
     function initSlierFeatures() {
@@ -173,12 +165,6 @@
         $("#page").removeClass("overlay");
         $("body").removeClass("no-scroll");
     }
-    function hidenTopHeader() {
-        $(".hidden-note .close-hidden-note").on("click", function (e) {
-            $(this).parents(".hidden-note").addClass("hidden");
-            setVariableStyleNavMobile();
-        });
-    }
     function setVariableStyleNavMobile() {
         $(".main-navigation").attr(
             "style",
@@ -197,7 +183,6 @@
         initSliderAdvisors();
         scrollToSection();
         collapseAsideMenuMobile();
-        hidenTopHeader();
     });
     $(window).load(function () {
         setVariableStyleNavMobile();

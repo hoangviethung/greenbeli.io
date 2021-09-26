@@ -19,6 +19,7 @@
                     $text_2 = get_sub_field('text_2');
                     $description = get_sub_field('description');
                     $image = get_sub_field('image');
+                    $logo = get_sub_field('logo');
                     $link_1 = get_sub_field('actions')["link_1"];
                     $link_2 = get_sub_field('actions')["link_2"];
                     // Do something...
@@ -31,27 +32,34 @@
                             <div class="container h-100">
                                 <div class="content">
                                     <div class="content__content">
-                                        <h3><?php echo $text_2 ?></h3>
+                                        <div class="logo">
+                                            <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" width="<?php echo esc_attr($logo['width']); ?>" height="<?php echo esc_attr($logo['height']); ?>" />
+                                        </div>
+                                        <h3><?php echo $text_1 ?></h3>
                                         <h2><?php echo $text_2 ?></h2>
-                                        <?php echo $description ?>
                                     </div>
-                                    <div class="content__actions">
-                                        <?php
-                                                if ($link_1) :
-                                                    $link_url_1 = $link_1['url'];
-                                                    $link_title_1 = $link_1['title'];
-                                                    $link_target_1 = $link_1['target'] ? $link_1['target'] : '_self';
-                                                    ?>
-                                            <a class="bt bt--md bt--shadow bt--primary-light" href="<?php echo esc_url($link_url_1); ?>" target="<?php echo esc_attr($link_target_1); ?>"><?php echo esc_html($link_title_1); ?></a>
-                                        <?php endif; ?>
-                                        <?php
-                                                if ($link_2) :
-                                                    $link_url_2 = $link_2['url'];
-                                                    $link_title_2 = $link_2['title'];
-                                                    $link_target_2 = $link_2['target'] ? $link_2['target'] : '_self';
-                                                    ?>
-                                            <a class="bt bt--md bt--shadow bt--secondary" href="<?php echo esc_url($link_url_2); ?>" target="<?php echo esc_attr($link_target_2); ?>"><?php echo esc_html($link_title_2); ?></a>
-                                        <?php endif; ?>
+                                    <div class="content__socials">
+                                        <div class="social__item telegram">
+                                            <a href="https://t.me/GreenBeli" target="_blank" rel="noopener noreferrer">
+                                                <span>
+                                                    <i class="fab fa-telegram-plane"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="social__item twitter">
+                                            <a href="https://twitter.com/Green_Beli" target="_blank" rel="noopener noreferrer">
+                                                <span>
+                                                    <i class="fab fa-twitter"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="social__item discord">
+                                            <a href="https://discord.com/invite/Uqa7PDeBqK" target="_blank" rel="noopener noreferrer">
+                                                <span>
+                                                    <i class="fab fa-discord"></i>
+                                                </span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +75,7 @@
             ?>
         </div>
     </div>
-    <div class="thumbs-slider swiper-container">
+    <!-- <div class="thumbs-slider swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <?php
@@ -92,7 +100,7 @@
                 ?>
             </div>
         </div>
-    </div>
+    </div> -->
 </section>
 <!-- CHARACTERS -->
 <section class="characters" id="characters">
@@ -144,6 +152,7 @@
                         // Loop through rows.
                         while (have_rows('characters')) : the_row();
                             // Load sub field value.
+                            $name = get_sub_field('name');
                             $image = get_sub_field('image');
                             // Do something...
                             ?>
@@ -151,7 +160,7 @@
                                 <div class="img">
                                     <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
                                 </div>
-                                <div class="name"><?php echo $character_item["name"] ?></div>
+                                <div class="name"><?php echo $name ?></div>
                             </div>
                     <?php
                         // End loop.
@@ -212,7 +221,7 @@
     </div>
 </section>
 <!-- Game Flow-->
-<section class="gameflow" id="gameflow">
+<!-- <section class="gameflow" id="gameflow">
     <div class="container">
         <div class="section-title ta-c">
             <h3><?php echo get_field("title_section_gameflow") ?></h3>
@@ -228,7 +237,7 @@
             <?php endif; ?>
         </div>
     </div>
-</section>
+</section> -->
 <!-- GRBE Token-->
 <section class="grbe-token" id="grbe-token">
     <div class="container">
@@ -534,4 +543,3 @@
     </div>
 </section>
 <?php get_footer(); ?>
-<?php get_template_part('template-parts/socials-fixed', 'socials-fixed'); ?>

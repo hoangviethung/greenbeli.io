@@ -6,53 +6,6 @@
     z-index: 302;
 }
 
-.top-header {
-    position: relative;
-    background-color: lighten(
-        $color: map-get($map: $theme-colors, $key: primary-dark),
-        $amount: 5%
-    );
-    padding: 16px 0;
-    p {
-        color: map-get($map: $theme-colors, $key: neutral-white);
-        text-align: center;
-        + p {
-            margin-top: 8px;
-            > a {
-                font-weight: 500;
-                color: map-get($map: $theme-colors, $key: secondary);
-                text-decoration: underline;
-            }
-            @media (max-width: 1024.98px) {
-                margin-top: 4px;
-            }
-        }
-        @media (max-width: 1199.98px) {
-            font-size: 0.75rem;
-        }
-    }
-    .close-hidden-note {
-        color: map-get($map: $theme-colors, $key: neutral-white);
-        cursor: pointer;
-        position: absolute;
-        top: 16px;
-        right: 16px;
-        line-height: 1;
-        font-size: 1.5rem;
-        transition: 0.3s all ease-in-out;
-        &:hover {
-            opacity: 0.8;
-        }
-        &:active {
-            transform: translateY(4px);
-        }
-        @media (max-width: 1024.98px) {
-            top: 8px;
-            right: 8px;
-        }
-    }
-}
-
 .main-header {
     background-color: map-get($map: $theme-colors, $key: primary-dark);
     padding: 10px 0;
