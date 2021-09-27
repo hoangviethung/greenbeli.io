@@ -31,8 +31,8 @@
         </div>
     </div>
 </footer>
-<!-- AUDIT WEBSITE -->
-<div class="audit-website">
+<!-- FOOTER AUDIT WEBSITE -->
+<div class="footer-audit-website">
     <div class="content">
         <p>Audited by</p>
         <?php
@@ -41,7 +41,6 @@
             <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
         <?php endif; ?>
     </div>
-
     <?php
     $link = get_field('link_audit_website');
     if ($link) :

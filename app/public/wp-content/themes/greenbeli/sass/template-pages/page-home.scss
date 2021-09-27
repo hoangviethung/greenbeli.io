@@ -87,6 +87,7 @@
             justify-content: center;
             align-items: center;
             z-index: 1;
+            margin-top: 24px;
             @media (max-width: 575.98px) {
                 right: 16px;
                 bottom: 16px;
@@ -96,17 +97,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 50%;
+            border-radius: 8px;
             background-color: map-get($map: $theme-colors, $key: neutral-white);
             > a {
                 font-size: 1.5rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                border-radius: 50%;
                 z-index: 1;
-                width: 68px;
-                height: 68px;
+                width: 48px;
+                height: 48px;
                 @media (max-width: 575.98px) {
                     font-size: 1.125rem;
                     width: 44px;
@@ -120,36 +120,8 @@
                 }
             }
             &.telegram {
-                position: relative;
-                @keyframes scaling {
-                    0% {
-                        transform: scale(1.1);
-                        background-color: #70cdff;
-                    }
-                    100% {
-                        transform: scale(1.6);
-                        background-color: #70cdff2d;
-                    }
-                }
                 > a {
-                    color: map-get($map: $theme-colors, $key: neutral-white);
-                    background-color: #1da1f2;
-                    span {
-                        position: relative;
-                    }
-                }
-                &:before,
-                &:after {
-                    content: "";
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    position: absolute;
-                    background-color: #4ec1ff;
-                    animation: scaling 1.5s cubic-bezier(0.12, 0.7, 0.74, 0.71)
-                        infinite;
-                    border-radius: 50%;
+                    color: #1da1f2;
                 }
             }
             &.twitter {
@@ -168,6 +140,55 @@
         }
         @media (max-width: 767.98px) {
             height: auto;
+        }
+    }
+}
+
+.contract {
+    background-color: map-get($map: $theme-colors, $key: bg-lighten);
+    padding: 40px 0;
+    @media (max-width: 767.98px) {
+        padding: 16px 0;
+    }
+    .wrapper {
+        text-align: center;
+        max-width: 800px;
+        margin: 8px auto 0;
+    }
+    .contract__input {
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .contract__audit-website {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 16px 0;
+        p {
+            padding-right: 8px;
+        }
+        img {
+            max-width: 120px;
+        }
+    }
+    .discover-more {
+        color: map-get($map: $theme-colors, $key: primary);
+        display: inline-flex;
+        align-items: center;
+        margin-top: 8px;
+        transition: opacity 0.2s ease;
+        span {
+            margin-right: 4px;
+        }
+        i {
+            transition: 0.3s all ease-in-out;
+        }
+        &:hover {
+            opacity: 0.8;
+            i {
+                transform: translateX(4px);
+            }
         }
     }
 }

@@ -1,1 +1,20 @@
 @import "buttons";
+
+.form-control {
+    box-shadow: unset;
+    border: 2px solid map-get($map: $theme-colors, $key: gray-border);
+    padding: 0 16px;
+    height: 48px;
+    width: 100%;
+    border-radius: 1.22rem;
+    transition: 0.3s all ease-in-out;
+    &:focus {
+        box-shadow: map-get($map: $theme-colors, $key: gray-border) 0px 0px 0px
+                1px,
+            rgba(
+                    $color: map-get($map: $theme-colors, $key: gray-border),
+                    $alpha: 0.4
+                )
+                0px 0px 0px 4px;
+    }
+}
