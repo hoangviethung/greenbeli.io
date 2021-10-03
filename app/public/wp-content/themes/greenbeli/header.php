@@ -22,6 +22,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQ8S7PTQL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HQ8S7PTQL4');
+    </script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -55,7 +67,7 @@
                             <?php endif;
                             $greenbeli_description = get_bloginfo('description', 'display');
                             if ($greenbeli_description || is_customize_preview()) :
-                                ?>
+                            ?>
                                 <p class="site-description">
                                     <?php echo $greenbeli_description; ?>
                                 </p>
