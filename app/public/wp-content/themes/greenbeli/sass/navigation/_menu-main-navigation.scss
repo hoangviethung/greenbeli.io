@@ -70,6 +70,20 @@
                 }
             }
         }
+        &.bt--tree-seeds-for-sale {
+            > a {
+                display: flex;
+                align-items: center;
+                color: #ff9800;
+                &:after {
+                    content: "\f138";
+                    font-size: 1.125rem;
+                    font-family: "Font Awesome 5 Pro";
+                    margin-left: 8px;
+                    margin-bottom: 4px;
+                }
+            }
+        }
         > a {
             color: map-get($map: $theme-colors, $key: neutral-white);
             font-weight: 600;
