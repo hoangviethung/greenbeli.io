@@ -23,7 +23,7 @@
                     $link_1 = get_sub_field('actions')["link_1"];
                     $link_2 = get_sub_field('actions')["link_2"];
                     // Do something...
-                    ?>
+            ?>
                     <div class="swiper-slide">
                         <div class="background">
                             <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
@@ -86,7 +86,7 @@
                         // Load sub field value.
                         $image = get_sub_field('image');
                         // Do something...
-                        ?>
+                ?>
                         <div class="swiper-slide">
                             <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
                         </div>
@@ -126,7 +126,7 @@
                 $link_url = $link['url'];
                 $link_title = $link['title'];
                 $link_target = $link['target'] ? $link['target'] : '_self';
-                ?>
+            ?>
                 <a class="discover-more" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
                     <span><?php echo esc_html($link_title); ?></span>
                     <i class="fal fa-long-arrow-right"></i>
@@ -154,7 +154,7 @@
                             $description = get_sub_field('description');
                             $image = get_sub_field('image');
                             // Do something...
-                            ?>
+                    ?>
                             <div class="swiper-slide">
                                 <div class="wrapper">
                                     <div class="img">
@@ -188,7 +188,7 @@
                             $name = get_sub_field('name');
                             $image = get_sub_field('image');
                             // Do something...
-                            ?>
+                    ?>
                             <div class="swiper-slide">
                                 <div class="img">
                                     <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
@@ -226,7 +226,7 @@
                         $description = get_sub_field('description');
                         $image = get_sub_field('image');
                         // Do something...
-                        ?>
+                ?>
                         <div class="swiper-slide">
                             <div class="features__item">
                                 <div class="item__img">
@@ -353,8 +353,6 @@
                         <ul>
                             <li><i class="fad fa-check"></i><span>Develop Token & NFT Game</span></li>
                             <li><i class="fad fa-check"></i><span>Public sale</span></li>
-                            <li><i class="fad fa-check"></i><span>Initial Seed offering</span></li>
-                            <li><i class="fad fa-check"></i><span>NFT Market</span></li>
                             <li><i class="fad fa-check"></i><span>Release Farming & Staking</span></li>
                         </ul>
                     </div>
@@ -367,6 +365,8 @@
                 <div class="block-right">
                     <div class="content">
                         <ul>
+                            <li><i class="fad fa-check"></i><span>Tree Seeds For Sale</span></li>
+                            <li><i class="fad fa-check"></i><span>NFT Market</span></li>
                             <li><i class="fad fa-check"></i><span>Game Beta release: PvP</span></li>
                             <li><i class="fad fa-check"></i><span>Release Breeding & Fusion</span></li>
                             <li><i class="fad fa-check"></i><span>Play to earn (P2E)</span></li>
@@ -428,12 +428,12 @@
                     $name = get_sub_field('name');
                     $value = get_sub_field('value');
                     // Do something...
-                    ?>
+            ?>
                     <div class="stat__item">
                         <div class="value">
                             <?php
-                                    $image = get_field("stats_item_background");
-                                    if (!empty($image)) : ?>
+                            $image = get_field("stats_item_background");
+                            if (!empty($image)) : ?>
                                 <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
                             <?php endif; ?>
                             <h4><?php echo $value ?></h4>
@@ -456,7 +456,7 @@
                 $link_url = $link['url'];
                 $link_title = $link['title'];
                 $link_target = $link['target'] ? $link['target'] : '_self';
-                ?>
+            ?>
                 <a class="<?php echo get_field('action_sectoin_stats_1')["class"] ?>" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
             <?php endif; ?>
         </div>
@@ -481,7 +481,7 @@
                         $description = get_sub_field('description');
                         $image = get_sub_field('image');
                         // Do something...
-                        ?>
+                ?>
                         <div class="swiper-slide">
                             <div class="leadership-item">
                                 <div class="leadership-img">
@@ -525,7 +525,7 @@
                             $description = get_sub_field('description');
                             $image = get_sub_field('image');
                             // Do something...
-                            ?>
+                    ?>
                             <div class="swiper-slide">
                                 <div class="leadership-item">
                                     <div class="leadership-img">
