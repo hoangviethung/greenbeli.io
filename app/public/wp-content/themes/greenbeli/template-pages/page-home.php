@@ -383,6 +383,7 @@
                 <div class="block-right">
                     <div class="content">
                         <ul>
+                            <li><i class="fad fa-check"></i><span>Listing on Solana</span></li>
                             <li><i class="fad fa-check"></i><span>Cross-Chain NFT Market</span></li>
                             <li><i class="fad fa-check"></i><span>Championship</span></li>
                             <li><i class="fad fa-check"></i><span>Collateral Loan</span></li>
