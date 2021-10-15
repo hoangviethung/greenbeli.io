@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "terms-of-use.css",
+	"sources": [
+		"../sass/template-pages/terms-of-use.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,aAAa,AAAC,CACV,OAAO,CAAE,MAAM,CAYlB,AAbD,AAGQ,aAHK,CAET,QAAQ,CACJ,EAAE,AAAC,CACC,SAAS,CAAE,IAAI,CACf,aAAa,CAAE,GAAG,CACrB,AANT,AAQY,aARC,CAET,QAAQ,CAKJ,CAAC,CACK,CAAC,AAAC,CACA,UAAU,CAAE,GAAG,CAClB"
+}

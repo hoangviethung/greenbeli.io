@@ -1,0 +1,14 @@
+.terms-of-use {
+    padding: 32px 0;
+    .content {
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+        p {
+            + p {
+                margin-top: 4px;
+            }
+        }
+    }
+}

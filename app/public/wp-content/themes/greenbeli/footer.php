@@ -18,10 +18,11 @@
         <div class="footer-wrapper">
             <div class="footer-left">
                 <a class="footer__logo" href="/">
-                    <img width="150" height="150" class="lazyload" src=<?php echo get_theme_file_uri("/images/logo.png") ?> alt="LOGO-GREEN-BELI-NFT" />
+                    <img src=<?php echo get_theme_file_uri("/images/logo-green-belli-white.png") ?> alt="LOGO-GREEN-BELI-NFT" />
                 </a>
                 <div class="footer__nav">
-                    <a class="bt bt--secondary" href="https://greenbeli.gitbook.io/green-beli/" target="_blank" rel="noopener noreferrer">Documents</a>
+                    <a class="bt bt--secondary" href="https://greenbeli.gitbook.io/green-beli/" target="_blank" rel="noopener noreferrer">Whitepaper</a>
+                    <a class="bt bt--primary-light" href="/terms-of-use">Terms of Use</a>
                 </div>
             </div>
             <div class="footer-right">
@@ -47,7 +48,7 @@
         $link_url = $link['url'];
         $link_title = $link['title'];
         $link_target = $link['target'] ? $link['target'] : '_self';
-        ?>
+    ?>
         <a class="discover-more" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
             <span><?php echo esc_html($link_title); ?></span>
             <i class="fal fa-long-arrow-right"></i>
