@@ -10,5 +10,14 @@
                 margin-top: 4px;
             }
         }
+        ul {
+            list-style-type: inherit;
+            padding: 8px 0;
+            li {
+                + li {
+                    margin-top: 8px;
+                }
+            }
+        }
     }
 }
