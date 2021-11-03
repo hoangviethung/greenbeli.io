@@ -119,19 +119,27 @@
                 if (!empty($image)) : ?>
                     <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
                 <?php endif; ?>
+                <?php
+                $link = get_field('link_audit_website');
+                if ($link) :
+                    $link_url = $link['url'];
+                    $link_title = $link['title'];
+                    $link_target = $link['target'] ? $link['target'] : '_self';
+                ?>
+                    <a class="discover-more" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
+                        <span><?php echo esc_html($link_title); ?></span>
+                        <i class="fal fa-long-arrow-right"></i>
+                    </a>
+                <?php endif; ?>
             </div>
-            <?php
-            $link = get_field('link_audit_website');
-            if ($link) :
-                $link_url = $link['url'];
-                $link_title = $link['title'];
-                $link_target = $link['target'] ? $link['target'] : '_self';
-            ?>
-                <a class="discover-more" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
-                    <span><?php echo esc_html($link_title); ?></span>
-                    <i class="fal fa-long-arrow-right"></i>
+            <div class="button_buy_grbe">
+                <?php
+                $button_buy_token = get_field('link_button_buy_token');
+                ?>
+                <a href="<?php echo esc_url($button_buy_token['url']); ?>" target="<?php echo esc_attr($button_buy_token['target'] ? $button_buy_token['target'] : '_self') ?>" class="bt bt--primary">
+                    <span><?php echo esc_html($button_buy_token['title']); ?></span>
                 </a>
-            <?php endif; ?>
+            </div>
         </div>
     </div>
 </section>

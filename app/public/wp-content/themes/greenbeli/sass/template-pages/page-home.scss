@@ -176,7 +176,7 @@
         color: map-get($map: $theme-colors, $key: primary);
         display: inline-flex;
         align-items: center;
-        margin-top: 8px;
+        padding-left: 16px;
         transition: opacity 0.2s ease;
         span {
             margin-right: 4px;
@@ -190,6 +190,9 @@
                 transform: translateX(4px);
             }
         }
+    }
+    .button_buy_grbe {
+        margin-top: 8px;
     }
 }
 
