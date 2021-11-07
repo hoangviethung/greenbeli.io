@@ -37,6 +37,7 @@
             slidesPerView: 1,
             spaceBetween: 24,
             speed: 1500,
+            simulateTouch: false,
             autoplay: {
                 delay: 3000,
             },
@@ -54,6 +55,33 @@
             navigation: {
                 nextEl: ".leadership-slider .swiper-button-next",
                 prevEl: ".leadership-slider .swiper-button-prev",
+            },
+        });
+    }
+    function initSlierRecentUpdate() {
+        const swiper = new Swiper(".recent-update-slider", {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 24,
+            speed: 1500,
+            autoplay: {
+                delay: 3000,
+            },
+            loop: true,
+            preloadImages: false,
+            lazy: true,
+            simulateTouch: false,
+            breakpoints: {
+                575: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+            },
+            navigation: {
+                nextEl: ".recent-update-slider .swiper-button-next",
+                prevEl: ".recent-update-slider .swiper-button-prev",
             },
         });
     }
@@ -111,6 +139,7 @@
             slidesPerView: 1,
             spaceBetween: 24,
             speed: 1500,
+            simulateTouch: false,
             autoplay: {
                 delay: 3000,
             },
@@ -181,6 +210,7 @@
         initSlierCharacters();
         initSlierInvestors();
         initSliderAdvisors();
+        initSlierRecentUpdate();
         scrollToSection();
         collapseAsideMenuMobile();
     });

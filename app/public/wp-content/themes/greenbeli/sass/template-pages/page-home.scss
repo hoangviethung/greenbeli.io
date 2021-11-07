@@ -331,8 +331,7 @@
     }
 }
 
-.grbe-token,
-.gameflow {
+.grbe-token {
     background-color: map-get($map: $theme-colors, $key: bg-lighten);
     padding: 40px 0;
     .grbe_token__image,
@@ -614,7 +613,7 @@
 }
 
 .leadership {
-    background-color: map-get($map: $theme-colors, $key: bg-light);
+    background-color: map-get($map: $theme-colors, $key: bg-lighten);
     padding: 40px 0;
     .leadership-slider,
     .advisors-slider {
@@ -687,6 +686,45 @@
             width: auto;
             margin: 0 auto;
         }
+    }
+    @media (max-width: 767.98px) {
+        padding: 16px 0;
+    }
+}
+
+.recent-update {
+    padding: 40px 0;
+    background-color: map-get($map: $theme-colors, $key: bg-light);
+    .recent-update-logo {
+        max-width: 80%;
+        margin-bottom: 16px;
+    }
+    .recent-update-slider {
+        margin-top: 16px;
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: rgba(
+                $color: map-get($map: $theme-colors, $key: primary-dark),
+                $alpha: 0.4
+            );
+            transition: color 0.3s ease-in-out;
+            &:hover {
+                color: rgba(
+                    $color: map-get($map: $theme-colors, $key: primary-dark),
+                    $alpha: 1
+                );
+            }
+        }
+    }
+    .recent-update-desc {
+        color: map-get($map: $theme-colors, $key: txt-body);
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .recent-update-action {
+        margin-top: 16px;
     }
     @media (max-width: 767.98px) {
         padding: 16px 0;

@@ -261,24 +261,6 @@
         </div>
     </div>
 </section>
-<!-- Game Flow-->
-<!-- <section class="gameflow" id="gameflow">
-    <div class="container">
-        <div class="section-title ta-c">
-            <h3><?php echo get_field("title_section_gameflow") ?></h3>
-        </div>
-        <div class="gameflow__content">
-            <p><?php echo get_field("content_section_gameflow") ?></p>
-        </div>
-        <div class="gameflow__image">
-            <?php
-            $image = get_field("image_section_gameflow");
-            if (!empty($image)) : ?>
-                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
-            <?php endif; ?>
-        </div>
-    </div>
-</section> -->
 <!-- GRBE Token-->
 <section class="grbe-token" id="grbe-token">
     <div class="container">
@@ -468,6 +450,56 @@
             ?>
                 <a class="<?php echo get_field('action_sectoin_stats_1')["class"] ?>" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
             <?php endif; ?>
+        </div>
+    </div>
+</section>
+<!-- Recent Update -->
+<section class="recent-update">
+    <div class="container">
+        <div class="section-title ta-c">
+            <h3><?php echo get_field("title_section_recent_update") ?></h3>
+        </div>
+        <div class="recent-update-slider swiper-container">
+            <div class="swiper-wrapper">
+                <?php
+                // Check rows exists.
+                if (have_rows('items_recent_update')) :
+                    // Loop through rows.
+                    while (have_rows('items_recent_update')) : the_row();
+                        // Load sub field value.
+                        $logo = get_sub_field('logo');
+                        $description = get_sub_field('desc');
+                        $link = get_sub_field('link');
+                        $link_url = $link['url'];
+                        $link_title = $link['title'];
+                        $link_target = $link['target'] ? $link['target'] : '_self';
+                        // Do something...
+                ?>
+                        <div class="swiper-slide">
+                            <div class="recent-update-item">
+                                <div class="recent-update-logo">
+                                    <img class="swiper-lazy" src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" width="<?php echo esc_attr($logo['width']); ?>" height="<?php echo esc_attr($logo['height']); ?>" />
+                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                </div>
+                                <div class="recent-update-desc">
+                                    <p><?php echo $description ?></p>
+                                </div>
+                                <div class="recent-update-action">
+                                    <a class="bt bt--primary" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"> Xem thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                <?php
+                    // End loop.
+                    endwhile;
+                // No value.
+                else :
+                // Do something...
+                endif;
+                ?>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
 </section>
