@@ -60,14 +60,9 @@
     }
     function initSlierRecentUpdate() {
         const swiper = new Swiper(".recent-update-slider", {
-            loop: true,
             slidesPerView: 1,
             spaceBetween: 24,
             speed: 1500,
-            autoplay: {
-                delay: 3000,
-            },
-            loop: true,
             preloadImages: false,
             lazy: true,
             simulateTouch: false,
