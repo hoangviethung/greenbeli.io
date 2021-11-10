@@ -134,6 +134,11 @@
                     color: #5865f2;
                 }
             }
+            &.facebook {
+                > a {
+                    color: #0d89f0;
+                }
+            }
         }
         @media (max-width: 1199.98px) {
             height: 400px;

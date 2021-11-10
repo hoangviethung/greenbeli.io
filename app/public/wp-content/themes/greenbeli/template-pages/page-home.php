@@ -60,6 +60,13 @@
                                                 </span>
                                             </a>
                                         </div>
+                                        <div class="social__item facebook">
+                                            <a href="https://www.facebook.com/GreenBeli" target="_blank" rel="noopener noreferrer">
+                                                <span>
+                                                    <i class="fab fa-facebook"></i>
+                                                </span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -479,7 +486,7 @@
                                     <p><?php echo $description ?></p>
                                 </div>
                                 <div class="recent-update-action">
-                                    <a class="bt bt--primary" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"> Xem thêm</a>
+                                    <a class="bt bt--primary" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">Read More</a>
                                 </div>
                             </div>
                         </div>

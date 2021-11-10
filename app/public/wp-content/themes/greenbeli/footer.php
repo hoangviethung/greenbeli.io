@@ -27,7 +27,7 @@
             </div>
             <div class="footer-right">
                 <h3 class="footer__title">JOIN OUR COMMUNITIES</h3>
-                <div class="footer__socials"><a href="https://twitter.com/Green_Beli" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a><a href="https://t.me/GreenBeli" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram-plane"></i></a><a href="https://medium.com/@greenbeli" target="_blank" rel="noopener noreferrer"><i class="fab fa-medium-m"></i></a><a href="https://discord.gg/Uqa7PDeBqK" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a><a href="https://www.reddit.com/user/Green_Beli" target="_blank" rel="noopener noreferrer"><i class="fab fa-reddit"></i></a></div>
+                <div class="footer__socials"><a href="https://twitter.com/Green_Beli" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a><a href="https://t.me/GreenBeli" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram-plane"></i></a><a href="https://medium.com/@greenbeli" target="_blank" rel="noopener noreferrer"><i class="fab fa-medium-m"></i></a><a href="https://discord.gg/Uqa7PDeBqK" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a><a href="https://www.facebook.com/GreenBeli" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a></div>
             </div>
         </div>
     </div>
