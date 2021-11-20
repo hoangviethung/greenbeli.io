@@ -358,9 +358,9 @@
                         <ul>
                             <li><i class="fad fa-check"></i><span>Tree Seeds For Sale</span></li>
                             <li><i class="fad fa-check"></i><span>NFT Market</span></li>
-                            <li><i class="fad fa-check"></i><span>Game Beta release: PvP</span></li>
+                            <li><i class="fad fa-check"></i><span>PvE</span></li>
                             <li><i class="fad fa-check"></i><span>Release Breeding & Fusion</span></li>
-                            <li><i class="fad fa-check"></i><span>Play to earn (P2E)</span></li>
+                            <li><i class="fad fa-check"></i><span>Game Beta release: PvP</span></li>
                             <li><i class="fad fa-check"></i><span>Release Land & NFT items</span></li>
                             <li><i class="fad fa-check"></i><span>First big Green Beli sponsorship</span></li>
                         </ul>
@@ -460,47 +460,49 @@
         <div class="section-title ta-c">
             <h3><?php echo get_field("title_section_recent_update") ?></h3>
         </div>
-        <div class="recent-update-slider swiper-container">
-            <div class="swiper-wrapper">
-                <?php
-                // Check rows exists.
-                if (have_rows('items_recent_update')) :
-                    // Loop through rows.
-                    while (have_rows('items_recent_update')) : the_row();
-                        // Load sub field value.
-                        $logo = get_sub_field('logo');
-                        $description = get_sub_field('desc');
-                        $link = get_sub_field('link');
-                        $link_url = $link['url'];
-                        $link_title = $link['title'];
-                        $link_target = $link['target'] ? $link['target'] : '_self';
-                        // Do something...
-                ?>
-                        <div class="swiper-slide">
-                            <div class="recent-update-item">
-                                <div class="recent-update-logo">
-                                    <img class="swiper-lazy" src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" width="<?php echo esc_attr($logo['width']); ?>" height="<?php echo esc_attr($logo['height']); ?>" />
-                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                                </div>
-                                <div class="recent-update-desc">
-                                    <p><?php echo $description ?></p>
-                                </div>
-                                <div class="recent-update-action">
-                                    <a class="bt bt--primary" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">Read More</a>
+        <div class="recent-update-slider">
+            <div class=" swiper-container">
+                <div class="swiper-wrapper">
+                    <?php
+                    // Check rows exists.
+                    if (have_rows('items_recent_update')) :
+                        // Loop through rows.
+                        while (have_rows('items_recent_update')) : the_row();
+                            // Load sub field value.
+                            $logo = get_sub_field('logo');
+                            $description = get_sub_field('desc');
+                            $link = get_sub_field('link');
+                            $link_url = $link['url'];
+                            $link_title = $link['title'];
+                            $link_target = $link['target'] ? $link['target'] : '_self';
+                            // Do something...
+                    ?>
+                            <div class="swiper-slide">
+                                <div class="recent-update-item">
+                                    <div class="recent-update-logo">
+                                        <img class="swiper-lazy" src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" width="<?php echo esc_attr($logo['width']); ?>" height="<?php echo esc_attr($logo['height']); ?>" />
+                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                    </div>
+                                    <div class="recent-update-desc">
+                                        <p><?php echo $description ?></p>
+                                    </div>
+                                    <div class="recent-update-action">
+                                        <a class="bt bt--primary" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">Read More</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                <?php
-                    // End loop.
-                    endwhile;
-                // No value.
-                else :
-                // Do something...
-                endif;
-                ?>
+                    <?php
+                        // End loop.
+                        endwhile;
+                    // No value.
+                    else :
+                    // Do something...
+                    endif;
+                    ?>
+                </div>
             </div>
-            <!-- <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div> -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
 </section>
@@ -510,57 +512,14 @@
         <div class="section-title ta-c">
             <h3><?php echo get_field("title_seciton_leadership") ?></h3>
         </div>
-        <div class="leadership-slider swiper-container">
-            <div class="swiper-wrapper">
-                <?php
-                // Check rows exists.
-                if (have_rows('leaderships')) :
-                    // Loop through rows.
-                    while (have_rows('leaderships')) : the_row();
-                        // Load sub field value.
-                        $name = get_sub_field('name');
-                        $position = get_sub_field('position');
-                        $description = get_sub_field('description');
-                        $image = get_sub_field('image');
-                        // Do something...
-                ?>
-                        <div class="swiper-slide">
-                            <div class="leadership-item">
-                                <div class="leadership-img">
-                                    <img class="swiper-lazy" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
-                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                                </div>
-                                <div class="leadership-info">
-                                    <h3><?php echo $name ?></h3>
-                                    <h4><?php echo $position ?></h4>
-                                </div>
-                            </div>
-                        </div>
-                <?php
-                    // End loop.
-                    endwhile;
-                // No value.
-                else :
-                // Do something...
-                endif;
-                ?>
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
-    </div>
-    <section class="advisors">
-        <div class="section-title ta-c">
-            <h3><?php echo get_field("title_section_advisors") ?></h3>
-        </div>
-        <div class="container">
-            <div class="advisors-slider swiper-container">
+        <div class="leadership-slider">
+            <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <?php
                     // Check rows exists.
-                    if (have_rows('advisors')) :
+                    if (have_rows('leaderships')) :
                         // Loop through rows.
-                        while (have_rows('advisors')) : the_row();
+                        while (have_rows('leaderships')) : the_row();
                             // Load sub field value.
                             $name = get_sub_field('name');
                             $position = get_sub_field('position');
@@ -577,7 +536,6 @@
                                     <div class="leadership-info">
                                         <h3><?php echo $name ?></h3>
                                         <h4><?php echo $position ?></h4>
-                                        <?php echo $description ?>
                                     </div>
                                 </div>
                             </div>
@@ -589,6 +547,55 @@
                     // Do something...
                     endif;
                     ?>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+    </div>
+    <section class="advisors">
+        <div class="section-title ta-c">
+            <h3><?php echo get_field("title_section_advisors") ?></h3>
+        </div>
+        <div class="container">
+            <div class="advisors-slider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <?php
+                        // Check rows exists.
+                        if (have_rows('advisors')) :
+                            // Loop through rows.
+                            while (have_rows('advisors')) : the_row();
+                                // Load sub field value.
+                                $name = get_sub_field('name');
+                                $position = get_sub_field('position');
+                                $description = get_sub_field('description');
+                                $image = get_sub_field('image');
+                                // Do something...
+                        ?>
+                                <div class="swiper-slide">
+                                    <div class="leadership-item">
+                                        <div class="leadership-img">
+                                            <img class="swiper-lazy" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
+                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                        </div>
+                                        <div class="leadership-info">
+                                            <h3><?php echo $name ?></h3>
+                                            <h4><?php echo $position ?></h4>
+                                            <?php echo $description ?>
+                                        </div>
+                                    </div>
+                                </div>
+                        <?php
+                            // End loop.
+                            endwhile;
+                        // No value.
+                        else :
+                        // Do something...
+                        endif;
+                        ?>
+                    </div>
                 </div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>

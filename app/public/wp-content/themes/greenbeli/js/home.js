@@ -32,7 +32,7 @@
         });
     }
     function initSlierLeaderShip() {
-        const swiper = new Swiper(".leadership-slider", {
+        const swiper = new Swiper(".leadership-slider .swiper-container", {
             loop: true,
             slidesPerView: 1,
             spaceBetween: 24,
@@ -41,7 +41,6 @@
             autoplay: {
                 delay: 3000,
             },
-            loop: true,
             preloadImages: false,
             lazy: true,
             breakpoints: {
@@ -59,13 +58,16 @@
         });
     }
     function initSlierRecentUpdate() {
-        const swiper = new Swiper(".recent-update-slider", {
+        const swiper = new Swiper(".recent-update-slider .swiper-container", {
             slidesPerView: 1,
             spaceBetween: 24,
             speed: 1500,
             preloadImages: false,
             lazy: true,
             simulateTouch: false,
+            autoplay: {
+                delay: 3000,
+            },
             breakpoints: {
                 575: {
                     slidesPerView: 2,
@@ -129,7 +131,7 @@
         });
     }
     function initSliderAdvisors() {
-        const swiper = new Swiper(".advisors-slider", {
+        const swiper = new Swiper(".advisors-slider .swiper-container", {
             loop: true,
             slidesPerView: 1,
             spaceBetween: 24,
