@@ -70,6 +70,16 @@
                 }
             }
         }
+        &.bt--play-game {
+            background: linear-gradient(0, #34e78b, #0cb25c);
+            padding: 4px;
+            > a {
+                background: linear-gradient(180deg, #34e78b, #0cb25c);
+                padding: 0.44rem 1.22rem;
+                border-radius: 1.22rem;
+                transition: 0.3s all ease-in-out;
+            }
+        }
         &.bt--tree-seeds-for-sale {
             > a {
                 display: flex;

@@ -161,9 +161,27 @@
         margin: 8px auto 0;
     }
     .contract__input {
-        max-width: 400px;
+        display: flex;
+        align-items: center;
+        max-width: 448px;
         width: 100%;
         margin: 0 auto;
+        .contract__logo {
+            -ms-flex: 0 0 48px;
+            flex: 0 0 48px;
+            max-width: 48px;
+        }
+        .contract__address {
+            -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            max-width: 100%;
+            padding-left: 16px;
+        }
+        + .contract__input {
+            margin-top: 24px;
+        }
     }
     .contract__audit-website {
         display: flex;

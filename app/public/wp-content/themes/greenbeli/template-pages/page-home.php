@@ -24,54 +24,61 @@
                     $link_2 = get_sub_field('actions')["link_2"];
                     // Do something...
             ?>
-                    <div class="swiper-slide">
-                        <div class="background">
-                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="container h-100">
-                                <div class="content">
-                                    <div class="content__content">
-                                        <div class="logo">
-                                            <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" width="<?php echo esc_attr($logo['width']); ?>" height="<?php echo esc_attr($logo['height']); ?>" />
-                                        </div>
-                                        <h3><?php echo $text_1 ?></h3>
-                                        <h2><?php echo $text_2 ?></h2>
-                                    </div>
-                                    <div class="content__socials">
-                                        <div class="social__item telegram">
-                                            <a href="https://t.me/GreenBeli" target="_blank" rel="noopener noreferrer">
-                                                <span>
-                                                    <i class="fab fa-telegram-plane"></i>
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <div class="social__item twitter">
-                                            <a href="https://twitter.com/Green_Beli" target="_blank" rel="noopener noreferrer">
-                                                <span>
-                                                    <i class="fab fa-twitter"></i>
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <div class="social__item discord">
-                                            <a href="https://discord.com/invite/Uqa7PDeBqK" target="_blank" rel="noopener noreferrer">
-                                                <span>
-                                                    <i class="fab fa-discord"></i>
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <div class="social__item facebook">
-                                            <a href="https://www.facebook.com/GreenBeli" target="_blank" rel="noopener noreferrer">
-                                                <span>
-                                                    <i class="fab fa-facebook"></i>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
+            <div class="swiper-slide">
+                <div class="background">
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                        width="<?php echo esc_attr($image['width']); ?>"
+                        height="<?php echo esc_attr($image['height']); ?>" />
+                </div>
+                <div class="content-wrapper">
+                    <div class="container h-100">
+                        <div class="content">
+                            <div class="content__content">
+                                <div class="logo">
+                                    <img src="<?php echo esc_url($logo['url']); ?>"
+                                        alt="<?php echo esc_attr($logo['alt']); ?>"
+                                        width="<?php echo esc_attr($logo['width']); ?>"
+                                        height="<?php echo esc_attr($logo['height']); ?>" />
+                                </div>
+                                <h3><?php echo $text_1 ?></h3>
+                                <h2><?php echo $text_2 ?></h2>
+                            </div>
+                            <div class="content__socials">
+                                <div class="social__item telegram">
+                                    <a href="https://t.me/GreenBeli" target="_blank" rel="noopener noreferrer">
+                                        <span>
+                                            <i class="fab fa-telegram-plane"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="social__item twitter">
+                                    <a href="https://twitter.com/Green_Beli" target="_blank" rel="noopener noreferrer">
+                                        <span>
+                                            <i class="fab fa-twitter"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="social__item discord">
+                                    <a href="https://discord.com/invite/Uqa7PDeBqK" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>
+                                            <i class="fab fa-discord"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="social__item facebook">
+                                    <a href="https://www.facebook.com/GreenBeli" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>
+                                            <i class="fab fa-facebook"></i>
+                                        </span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
             <?php
                 // End loop.
                 endwhile;
@@ -117,7 +124,24 @@
         </div>
         <div class="wrapper">
             <div class="contract__input">
-                <input class="form-control ta-c" type="text" value=<?php echo get_field("address_contract") ?> readonly>
+                <img class="contract__logo" src="<?php echo esc_url(get_field("address_contract_1")['logo']['url']); ?>"
+                    alt="<?php echo esc_attr(get_field("address_contract_1")['logo']['alt']); ?>"
+                    width="<?php echo esc_attr(get_field("address_contract_1")['logo']['width']); ?>"
+                    height="<?php echo esc_attr(get_field("address_contract_1")['logo']['height']); ?>" />
+                <div class="contract__address">
+                    <input class="form-control  ta-c" type="text"
+                        value=<?php echo get_field("address_contract_1")['address'] ?> readonly>
+                </div>
+            </div>
+            <div class="contract__input">
+                <img class="contract__logo" src="<?php echo esc_url(get_field("address_contract_2")['logo']['url']); ?>"
+                    alt="<?php echo esc_attr(get_field("address_contract_2")['logo']['alt']); ?>"
+                    width="<?php echo esc_attr(get_field("address_contract_2")['logo']['width']); ?>"
+                    height="<?php echo esc_attr(get_field("address_contract_2")['logo']['height']); ?>" />
+                <div class="contract__address">
+                    <input class="form-control  ta-c" type="text"
+                        value=<?php echo get_field("address_contract_2")['address'] ?> readonly>
+                </div>
             </div>
             <div class="contract__audit-website">
                 <p>Audited by</p>
@@ -128,16 +152,20 @@
                 $link_title = $link['title'];
                 $link_target = $link['target'] ? $link['target'] : '_self';
                 if (!empty($image)) : ?>
-                    <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
-                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
-                    </a>
+                <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                        width="<?php echo esc_attr($image['width']); ?>"
+                        height="<?php echo esc_attr($image['height']); ?>" />
+                </a>
                 <?php endif; ?>
             </div>
             <div class="button_buy_grbe">
                 <?php
                 $button_buy_token = get_field('link_button_buy_token');
                 ?>
-                <a href="<?php echo esc_url($button_buy_token['url']); ?>" target="<?php echo esc_attr($button_buy_token['target'] ? $button_buy_token['target'] : '_self') ?>" class="bt bt--primary">
+                <a href="<?php echo esc_url($button_buy_token['url']); ?>"
+                    target="<?php echo esc_attr($button_buy_token['target'] ? $button_buy_token['target'] : '_self') ?>"
+                    class="bt bt--primary">
                     <span><?php echo esc_html($button_buy_token['title']); ?></span>
                 </a>
             </div>
@@ -164,18 +192,21 @@
                             $image = get_sub_field('image');
                             // Do something...
                     ?>
-                            <div class="swiper-slide">
-                                <div class="wrapper">
-                                    <div class="img">
-                                        <img class="swiper-lazy" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
-                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                                    </div>
-                                    <div class="info">
-                                        <h2><?php echo $name ?></h2>
-                                        <?php echo $description ?>
-                                    </div>
-                                </div>
+                    <div class="swiper-slide">
+                        <div class="wrapper">
+                            <div class="img">
+                                <img class="swiper-lazy" src="<?php echo esc_url($image['url']); ?>"
+                                    alt="<?php echo esc_attr($image['alt']); ?>"
+                                    width="<?php echo esc_attr($image['width']); ?>"
+                                    height="<?php echo esc_attr($image['height']); ?>" />
+                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                             </div>
+                            <div class="info">
+                                <h2><?php echo $name ?></h2>
+                                <?php echo $description ?>
+                            </div>
+                        </div>
+                    </div>
                     <?php
                         // End loop.
                         endwhile;
@@ -198,12 +229,15 @@
                             $image = get_sub_field('image');
                             // Do something...
                     ?>
-                            <div class="swiper-slide">
-                                <div class="img">
-                                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
-                                </div>
-                                <div class="name"><?php echo $name ?></div>
-                            </div>
+                    <div class="swiper-slide">
+                        <div class="img">
+                            <img src="<?php echo esc_url($image['url']); ?>"
+                                alt="<?php echo esc_attr($image['alt']); ?>"
+                                width="<?php echo esc_attr($image['width']); ?>"
+                                height="<?php echo esc_attr($image['height']); ?>" />
+                        </div>
+                        <div class="name"><?php echo $name ?></div>
+                    </div>
                     <?php
                         // End loop.
                         endwhile;
@@ -236,18 +270,21 @@
                         $image = get_sub_field('image');
                         // Do something...
                 ?>
-                        <div class="swiper-slide">
-                            <div class="features__item">
-                                <div class="item__img">
-                                    <img class="swiper-lazy" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
-                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                                </div>
-                                <div class="item__content">
-                                    <h4><?php echo $name ?></h4>
-                                    <p><?php echo $description ?></p>
-                                </div>
-                            </div>
+                <div class="swiper-slide">
+                    <div class="features__item">
+                        <div class="item__img">
+                            <img class="swiper-lazy" src="<?php echo esc_url($image['url']); ?>"
+                                alt="<?php echo esc_attr($image['alt']); ?>"
+                                width="<?php echo esc_attr($image['width']); ?>"
+                                height="<?php echo esc_attr($image['height']); ?>" />
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
+                        <div class="item__content">
+                            <h4><?php echo $name ?></h4>
+                            <p><?php echo $description ?></p>
+                        </div>
+                    </div>
+                </div>
                 <?php
                     // End loop.
                     endwhile;
@@ -275,7 +312,8 @@
             <?php
             $image = get_field("image_section_rgbe_token");
             if (!empty($image)) : ?>
-                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
+            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
             <?php endif; ?>
         </div>
     </div>
@@ -288,7 +326,9 @@
                 <?php
                 $image = get_field("image_section_ecosystem_fund");
                 if (!empty($image)) : ?>
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
+                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                    width="<?php echo esc_attr($image['width']); ?>"
+                    height="<?php echo esc_attr($image['height']); ?>" />
                 <?php endif; ?>
             </div>
             <div class="ecosystem_fund__content">
@@ -310,7 +350,8 @@
             <?php
             $image = get_field("image_section_tokenomics");
             if (!empty($image)) : ?>
-                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
+            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
             <?php endif; ?>
         </div>
     </div>
@@ -421,17 +462,19 @@
                     $value = get_sub_field('value');
                     // Do something...
             ?>
-                    <div class="stat__item">
-                        <div class="value">
-                            <?php
+            <div class="stat__item">
+                <div class="value">
+                    <?php
                             $image = get_field("stats_item_background");
                             if (!empty($image)) : ?>
-                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
-                            <?php endif; ?>
-                            <h4><?php echo $value ?></h4>
-                        </div>
-                        <p><?php echo $name ?></p>
-                    </div>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                        width="<?php echo esc_attr($image['width']); ?>"
+                        height="<?php echo esc_attr($image['height']); ?>" />
+                    <?php endif; ?>
+                    <h4><?php echo $value ?></h4>
+                </div>
+                <p><?php echo $name ?></p>
+            </div>
             <?php
                 // End loop.
                 endwhile;
@@ -449,7 +492,9 @@
                 $link_title = $link['title'];
                 $link_target = $link['target'] ? $link['target'] : '_self';
             ?>
-                <a class="<?php echo get_field('action_sectoin_stats_1')["class"] ?>" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+            <a class="<?php echo get_field('action_sectoin_stats_1')["class"] ?>"
+                href="<?php echo esc_url($link_url); ?>"
+                target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
             <?php endif; ?>
         </div>
     </div>
@@ -477,20 +522,24 @@
                             $link_target = $link['target'] ? $link['target'] : '_self';
                             // Do something...
                     ?>
-                            <div class="swiper-slide">
-                                <div class="recent-update-item">
-                                    <div class="recent-update-logo">
-                                        <img class="swiper-lazy" src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" width="<?php echo esc_attr($logo['width']); ?>" height="<?php echo esc_attr($logo['height']); ?>" />
-                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                                    </div>
-                                    <div class="recent-update-desc">
-                                        <p><?php echo $description ?></p>
-                                    </div>
-                                    <div class="recent-update-action">
-                                        <a class="bt bt--primary" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">Read More</a>
-                                    </div>
-                                </div>
+                    <div class="swiper-slide">
+                        <div class="recent-update-item">
+                            <div class="recent-update-logo">
+                                <img class="swiper-lazy" src="<?php echo esc_url($logo['url']); ?>"
+                                    alt="<?php echo esc_attr($logo['alt']); ?>"
+                                    width="<?php echo esc_attr($logo['width']); ?>"
+                                    height="<?php echo esc_attr($logo['height']); ?>" />
+                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                             </div>
+                            <div class="recent-update-desc">
+                                <p><?php echo $description ?></p>
+                            </div>
+                            <div class="recent-update-action">
+                                <a class="bt bt--primary" href="<?php echo esc_url($link_url); ?>"
+                                    target="<?php echo esc_attr($link_target); ?>">Read More</a>
+                            </div>
+                        </div>
+                    </div>
                     <?php
                         // End loop.
                         endwhile;
@@ -527,18 +576,21 @@
                             $image = get_sub_field('image');
                             // Do something...
                     ?>
-                            <div class="swiper-slide">
-                                <div class="leadership-item">
-                                    <div class="leadership-img">
-                                        <img class="swiper-lazy" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
-                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                                    </div>
-                                    <div class="leadership-info">
-                                        <h3><?php echo $name ?></h3>
-                                        <h4><?php echo $position ?></h4>
-                                    </div>
-                                </div>
+                    <div class="swiper-slide">
+                        <div class="leadership-item">
+                            <div class="leadership-img">
+                                <img class="swiper-lazy" src="<?php echo esc_url($image['url']); ?>"
+                                    alt="<?php echo esc_attr($image['alt']); ?>"
+                                    width="<?php echo esc_attr($image['width']); ?>"
+                                    height="<?php echo esc_attr($image['height']); ?>" />
+                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                             </div>
+                            <div class="leadership-info">
+                                <h3><?php echo $name ?></h3>
+                                <h4><?php echo $position ?></h4>
+                            </div>
+                        </div>
+                    </div>
                     <?php
                         // End loop.
                         endwhile;
@@ -574,19 +626,22 @@
                                 $image = get_sub_field('image');
                                 // Do something...
                         ?>
-                                <div class="swiper-slide">
-                                    <div class="leadership-item">
-                                        <div class="leadership-img">
-                                            <img class="swiper-lazy" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
-                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                                        </div>
-                                        <div class="leadership-info">
-                                            <h3><?php echo $name ?></h3>
-                                            <h4><?php echo $position ?></h4>
-                                            <?php echo $description ?>
-                                        </div>
-                                    </div>
+                        <div class="swiper-slide">
+                            <div class="leadership-item">
+                                <div class="leadership-img">
+                                    <img class="swiper-lazy" src="<?php echo esc_url($image['url']); ?>"
+                                        alt="<?php echo esc_attr($image['alt']); ?>"
+                                        width="<?php echo esc_attr($image['width']); ?>"
+                                        height="<?php echo esc_attr($image['height']); ?>" />
+                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                                 </div>
+                                <div class="leadership-info">
+                                    <h3><?php echo $name ?></h3>
+                                    <h4><?php echo $position ?></h4>
+                                    <?php echo $description ?>
+                                </div>
+                            </div>
+                        </div>
                         <?php
                             // End loop.
                             endwhile;
@@ -614,11 +669,13 @@
                 <?php
                 $images = get_field('investors');
                 if ($images) : ?>
-                    <?php foreach ($images as $image) : ?>
-                        <div class="swiper-slide">
-                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>" />
-                        </div>
-                    <?php endforeach; ?>
+                <?php foreach ($images as $image) : ?>
+                <div class="swiper-slide">
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                        width="<?php echo esc_attr($image['width']); ?>"
+                        height="<?php echo esc_attr($image['height']); ?>" />
+                </div>
+                <?php endforeach; ?>
                 <?php endif; ?>
             </div>
         </div>
