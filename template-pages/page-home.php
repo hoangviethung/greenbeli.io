@@ -124,20 +124,26 @@
         </div>
         <div class="wrapper">
             <div class="contract__input">
-                <img class="contract__logo" src="<?php echo esc_url(get_field("address_contract_1")['logo']['url']); ?>"
-                    alt="<?php echo esc_attr(get_field("address_contract_1")['logo']['alt']); ?>"
-                    width="<?php echo esc_attr(get_field("address_contract_1")['logo']['width']); ?>"
-                    height="<?php echo esc_attr(get_field("address_contract_1")['logo']['height']); ?>" />
+                <div class="contract__logo">
+                    <img src="<?php echo esc_url(get_field("address_contract_1")['logo']['url']); ?>"
+                        alt="<?php echo esc_attr(get_field("address_contract_1")['logo']['alt']); ?>"
+                        width="<?php echo esc_attr(get_field("address_contract_1")['logo']['width']); ?>"
+                        height="<?php echo esc_attr(get_field("address_contract_1")['logo']['height']); ?>" />
+                    <span> <?php echo get_field("address_contract_1")['name'] ?> </span>
+                </div>
                 <div class="contract__address">
                     <input class="form-control  ta-c" type="text"
                         value=<?php echo get_field("address_contract_1")['address'] ?> readonly>
                 </div>
             </div>
             <div class="contract__input">
-                <img class="contract__logo" src="<?php echo esc_url(get_field("address_contract_2")['logo']['url']); ?>"
-                    alt="<?php echo esc_attr(get_field("address_contract_2")['logo']['alt']); ?>"
-                    width="<?php echo esc_attr(get_field("address_contract_2")['logo']['width']); ?>"
-                    height="<?php echo esc_attr(get_field("address_contract_2")['logo']['height']); ?>" />
+                <div class="contract__logo">
+                    <img src="<?php echo esc_url(get_field("address_contract_2")['logo']['url']); ?>"
+                        alt="<?php echo esc_attr(get_field("address_contract_2")['logo']['alt']); ?>"
+                        width="<?php echo esc_attr(get_field("address_contract_2")['logo']['width']); ?>"
+                        height="<?php echo esc_attr(get_field("address_contract_2")['logo']['height']); ?>" />
+                    <span> <?php echo get_field("address_contract_2")['name'] ?> </span>
+                </div>
                 <div class="contract__address">
                     <input class="form-control  ta-c" type="text"
                         value=<?php echo get_field("address_contract_2")['address'] ?> readonly>

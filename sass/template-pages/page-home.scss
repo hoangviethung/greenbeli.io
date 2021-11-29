@@ -162,14 +162,34 @@
     }
     .contract__input {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        max-width: 448px;
+        max-width: 550px;
         width: 100%;
         margin: 0 auto;
         .contract__logo {
-            -ms-flex: 0 0 48px;
-            flex: 0 0 48px;
-            max-width: 48px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+            max-width: 25%;
+            @media (max-width: 575.98px) {
+                -ms-flex: 0 0 48px;
+                flex: 0 0 48px;
+                max-width: 48px;
+            }
+            span {
+                padding-left: 8px;
+                font-weight: 700;
+                @media (max-width: 575.98px) {
+                    display: none;
+                }
+            }
+            img {
+                max-width: 48px;
+                width: 100%;
+            }
         }
         .contract__address {
             -ms-flex-preferred-size: 0;
