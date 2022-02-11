@@ -22,7 +22,7 @@
         "@wordpress/scripts": "^12.1.0",
         "concurrently": "^6.2.1",
         "dir-archiver": "^1.1.1",
-        "node-sass": "^4.14.1",
+        "node-sass": "^7.0.0",
         "rtlcss": "^2.5.0"
     },
     "rtlcssConfig": {
